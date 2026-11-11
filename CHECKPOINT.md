@@ -3,12 +3,12 @@
 Last updated: 2026-11-12. Full design: `architecture.md`. Build plan: `PLAN.md`.
 
 ## Current State
-- Build steps 1-12 done (development stage complete). Step 13 (publish + deploy) not started.
+- Build steps 1-12 done. Step 13: published to GitHub (public, CI green); deploy not started.
 - Backend: 191 tests pass (unit + integration on embedded Postgres). ruff check, ruff format --check, 6/6 import-linter contracts pass.
 - Frontend: lint, typecheck, 10 vitest tests, build pass.
 - E2E: `scripts/smoke_e2e.py` passes against `scripts/dev_stack.py --provider fake` (EN journey, knowledge + citations, HTML report, broker handoff + broker queue auth, Arabic session). UI checked in Chrome in EN and AR (RTL), broker page loads leads.
-- Live LLM run NOT done: the system-wide `GEMINI_API_KEY` is rejected (rechecked 2026-11-12, still HTTP 400) ("API key not valid"); no Anthropic key. Needs a valid key, then `python scripts/dev_stack.py --provider gemini` + `scripts/smoke_e2e.py` + `scripts/eval_agent.py`.
-- Not a git repo yet; nothing committed or deployed.
+- Live LLM (2026-11-12): valid key now in `.env`, but the old invalid system-wide `GEMINI_API_KEY` wins over `.env` in pydantic-settings, so export the `.env` key into the shell before `dev_stack.py`. Model `gemini-3.5-flash` (2.5-flash closed to new keys; 3.8-flash hangs with 504). Live smoke on 3.5-flash: buyer journey (update_profile, search_units, compare_financing, project_returns) passes in ~21s. Free tier = 5 RPM and 20 requests/day per model, which ran out before the knowledge/report/Arabic steps and the full agent eval. Live eval on `gemini-3.1-flash-lite` (no quota issues): task success 0.60, clarification 1.00, grounding 0.70, 5.3 s/scenario; it often stops after search_units and states untraced figures. Recorded in README and `evals/results/agent_eval_gemini-3.1-flash-lite.json`.
+- Git: `main` on https://github.com/Mrwanawad/Real-Estate-Investment-Companion-using-Google-ADK-Litestar-LightGBM-React (public). Author Mrwan Awad, no Claude attribution.
 
 ## Modules (all under src/reic/modules)
 - inventory: search + goal-weighted shortlist.
@@ -31,14 +31,15 @@ Last updated: 2026-11-12. Full design: `architecture.md`. Build plan: `PLAN.md`.
 - Dockerfile (python:3.12-slim + pango for WeasyPrint), .dockerignore, fly.toml, CI updated, README rewritten. Docker image never built (not allowed on this machine).
 
 ## Decisions
+- Gemini client: 60s request timeout + 3 retry attempts with backoff (429/5xx) via ADK `retry_options`. Tool "started" events only from non-partial ADK events (SSE mode repeated every call). Smoke/eval take `--pause SECONDS` per turn for free-tier keys.
 - Rate limit (2026-11-12): Litestar RateLimitMiddleware on POST /leads, POST /chat/sessions, POST /chat/sessions/{id}/messages only; `RATE_LIMIT_PER_MINUTE` (default 20, 0 off), client id from `CLIENT_IP_HEADER` when set (fly.toml sets Fly-Client-IP), else socket IP. In-memory store (single machine). dev_stack sets it to 0 so smoke/eval can burst. Code: `bootstrap/rate_limit.py`.
 - See PLAN.md locked decisions. Added: knowledge index in memory (corpus is small; pgvector not needed yet). Chat sessions in memory (single process, capped at 2000).
 - Webhook signature = HMAC-SHA256 over `"<timestamp>." + body`, header `X-REIC-Signature: sha256=<hex>` + `X-REIC-Timestamp`.
 - Financing assumptions in Settings: discount 22%, mortgage 24% / 10y / 20% down, inflation 15% (synthetic).
 
 ## Next
-- Get a valid Gemini (or Anthropic) key, run live smoke + agent eval, record numbers.
-- Step 13: git init, repo `Real-Estate-Investment-Companion-using-Google-ADK-Litestar-LightGBM-React` (confirm name + visibility first), Fly.io (API) + Neon (DB) + Cloudflare Pages (UI).
+- Live eval on gemini-3.5-flash needs quota: enable billing on the Gemini key's project (cents per run) or wait for the daily reset, then `scripts/smoke_e2e.py --pause 15` and `scripts/eval_agent.py --provider gemini --pause 15`; record numbers in README.
+- Deploy: flyctl, neonctl, wrangler not installed; each needs an interactive login (Fly also wants a card). Fly.io (API) + Neon (DB) + Cloudflare Pages (UI).
 - Optional: async webhook; PDF in Docker (GTK in image).
 
 ## Gotchas

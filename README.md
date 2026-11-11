@@ -46,8 +46,14 @@ All numbers are on synthetic data. Results are in `evals/results/`; regenerate w
 | Agent (10 scenarios, fake provider) | Task success | 0.90 |
 | | Clarification when budget missing | 1.00 |
 | | Grounding (no untraced figures) | 1.00 |
+| Agent (10 scenarios, live `gemini-3.1-flash-lite`) | Task success | 0.60 |
+| | Clarification when budget missing | 1.00 |
+| | Grounding (no untraced figures) | 0.70 |
+| | Mean seconds per scenario | 5.3 |
 
-The fake provider is scripted, so the agent row tests the tools, streaming and guardrails, not language-model quality. The one failed scenario is the Arabic rent request (Madinaty, 4M EGP), where the search returns no unit. Rerun `scripts/eval_agent.py --provider gemini` against an API started with that provider for real-model numbers.
+The fake provider is scripted, so its row tests the tools, streaming and guardrails, not language-model quality. Its one failed scenario is the Arabic rent request (Madinaty, 4M EGP), where the search returns no unit.
+
+The live row is the small `flash-lite` model: it clarifies and cites well but often stops after the shortlist without running the financing and returns tools, and states some figures no tool returned. `gemini-3.5-flash` completed the full English buyer journey (profile, search, financing, returns) in about 21 s in the live smoke test; its full eval did not fit the free tier (5 requests/minute, 20/day). With a key that allows it, start the API with `GEMINI_MODEL=gemini-3.5-flash` and run `scripts/eval_agent.py --provider gemini --pause 15`.
 
 ## API
 

@@ -1,0 +1,135 @@
+{
+  "summary": {
+    "provider": "gemini-3.1-flash-lite",
+    "scenarios": 10,
+    "task_success": 0.6,
+    "clarification_quality": 1.0,
+    "grounding": 0.7,
+    "mean_seconds": 5.27
+  },
+  "results": [
+    {
+      "scenario": "rent_en",
+      "language": "en",
+      "task_success": false,
+      "grounded": false,
+      "tools": [
+        "update_profile",
+        "search_units"
+      ],
+      "artifacts": [
+        "shortlist"
+      ],
+      "seconds": 5.06
+    },
+    {
+      "scenario": "resell_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": false,
+      "tools": [
+        "update_profile",
+        "search_units",
+        "project_returns"
+      ],
+      "artifacts": [
+        "projection",
+        "risks",
+        "shortlist"
+      ],
+      "seconds": 9.89
+    },
+    {
+      "scenario": "live_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": false,
+      "tools": [
+        "update_profile",
+        "search_units"
+      ],
+      "artifacts": [
+        "shortlist"
+      ],
+      "seconds": 6.8
+    },
+    {
+      "scenario": "rent_ar",
+      "language": "ar",
+      "task_success": false,
+      "grounded": true,
+      "tools": [
+        "update_profile",
+        "search_units"
+      ],
+      "artifacts": [],
+      "seconds": 4.9
+    },
+    {
+      "scenario": "resell_ar",
+      "language": "ar",
+      "task_success": false,
+      "grounded": true,
+      "tools": [],
+      "artifacts": [],
+      "seconds": 3.48
+    },
+    {
+      "scenario": "missing_budget_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": true,
+      "tools": [],
+      "artifacts": [],
+      "seconds": 3.1,
+      "clarified": true
+    },
+    {
+      "scenario": "missing_budget_ar",
+      "language": "ar",
+      "task_success": true,
+      "grounded": true,
+      "tools": [],
+      "artifacts": [],
+      "seconds": 3.47,
+      "clarified": true
+    },
+    {
+      "scenario": "knowledge_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "search_knowledge"
+      ],
+      "artifacts": [
+        "citations"
+      ],
+      "seconds": 4.09
+    },
+    {
+      "scenario": "knowledge_ar",
+      "language": "ar",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "search_knowledge"
+      ],
+      "artifacts": [
+        "citations"
+      ],
+      "seconds": 4.52
+    },
+    {
+      "scenario": "broker_contact_en",
+      "language": "en",
+      "task_success": false,
+      "grounded": true,
+      "tools": [
+        "update_profile"
+      ],
+      "artifacts": [],
+      "seconds": 7.43
+    }
+  ]
+}

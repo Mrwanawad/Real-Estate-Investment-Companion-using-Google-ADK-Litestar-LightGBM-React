@@ -1,0 +1,26 @@
+{"id": "q01", "language": "en", "question": "How much is the reservation deposit and how long is the unit held?", "relevant": ["reservation-cancellation-en", "reservation-cancellation-ar"]}
+{"id": "q02", "language": "en", "question": "Can I cancel within a week after paying the deposit?", "relevant": ["reservation-cancellation-en", "reservation-cancellation-ar"]}
+{"id": "q03", "language": "en", "question": "What area tolerance does the sales contract allow and can the developer raise the price?", "relevant": ["sales-contract-clauses-en"]}
+{"id": "q04", "language": "en", "question": "Where are disputes with the developer arbitrated?", "relevant": ["sales-contract-clauses-en"]}
+{"id": "q05", "language": "en", "question": "What is the penalty if I pay an instalment late?", "relevant": ["installment-rules-en", "installment-rules-ar"]}
+{"id": "q06", "language": "en", "question": "Is there annual price escalation on unpaid installments?", "relevant": ["installment-rules-en", "installment-rules-ar"]}
+{"id": "q07", "language": "en", "question": "What interest rate does the subsidised mortgage initiative offer and who qualifies?", "relevant": ["mortgage-options-en", "mortgage-options-ar"]}
+{"id": "q08", "language": "en", "question": "What loan to value does a bank give and what share of income can the payment take?", "relevant": ["mortgage-options-en", "mortgage-options-ar"]}
+{"id": "q09", "language": "en", "question": "How much does the developer charge to transfer my contract to a new buyer?", "relevant": ["resale-transfer-fees-en", "resale-transfer-fees-ar"]}
+{"id": "q10", "language": "en", "question": "Compensation if the handover is late by many months", "relevant": ["delivery-delay-compensation-en", "delivery-delay-ar"]}
+{"id": "q11", "language": "en", "question": "How big is the maintenance deposit for a villa and who holds it?", "relevant": ["maintenance-deposit-en"]}
+{"id": "q12", "language": "en", "question": "What fee does a property manager take from rent and what gross yield can I expect?", "relevant": ["rental-management-en"]}
+{"id": "q13", "language": "en", "question": "How do I register my apartment at the real estate registry?", "relevant": ["registration-shahr-akary-en", "registration-shahr-akary-ar"]}
+{"id": "q14", "language": "en", "question": "Can a foreigner buy a home and what does core and shell mean?", "relevant": ["faq-en"]}
+{"id": "q15", "language": "ar", "question": "كم مبلغ مقدم الحجز وكم يوما تبقى الوحدة محجوزة؟", "relevant": ["reservation-cancellation-ar", "reservation-cancellation-en"]}
+{"id": "q16", "language": "ar", "question": "ماذا أخسر إذا ألغيت العقد بعد التوقيع؟", "relevant": ["reservation-cancellation-ar", "reservation-cancellation-en"]}
+{"id": "q17", "language": "ar", "question": "ما غرامة التأخر في سداد القسط؟", "relevant": ["installment-rules-ar", "installment-rules-en"]}
+{"id": "q18", "language": "ar", "question": "هل يمكن تأجيل قسطين بسبب ضائقة مالية؟", "relevant": ["installment-rules-ar", "installment-rules-en"]}
+{"id": "q19", "language": "ar", "question": "ما شروط التمويل العقاري المدعوم وسعر الفائدة؟", "relevant": ["mortgage-options-ar", "mortgage-options-en"]}
+{"id": "q20", "language": "ar", "question": "ما رسوم التقييم والسداد المبكر في القرض العقاري؟", "relevant": ["mortgage-options-ar", "mortgage-options-en"]}
+{"id": "q21", "language": "ar", "question": "كم يبلغ تعويض تأخر تسليم الوحدة بعد فترة السماح؟", "relevant": ["delivery-delay-ar", "delivery-delay-compensation-en"]}
+{"id": "q22", "language": "ar", "question": "متى يحق لي فسخ العقد بسبب التأخير الطويل في الاستلام؟", "relevant": ["delivery-delay-ar", "delivery-delay-compensation-en"]}
+{"id": "q23", "language": "ar", "question": "ما خطوات تسجيل الوحدة في الشهر العقاري وما رسومه؟", "relevant": ["registration-shahr-akary-ar", "registration-shahr-akary-en"]}
+{"id": "q24", "language": "ar", "question": "ما هي دعوى صحة التوقيع؟", "relevant": ["registration-shahr-akary-ar", "registration-shahr-akary-en"]}
+{"id": "q25", "language": "ar", "question": "كم رسم التنازل عن العقد للمشتري الجديد وعمولة السمسرة؟", "relevant": ["resale-transfer-fees-ar", "resale-transfer-fees-en"]}
+{"id": "q26", "language": "ar", "question": "هل يجوز بيع الوحدة قبل سداد جزء من الثمن؟", "relevant": ["resale-transfer-fees-ar", "resale-transfer-fees-en"]}

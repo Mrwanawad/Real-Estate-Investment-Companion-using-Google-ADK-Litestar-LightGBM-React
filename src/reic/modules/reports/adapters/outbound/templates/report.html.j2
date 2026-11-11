@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+<meta charset="utf-8">
+<title>{{ t.title }}</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Times New Roman", Times, serif; color: #111; background: #fff; font-size: 11.5pt; line-height: 1.45; margin: 0; }
+  h1, h2 { font-family: "GFS Didot", Georgia, serif; font-weight: normal; color: #111; }
+  h1 { font-size: 24pt; margin: 0 0 4pt; }
+  h2 { font-size: 15pt; margin: 22pt 0 8pt; padding-bottom: 3pt; border-bottom: 1px solid #111; page-break-after: avoid; }
+  .label, th { font-family: "Times New Roman", serif; font-weight: bold; }
+  .disclaimer { border: 3px solid #111; padding: 12pt 14pt; margin: 10pt 0 16pt; text-align: center; page-break-inside: avoid; }
+  .disclaimer strong { display: block; font-family: "Times New Roman", serif; font-size: 20pt; letter-spacing: 0; line-height: 1.2; }
+  .disclaimer span { display: block; margin-top: 6pt; font-size: 11pt; color: #333; }
+  .meta { color: #444; margin: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 10.5pt; }
+  th, td { border: 1px solid #999; padding: 4pt 6pt; text-align: start; vertical-align: top; }
+  th { background: #eee; }
+  td.num { font-family: "Times New Roman", serif; font-weight: bold; }
+  tr.best td { background: #f0f0f0; font-weight: bold; }
+  dl.kv { display: grid; grid-template-columns: max-content 1fr; gap: 3pt 14pt; margin: 0; }
+  dl.kv dt { font-weight: bold; }
+  dl.kv dd { margin: 0; font-weight: bold; }
+  figure { margin: 10pt 0; page-break-inside: avoid; }
+  figcaption { font-weight: bold; margin-bottom: 4pt; }
+  .chart { direction: ltr; text-align: start; overflow: hidden; }
+  .chart svg { max-width: 100%; height: auto; }
+  ul { margin: 4pt 0; padding-inline-start: 18pt; }
+  .risk { border: 1px solid #999; padding: 6pt 9pt; margin: 6pt 0; page-break-inside: avoid; }
+  .risk .level { font-weight: bold; text-transform: uppercase; }
+  .risk.high { border: 2px solid #111; }
+  .cite { margin: 6pt 0; page-break-inside: avoid; }
+  .cite q { color: #333; }
+  .reasons { color: #333; font-size: 10pt; margin: 0 0 6pt; }
+  footer { margin-top: 24pt; border-top: 1px solid #999; padding-top: 6pt; font-size: 9.5pt; color: #444; text-align: center; }
+</style>
+</head>
+<body>
+<h1>{{ t.title }}</h1>
+{% if generated_at %}
+<p class="meta"><span class="label">{{ t.generated }}:</span> {{ generated_at }}</p>
+{% endif %}
+<div class="disclaimer">
+  <strong>{{ t.disclaimer }}</strong>
+  <span>{{ t.disclaimer_note }}</span>
+</div>
+
+{% if empty %}
+<p>{{ t.empty }}</p>
+{% endif %}
+
+{% if profile %}
+<section id="profile">
+<h2>{{ t.profile }}</h2>
+<dl class="kv">
+{% for label, value in profile %}
+  <dt>{{ label }}</dt><dd>{{ value }}</dd>
+{% endfor %}
+</dl>
+</section>
+{% endif %}
+
+{% if shortlist %}
+<section id="shortlist">
+<h2>{{ t.shortlist }}</h2>
+<table>
+  <thead><tr>
+    <th>{{ t.code }}</th><th>{{ t.project }}</th><th>{{ t.area }}</th><th>{{ t.type }}</th>
+    <th>{{ t.bedrooms }}</th><th>{{ t.bua }}</th><th>{{ t.price }}</th><th>{{ t.delivery }}</th><th>{{ t.score }}</th>
+  </tr></thead>
+  <tbody>
+{% for u in shortlist %}
+  <tr>
+    <td>{{ u.code }}</td><td>{{ u.project }}</td><td>{{ u.area }}</td><td>{{ u.type }}</td>
+    <td>{{ u.bedrooms }}</td><td>{{ u.bua }}</td><td class="num">{{ u.price }}</td><td>{{ u.delivery }}</td><td class="num">{{ u.score }}</td>
+  </tr>
+{% if u.reasons %}
+  <tr><td colspan="9" class="reasons">{{ u.reasons | join(" · ") }}</td></tr>
+{% endif %}
+{% endfor %}
+  </tbody>
+</table>
+</section>
+{% endif %}
+
+{% if financing %}
+<section id="financing">
+<h2>{{ t.financing }}</h2>
+<dl class="kv">
+  <dt>{{ t.unit }}</dt><dd>{{ financing.unit_code }}</dd>
+  <dt>{{ t.price }}</dt><dd>{{ financing.price }}</dd>
+{% if financing.cheapest %}
+  <dt>{{ t.cheapest }}</dt><dd>{{ financing.cheapest }}</dd>
+{% endif %}
+</dl>
+{% if financing.rows %}
+<table>
+  <thead><tr>
+    <th>{{ t.option }}</th><th>{{ t.kind }}</th><th>{{ t.upfront }}</th><th>{{ t.monthly }}</th><th>{{ t.total_nominal }}</th><th>{{ t.present_value }}</th>
+  </tr></thead>
+  <tbody>
+{% for o in financing.rows %}
+  <tr{% if o.best %} class="best"{% endif %}>
+    <td>{{ o.label }}</td><td>{{ o.kind }}</td><td class="num">{{ o.upfront }}</td><td class="num">{{ o.monthly }}</td><td class="num">{{ o.total }}</td><td class="num">{{ o.pv }}</td>
+  </tr>
+{% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% if financing.chart %}
+<figure><figcaption>{{ t.pv_chart }}</figcaption><div class="chart">{{ financing.chart | safe }}</div></figure>
+{% endif %}
+</section>
+{% endif %}
+
+{% if projection %}
+<section id="projection">
+<h2>{{ t.projection }}</h2>
+<dl class="kv">
+  <dt>{{ t.unit }}</dt><dd>{{ projection.unit_code }}</dd>
+  <dt>{{ t.horizon }}</dt><dd>{{ projection.horizon }}</dd>
+{% for label, value in projection.kpis %}
+  <dt>{{ label }}</dt><dd>{{ value }}</dd>
+{% endfor %}
+</dl>
+{% if projection.fan %}
+<figure><figcaption>{{ t.fan_chart }}</figcaption><div class="chart">{{ projection.fan | safe }}</div></figure>
+{% endif %}
+{% if projection.tornado %}
+<figure><figcaption>{{ t.tornado }}</figcaption><div class="chart">{{ projection.tornado | safe }}</div></figure>
+{% endif %}
+</section>
+{% endif %}
+
+{% if risks %}
+<section id="risks">
+<h2>{{ t.risks }}</h2>
+{% for r in risks %}
+<div class="risk {{ r.level_raw }}"><span class="label">{{ r.kind }}</span> — <span class="level">{{ r.level }}</span><br>{{ r.text }}</div>
+{% endfor %}
+</section>
+{% endif %}
+
+{% if citations %}
+<section id="citations">
+<h2>{{ t.citations }}</h2>
+{% for c in citations %}
+<div class="cite"><span class="label">{{ c.title }}</span> ({{ c.doc_id }})<br><q>{{ c.snippet }}</q></div>
+{% endfor %}
+<p class="meta">{{ t.synthetic_source }}</p>
+</section>
+{% endif %}
+
+<footer>{{ t.disclaimer }}</footer>
+</body>
+</html>

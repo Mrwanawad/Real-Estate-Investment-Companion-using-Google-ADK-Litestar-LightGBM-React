@@ -1,0 +1,152 @@
+{
+  "forecast": {
+    "model": "arima_110_drift_log",
+    "mean_over_areas": {
+      "mape": 0.0592,
+      "mase": 0.9388,
+      "coverage_80": 0.7685,
+      "pinball": 12.5105
+    },
+    "per_area": {
+      "AL": {
+        "mape": 0.0482,
+        "mase": 0.846,
+        "coverage_80": 0.778,
+        "pinball": 11.469,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "HE": {
+        "mape": 0.0496,
+        "mase": 0.798,
+        "coverage_80": 0.778,
+        "pinball": 11.928,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "MA": {
+        "mape": 0.0536,
+        "mase": 0.878,
+        "coverage_80": 0.778,
+        "pinball": 11.1,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "MD": {
+        "mape": 0.0614,
+        "mase": 0.884,
+        "coverage_80": 0.75,
+        "pinball": 18.697,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "MS": {
+        "mape": 0.081,
+        "mase": 1.345,
+        "coverage_80": 0.694,
+        "pinball": 12.828,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "NA": {
+        "mape": 0.0585,
+        "mase": 0.875,
+        "coverage_80": 0.806,
+        "pinball": 10.478,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "NC": {
+        "mape": 0.0637,
+        "mase": 0.98,
+        "coverage_80": 0.75,
+        "pinball": 13.486,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "OC": {
+        "mape": 0.0722,
+        "mase": 1.21,
+        "coverage_80": 0.778,
+        "pinball": 12.969,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "SH": {
+        "mape": 0.0609,
+        "mase": 0.898,
+        "coverage_80": 0.778,
+        "pinball": 10.51,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "SK": {
+        "mape": 0.0549,
+        "mase": 0.891,
+        "coverage_80": 0.778,
+        "pinball": 12.658,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "SZ": {
+        "mape": 0.0502,
+        "mase": 0.771,
+        "coverage_80": 0.778,
+        "pinball": 11.098,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      },
+      "ZM": {
+        "mape": 0.0558,
+        "mase": 0.889,
+        "coverage_80": 0.778,
+        "pinball": 12.903,
+        "origins": 3,
+        "horizon": 12,
+        "points": 36
+      }
+    },
+    "baseline_seasonal_naive_mean_over_areas": {
+      "mape": 0.2041,
+      "mase": 3.0344,
+      "coverage_80": 0.3241,
+      "pinball": 43.0757
+    }
+  },
+  "unit_value": {
+    "candidate": "lightgbm_quantile",
+    "served": "lightgbm_quantile",
+    "promoted": true,
+    "holdout_mae_model": 7807,
+    "holdout_mae_baseline": 17176,
+    "holdout_coverage_80_model": 0.737,
+    "calibration": "split conformal (CQR, log space), target 0.8",
+    "served_log_margin": 0.025,
+    "unit": "EGP per m2"
+  },
+  "rent": {
+    "model": "lightgbm",
+    "holdout_mae": 6587,
+    "holdout_mape": 0.1018,
+    "train_rows": 5000
+  },
+  "meta": {
+    "data": "synthetic demo data (demo_data/synthetic), NOT real prices",
+    "backtest": "rolling origin, 3 non-overlapping origins x 12-month horizon per area",
+    "holdout": "random 20% split, seed 7",
+    "train_and_eval_seconds": 2.32,
+    "run_at": "2026-11-11T15:27:53+00:00",
+    "python": "3.12.12"
+  }
+}

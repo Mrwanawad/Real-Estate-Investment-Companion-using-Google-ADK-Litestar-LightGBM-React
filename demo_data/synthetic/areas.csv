@@ -1,0 +1,13 @@
+id,name_en,name_ar,type,base_price_per_m2_2015,liquidity_tier,gross_rental_yield_base
+NC,New Cairo,القاهرة الجديدة,urban,11000,1,0.0500
+SZ,Sheikh Zayed,الشيخ زايد,urban,10000,1,0.0510
+OC,6th of October,السادس من أكتوبر,urban,7500,2,0.0530
+SH,North Coast,الساحل الشمالي,coastal,14000,2,0.0380
+NA,New Administrative Capital,العاصمة الإدارية الجديدة,urban,8000,2,0.0520
+MS,Mostakbal City,مستقبل سيتي,urban,6500,3,0.0530
+MD,Madinaty,مدينتي,urban,9500,1,0.0520
+MA,Maadi,المعادي,urban,14000,1,0.0480
+ZM,Zamalek,الزمالك,urban,28000,1,0.0440
+AL,New Alamein,العلمين الجديدة,coastal,12000,2,0.0400
+SK,Ain Sokhna,العين السخنة,coastal,9000,3,0.0420
+HE,Heliopolis,مصر الجديدة,urban,12000,1,0.0490

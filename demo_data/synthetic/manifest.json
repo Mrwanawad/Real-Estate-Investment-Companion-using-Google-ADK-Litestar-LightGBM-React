@@ -1,0 +1,43 @@
+{
+  "files": {
+    "area_price_index.csv": {
+      "rows": 1704,
+      "sha256": "e05df7ce03f4312b2120772966b83166d78549d8a4398673721cd4f46dab921f"
+    },
+    "areas.csv": {
+      "rows": 12,
+      "sha256": "133597a0ef23adf20e9a3ed0981dfa718d3e79aeff0d7eb282bfca87c9195b98"
+    },
+    "developers.csv": {
+      "rows": 15,
+      "sha256": "89901a018c968050c983d05687807859ac9d853402e2b12bddc8e0ab64b243be"
+    },
+    "macro_monthly.csv": {
+      "rows": 142,
+      "sha256": "95eb9afd2315febe7d3c0b2cd123c49aa71d719af522e9b609948cb5dce31b7c"
+    },
+    "payment_plans.csv": {
+      "rows": 82,
+      "sha256": "27be4d70ab206023280635b51059b98449f5ef480b120b95dbb4bbde11c2f492"
+    },
+    "projects.csv": {
+      "rows": 40,
+      "sha256": "224b7865b4fbd112368e6490d2a5caf3ac5dd26754d798aeadf437f8fed1955d"
+    },
+    "rental_listings.csv": {
+      "rows": 5000,
+      "sha256": "48aadea4a93ba61788bbd430a1fd8c2303c41a56c3c950887cbc3d4c68721e03"
+    },
+    "units.csv": {
+      "rows": 1500,
+      "sha256": "7fa09e44fbfdf850e43fa9a3db92989a88dbeeb585b12a556df748c14f0bc9ac"
+    }
+  },
+  "options": {
+    "listings": 5000,
+    "projects": 40,
+    "units": 1500
+  },
+  "seed": 20261109,
+  "synthetic": true
+}

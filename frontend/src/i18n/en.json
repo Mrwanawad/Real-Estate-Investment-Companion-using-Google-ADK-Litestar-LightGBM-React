@@ -1,0 +1,85 @@
+{
+  "app": { "title": "Real Estate Investment Companion" },
+  "banner": { "synthetic": "Synthetic demo data" },
+  "welcome": "Compare units, financing and returns with a guided companion.",
+  "language": { "toggle": "العربية" },
+  "nav": { "chat": "Back to chat", "broker": "Broker view" },
+  "chat": {
+    "placeholder": "Ask about units, financing or returns",
+    "send": "Send",
+    "contactBroker": "Contact a broker",
+    "brokerMessage": "I would like to speak with a broker.",
+    "error": "Something went wrong. Please try again.",
+    "suggestion1": "I have 5M EGP, want to rent out in New Cairo, 5 year horizon",
+    "suggestion2": "Compare payment plans for a 2 bedroom apartment",
+    "suggestion3": "What are the risks of buying off-plan?"
+  },
+  "tool": {
+    "working": "Working on it…",
+    "search_units": "Checking inventory…",
+    "compare_financing": "Comparing financing options…",
+    "project_returns": "Projecting returns…",
+    "assess_risks": "Assessing risks…",
+    "search_knowledge": "Searching the knowledge base…",
+    "create_lead": "Passing your details to a broker…",
+    "build_report": "Building your report…"
+  },
+  "unit": {
+    "bedrooms_one": "{{count}} bedroom",
+    "bedrooms_other": "{{count}} bedrooms",
+    "m2": "m²",
+    "delivery": "Delivery {{year}}",
+    "tier": "Developer tier {{tier}}",
+    "score": "Match score {{score}}"
+  },
+  "artifact": {
+    "financing": "Financing options for {{code}}",
+    "projection": "Projected returns for {{code}} over {{years}} years",
+    "risks": "Risks",
+    "sources": "Sources",
+    "handoff": "A broker will contact you. Reference: {{id}}.",
+    "reportHtml": "Open report",
+    "reportPdf": "Download PDF"
+  },
+  "financing": {
+    "option": "Option",
+    "upfront": "Upfront",
+    "monthly": "Avg. monthly",
+    "total": "Total nominal",
+    "pv": "Present value",
+    "cheapest": "Cheapest",
+    "chartLabel": "Bar chart of present value per financing option"
+  },
+  "projection": {
+    "valueP50": "Median value at horizon",
+    "valueRange": "Value range (P10 - P90)",
+    "rent": "Monthly rent (median)",
+    "yield": "Gross yield",
+    "irr": "IRR median (P10 - P90)",
+    "probLoss": "Probability of loss",
+    "breakEven": "Break-even year",
+    "none": "Not within horizon",
+    "year": "Year",
+    "chartLabel": "Fan chart of projected value with P10 to P90 band and median line"
+  },
+  "risk": { "low": "Low", "medium": "Medium", "high": "High" },
+  "status": { "new": "New", "contacted": "Contacted", "qualified": "Qualified", "closed": "Closed" },
+  "broker": {
+    "title": "Broker leads",
+    "apiKey": "API key",
+    "filter": "Status",
+    "all": "All",
+    "load": "Load leads",
+    "empty": "No leads found.",
+    "unauthorized": "Invalid API key (401).",
+    "unavailable": "Broker access is not configured on the server (503).",
+    "failed": "Could not complete the request.",
+    "created": "Created",
+    "name": "Name",
+    "contact": "Phone / email",
+    "goal": "Goal",
+    "budget": "Budget",
+    "status": "Status",
+    "summary": "Summary"
+  }
+}

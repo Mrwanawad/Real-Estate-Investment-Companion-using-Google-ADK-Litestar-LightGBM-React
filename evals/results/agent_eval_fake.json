@@ -1,0 +1,163 @@
+{
+  "summary": {
+    "provider": "fake",
+    "scenarios": 10,
+    "task_success": 0.9,
+    "clarification_quality": 1.0,
+    "grounding": 1.0,
+    "mean_seconds": 0.21
+  },
+  "results": [
+    {
+      "scenario": "rent_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "update_profile",
+        "search_units",
+        "compare_financing",
+        "project_returns"
+      ],
+      "artifacts": [
+        "financing",
+        "projection",
+        "risks",
+        "shortlist"
+      ],
+      "seconds": 0.57
+    },
+    {
+      "scenario": "resell_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "update_profile",
+        "search_units",
+        "compare_financing",
+        "project_returns"
+      ],
+      "artifacts": [
+        "financing",
+        "projection",
+        "risks",
+        "shortlist"
+      ],
+      "seconds": 0.48
+    },
+    {
+      "scenario": "live_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "update_profile",
+        "search_units",
+        "compare_financing",
+        "project_returns"
+      ],
+      "artifacts": [
+        "financing",
+        "projection",
+        "risks",
+        "shortlist"
+      ],
+      "seconds": 0.56
+    },
+    {
+      "scenario": "rent_ar",
+      "language": "ar",
+      "task_success": false,
+      "grounded": true,
+      "tools": [
+        "update_profile",
+        "search_units"
+      ],
+      "artifacts": [],
+      "seconds": 0.02
+    },
+    {
+      "scenario": "resell_ar",
+      "language": "ar",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "update_profile",
+        "search_units",
+        "compare_financing",
+        "project_returns"
+      ],
+      "artifacts": [
+        "financing",
+        "projection",
+        "risks",
+        "shortlist"
+      ],
+      "seconds": 0.35
+    },
+    {
+      "scenario": "missing_budget_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "update_profile"
+      ],
+      "artifacts": [],
+      "seconds": 0.02,
+      "clarified": true
+    },
+    {
+      "scenario": "missing_budget_ar",
+      "language": "ar",
+      "task_success": true,
+      "grounded": true,
+      "tools": [],
+      "artifacts": [],
+      "seconds": 0.01,
+      "clarified": true
+    },
+    {
+      "scenario": "knowledge_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "search_knowledge"
+      ],
+      "artifacts": [
+        "citations"
+      ],
+      "seconds": 0.02
+    },
+    {
+      "scenario": "knowledge_ar",
+      "language": "ar",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "search_knowledge"
+      ],
+      "artifacts": [
+        "citations"
+      ],
+      "seconds": 0.02
+    },
+    {
+      "scenario": "broker_contact_en",
+      "language": "en",
+      "task_success": true,
+      "grounded": true,
+      "tools": [
+        "create_lead",
+        "update_profile",
+        "create_lead"
+      ],
+      "artifacts": [
+        "handoff"
+      ],
+      "seconds": 0.04
+    }
+  ]
+}

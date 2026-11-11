@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.local
+.pytest_cache/
+.ruff_cache/
+.import_linter_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.devdata/
+node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+# Model caches (downloaded weights). Trained artifacts live in models/ and are tracked.
+.cache/
+huggingface/
+hf_cache/
+*.safetensors
+
+# Local tool settings
+.claude/

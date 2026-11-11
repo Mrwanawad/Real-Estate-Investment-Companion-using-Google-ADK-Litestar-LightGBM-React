@@ -1,0 +1,25 @@
+{
+  "embedder": "hashing-384",
+  "questions": 26,
+  "questions_by_language": {
+    "en": 14,
+    "ar": 12
+  },
+  "chunks": 99,
+  "k": 4,
+  "data": "synthetic corpus in demo_data/docs",
+  "results": {
+    "bm25": {
+      "recall@4": 1.0,
+      "mrr": 0.9808
+    },
+    "vector": {
+      "recall@4": 1.0,
+      "mrr": 0.9231
+    },
+    "hybrid": {
+      "recall@4": 1.0,
+      "mrr": 0.9615
+    }
+  }
+}

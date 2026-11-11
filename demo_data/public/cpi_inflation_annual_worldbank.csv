@@ -1,0 +1,12 @@
+year,inflation_cpi_annual_avg_pct_wb_FP.CPI.TOTL.ZG,source_url,retrieved_at
+2015,10.37049,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2016,13.813606,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2017,29.506608,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2018,14.401466,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2019,9.1528,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2020,5.044933,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2021,5.214049,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2022,13.895661,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2023,33.884776,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2024,28.27059,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z
+2025,14.073514,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=100,2026-11-09T20:24:48Z

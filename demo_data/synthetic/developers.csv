@@ -1,0 +1,16 @@
+id,name_en,tier,on_time_delivery_rate
+D01,Kemet Vista Developments,A,0.89
+D02,Tamarisk Estates,A,0.85
+D03,Nilufar Homes,A,0.93
+D04,Zephyra Group,A,0.87
+D05,Solara Living,B,0.80
+D06,Meridian Crest,B,0.80
+D07,Aurelia Urban,B,0.81
+D08,Sandrose Developments,B,0.80
+D09,Cobalt Nile Properties,B,0.77
+D10,Wadi Bloom Developments,B,0.78
+D11,Ibis Gate Properties,C,0.66
+D12,Saffron Bay Developments,C,0.65
+D13,Alder Horizon,C,0.57
+D14,Dunemark Group,C,0.53
+D15,Lumen Habitat,C,0.61

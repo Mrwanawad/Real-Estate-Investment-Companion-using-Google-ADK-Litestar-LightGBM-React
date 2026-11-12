@@ -172,3 +172,24 @@ async def test_backend_failure_is_reported_not_fatal() -> None:
     )
     assert events[-1].kind == "done"
     assert not [e for e in events if e.kind == "error"]
+
+
+class StreamingFakeLlm(FakeLlm):
+    """Like Gemini in SSE mode: each response arrives as a partial chunk, then the aggregate."""
+
+    async def generate_content_async(self, llm_request, stream=False):  # type: ignore[no-untyped-def]
+        response = self._next(llm_request)
+        if stream:
+            yield response.model_copy(update={"partial": True})
+        yield response
+
+
+async def test_streamed_tool_calls_are_reported_once() -> None:
+    service = ChatService(AdkEngine(StreamingFakeLlm(), stream=True), StubBackend())
+    sid = service.create_session("en")
+    events = await _collect(
+        service, sid, "I have 5M EGP, want to rent it out in New Cairo for 5 years"
+    )
+    started = [e.data["name"] for e in events if e.kind == "tool" and e.data["status"] == "started"]
+    assert started == ["update_profile", "search_units", "compare_financing", "project_returns"]
+    assert events[-1].kind == "done"

@@ -4,7 +4,7 @@ Last updated: 2026-11-12. Full design: `architecture.md`. Build plan: `PLAN.md`.
 
 ## Current State
 - Build steps 1-13 done. Deployed 2026-11-12: UI https://reic-companion.mrwaanawad.workers.dev (Cloudflare Workers static assets, `frontend/wrangler.jsonc`), API https://reic-companion.fly.dev (Fly app `reic-companion`, fra, 1 shared CPU / 1 GB, auto-stop), DB Neon project `muddy-fog-02761591` (org-restless-pond-36388009, aws-eu-central-1, PG 18), migrated + seeded from this machine. Verified: /health, inventory search, CORS from UI origin, broker 401/200. Chat blocked only by Gemini free-tier daily quota (429).
-- Backend: 191 tests pass (unit + integration on embedded Postgres). ruff check, ruff format --check, 6/6 import-linter contracts pass.
+- Backend: 192 tests pass (unit + integration on embedded Postgres). ruff check, ruff format --check, 6/6 import-linter contracts pass.
 - Frontend: lint, typecheck, 10 vitest tests, build pass.
 - E2E: `scripts/smoke_e2e.py` passes against `scripts/dev_stack.py --provider fake` (EN journey, knowledge + citations, HTML report, broker handoff + broker queue auth, Arabic session). UI checked in Chrome in EN and AR (RTL), broker page loads leads.
 - Live LLM (2026-11-12): valid key now in `.env`, but the old invalid system-wide `GEMINI_API_KEY` wins over `.env` in pydantic-settings, so export the `.env` key into the shell before `dev_stack.py`. Model `gemini-3.5-flash` (2.5-flash closed to new keys; 3.8-flash hangs with 504). Live smoke on 3.5-flash: buyer journey (update_profile, search_units, compare_financing, project_returns) passes in ~21s. Free tier = 5 RPM and 20 requests/day per model, which ran out before the knowledge/report/Arabic steps and the full agent eval. Live eval on `gemini-3.1-flash-lite` (no quota issues): task success 0.60, clarification 1.00, grounding 0.70, 5.3 s/scenario; it often stops after search_units and states untraced figures. Recorded in README and `evals/results/agent_eval_gemini-3.1-flash-lite.json`.
@@ -17,7 +17,7 @@ Last updated: 2026-11-12. Full design: `architecture.md`. Build plan: `PLAN.md`.
 - scenarios: NumPy Monte Carlo (value, rent, IRR, break-even, sensitivity) + rule-based risks EN/AR.
 - knowledge: 16 synthetic docs (10 EN, 6 AR), BM25 + hashing/MiniLM vectors + RRF, in-memory index.
 - handoff: leads table (0003), broker API (X-API-Key guard), HMAC webhook signing `ts.body`.
-- reports: Jinja2 HTML EN/AR with inline SVG; PDF via WeasyPrint when GTK exists (not on this machine, so PDF link is null).
+- reports: Jinja2 HTML EN/AR with inline SVG; PDF via WeasyPrint: works on prod (EN and AR verified 2026-11-12, pango + fonts in image); null locally (no GTK).
 - companion: ADK `LlmAgent` per turn, 7 tools (update_profile, search_units, compare_financing, project_returns, search_knowledge, create_lead, build_report), SSE chat API, grounding check on numbers, provider chain anthropic -> gemini with circuit breaker, scripted `FakeLlm` for tests/offline demo. Gateway over other modules in `bootstrap/companion.py`.
 
 ## Real metrics (synthetic data)
@@ -31,7 +31,7 @@ Last updated: 2026-11-12. Full design: `architecture.md`. Build plan: `PLAN.md`.
 - Dockerfile (python:3.12-slim + pango for WeasyPrint), .dockerignore, fly.toml, CI updated, README rewritten. Docker image never built (not allowed on this machine).
 
 ## Decisions
-- Gemini client: 60s request timeout + 3 retry attempts with backoff (429/5xx) via ADK `retry_options`. Tool "started" events only from non-partial ADK events (SSE mode repeated every call). Smoke/eval take `--pause SECONDS` per turn for free-tier keys.
+- Gemini client: 60s request timeout + 3 retry attempts with backoff (429/5xx) via ADK `retry_options`. Tool "started" events only from non-partial ADK events (SSE mode repeated every call); regression test `test_streamed_tool_calls_are_reported_once`. Smoke/eval take `--pause SECONDS` per turn for free-tier keys.
 - Rate limit (2026-11-12): Litestar RateLimitMiddleware on POST /leads, POST /chat/sessions, POST /chat/sessions/{id}/messages only; `RATE_LIMIT_PER_MINUTE` (default 20, 0 off), client id from `CLIENT_IP_HEADER` when set (fly.toml sets Fly-Client-IP), else socket IP. In-memory store (single machine). dev_stack sets it to 0 so smoke/eval can burst. Code: `bootstrap/rate_limit.py`.
 - See PLAN.md locked decisions. Added: knowledge index in memory (corpus is small; pgvector not needed yet). Chat sessions in memory (single process, capped at 2000).
 - Webhook signature = HMAC-SHA256 over `"<timestamp>." + body`, header `X-REIC-Signature: sha256=<hex>` + `X-REIC-Timestamp`.
@@ -41,7 +41,7 @@ Last updated: 2026-11-12. Full design: `architecture.md`. Build plan: `PLAN.md`.
 - Live eval on gemini-3.5-flash needs quota: enable billing on the Gemini key's project (cents per run) or wait for the daily reset, then `scripts/smoke_e2e.py --pause 15` and `scripts/eval_agent.py --provider gemini --pause 15`; record numbers in README.
 - Redeploy: API `flyctl deploy --remote-only --ha=false -a reic-companion`; UI `cd frontend && VITE_API_URL=https://reic-companion.fly.dev npm run build && npx wrangler deploy` (static assets worker per `frontend/wrangler.jsonc`). Fly secrets: GEMINI_API_KEY, BROKER_API_KEY, DATABASE_URL, CORS_ORIGINS. Local copies outside repo: `%LOCALAPPDATA%
 eicroker_api_key.txt`, `neon_database_url.txt` (asyncpg URL uses `ssl=require`; `scripts/seed.py` needs `sslmode=require` instead).
-- Optional: async webhook; PDF in Docker (GTK in image).
+- Optional: async webhook. Delete the stale system-wide GEMINI_API_KEY on this machine.
 
 ## Gotchas
 - `wrangler pages project create` auto-edits package.json/vite.config.ts (Cloudflare Vite plugin); don't rerun it, use `npx wrangler deploy`.

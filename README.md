@@ -2,7 +2,9 @@
 
 A bilingual (English / Egyptian Arabic) AI companion for real estate buyers and small investors. It turns a conversation into a decision pack: a shortlist of units, a cash vs. installments vs. mortgage comparison, resale and rental projections as P10 / P50 / P90 ranges, a risk summary, cited answers from company policy documents, a shareable report, and a handoff to a broker.
 
-**Live demo:** UI https://reic-companion.mrwaanawad.workers.dev · API https://reic-companion.fly.dev/health
+**Live demo:** UI https://reic-companion.mrwaanawad.workers.dev · API https://reic-companion.fly.dev/health · API docs https://reic-companion.fly.dev/schema/swagger
+
+**Try it:** *"I have 5M EGP and want to rent it out in New Cairo for 5 years"*, then *"What is the cancellation and refund policy?"*, *"Build my report"* and *"I want to talk to a broker"*. Switch to Arabic in the header, or open the broker queue at `#/broker`.
 
 > **All inventory, market data and documents in this repo are synthetic.** Nothing here is real pricing, a real listing, or investment advice.
 
@@ -40,6 +42,13 @@ flowchart LR
 
 A typical turn: the buyer says *"I have 5M EGP and want to rent it out in New Cairo for 5 years."* The agent saves goal, budget, area and horizon to the profile, searches units within budget, compares the three payment routes on the best fit, and projects value and rent over 5 years. The UI then shows each result as an artifact (shortlist, financing table, fan chart, risk list) next to a short explanation. If the budget or goal is missing, the agent asks before it searches.
 
+## The interface
+
+- **Chat:** answers stream in token by token, with live tool status (for example "Checking inventory…").
+- **Result cards:** a shortlist with a fit score per unit, a financing comparison table, a Plotly fan chart of value at P10/P50/P90, a risk list with levels, numbered citations, a handoff confirmation, and HTML/PDF report links.
+- **Language:** a one-click switch between English and Egyptian Arabic. The whole layout flips to right-to-left, and the agent replies in the chosen language.
+- **Broker page:** the lead queue with buyer profiles, filterable by status, behind the broker API key. Status moves new → contacted → qualified → closed through `PATCH /broker/leads/{id}`, which rejects invalid transitions.
+
 ## The pieces
 
 | Module | What it does | Method |
@@ -54,6 +63,15 @@ A typical turn: the buyer says *"I have 5M EGP and want to rent it out in New Ca
 | `reports` | Shareable report | Jinja2 HTML in EN/AR (RTL) with inline SVG charts. PDF through WeasyPrint (works in the deployed image, Arabic included; locally it needs GTK) |
 
 Each module follows `domain / ports / application / adapters`. import-linter enforces 6 contracts: layers point inward, modules don't import each other, and domain/application code stays free of frameworks and vendors (no Litestar, SQLAlchemy, LightGBM or Google imports in the core). Cross-module calls go through gateways in `src/reic/bootstrap/`.
+
+## Data
+
+| Set | Content | Provenance |
+| --- | --- | --- |
+| Inventory | 12 real Egyptian districts, 15 fictional developers, 40 projects, 1,500 units, 82 payment plans | Synthetic, `scripts/generate_synthetic_data.py`, fixed seed, sha256 manifest |
+| Market | Monthly price index per area 2015-2026 with the 2016, 2022, 2023 and 2024 devaluation jumps; 5,000 rental listings | Synthetic, driven by the macro series below |
+| Macro | CPI, EGP/USD, CBE overnight rates | Real anchors from the World Bank and the CBE, each row with source URL and retrieval time (`demo_data/public/`). Monthly series are interpolated and labelled as such |
+| Knowledge | 16 policy documents (10 EN, 6 AR): cancellation, installments, mortgage, registration (Shahr Akary), resale fees, delivery delays, maintenance, rentals | Synthetic, written for the demo |
 
 ## Evaluation
 
@@ -84,6 +102,15 @@ How to read the agent rows:
 
 Tests: 192 backend tests (unit, API, seeded property tests, integration on embedded Postgres) and 10 frontend tests. `scripts/smoke_e2e.py` runs the full journey against a running stack: English buyer journey, knowledge answer with citations, HTML report, broker handoff with queue auth, and an Arabic session.
 
+## Engineering notes
+
+Things the live runs taught us, now handled in code:
+- **Duplicated tool calls in streaming.** Gemini's SSE mode sends every function call twice, once as a partial chunk and again in the final event, so the trace showed each tool twice. Tool status now comes from final events only, with a regression test.
+- **Model churn.** `gemini-2.5-flash` was closed to new keys, and `gemini-3.8-flash` hung until a 504. The default moved to `gemini-3.5-flash`, and Gemini calls now have a 60 s timeout and retries with backoff on 429/5xx before the provider chain sees an error.
+- **Native dependencies in the image.** The first deploy crashed because LightGBM needs `libgomp1`, which slim Debian doesn't ship. It's now part of the image.
+- **Public write endpoints.** Lead creation and chat creation are rate limited per client. Behind Fly's proxy the client is identified by `Fly-Client-IP`, because every request arrives from the proxy's address.
+- **Schema-safe prompts.** ADK treats `{...}` in instructions as state templates, so the profile JSON broke prompts. The instruction is now passed as a callable.
+
 ## Quickstart
 
 ```
@@ -96,6 +123,20 @@ python scripts/smoke_e2e.py                     # end-to-end check against the r
 You don't need Docker, a Postgres install or an API key: `dev_stack.py` starts an embedded Postgres, and the `fake` provider is scripted. Use `--provider gemini` (with `GEMINI_API_KEY`) for the real model.
 
 Checks: `uv run ruff check . && uv run ruff format --check . && uv run lint-imports && uv run pytest`.
+
+```
+src/reic/
+  bootstrap/        app factory, dependency wiring, cross-module gateways, rate limit
+  modules/<name>/   domain / ports / application / adapters (inbound, outbound)
+  shared/           settings, database, observability
+frontend/           React + Vite UI (chat, artifacts, broker page, EN/AR)
+scripts/            data generation, seeding, training, evals, dev stack, smoke test
+evals/              RAG gold set and recorded results
+migrations/         Alembic (pgvector, inventory and market, leads)
+demo_data/          synthetic data, public anchors, policy documents
+```
+
+Design details: [`architecture.md`](architecture.md).
 
 ## Configuration
 
@@ -127,7 +168,7 @@ See `.env.example` for every setting.
 | Database | Neon Postgres (Frankfurt) | Seeded with `scripts/seed.py` |
 | UI | Cloudflare Workers static assets | `frontend/wrangler.jsonc`, SPA fallback |
 
-API: set secrets with `fly secrets set DATABASE_URL=... GEMINI_API_KEY=... BROKER_API_KEY=... CORS_ORIGINS=...`, then run `fly deploy --remote-only`. The image leaves out the `forecast` (Prophet) and `retrieval` (sentence-transformers) extras to stay small.
+API: set secrets with `fly secrets set DATABASE_URL=... GEMINI_API_KEY=... BROKER_API_KEY=... CORS_ORIGINS=...`, then run `fly deploy --remote-only`. The image leaves out the `retrieval` extra (sentence-transformers) to stay small.
 
 UI: from `frontend/`, run `VITE_API_URL=<API URL> npm run build`, then `npx wrangler deploy`. Add the UI origin to `CORS_ORIGINS`.
 
@@ -144,4 +185,5 @@ Python 3.12 · uv · Litestar · Pydantic · SQLAlchemy 2 + Alembic · PostgreSQ
 - The RAG eval uses the hashing embedder on a small corpus, and the gold set is easy.
 - Live agent numbers so far are from `gemini-3.1-flash-lite`. A full `gemini-3.5-flash` eval needs a paid-tier key.
 - Chat sessions and the knowledge index live in memory (single machine). Rate limits use an in-memory store.
-- The container has no Prophet or sentence-transformers, so it uses the hashing embedder unless `retrieval` is added.
+- The container uses the hashing embedder; add the `retrieval` extra for MiniLM or bge-m3.
+- No cross-encoder reranker. Hybrid retrieval already reaches Recall@4 = 1.00 on the gold set, so it wasn't needed at this corpus size.

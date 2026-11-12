@@ -31,9 +31,6 @@ ml = [
     "scikit-learn>=1.8",
     "statsmodels>=0.15",
 ]
-forecast = [
-    "prophet>=1.5",
-]
 retrieval = [
     "sentence-transformers>=6.2",
 ]

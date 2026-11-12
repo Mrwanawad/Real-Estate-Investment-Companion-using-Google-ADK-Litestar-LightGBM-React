@@ -23,3 +23,7 @@ hf_cache/
 
 # Local tool settings
 .claude/
+
+# Local working notes
+PLAN.md
+CHECKPOINT.md

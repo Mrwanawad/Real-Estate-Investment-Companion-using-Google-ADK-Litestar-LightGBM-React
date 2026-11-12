@@ -187,3 +187,7 @@ Python 3.12 · uv · Litestar · Pydantic · SQLAlchemy 2 + Alembic · PostgreSQ
 - Chat sessions and the knowledge index live in memory (single machine). Rate limits use an in-memory store.
 - The container uses the hashing embedder; add the `retrieval` extra for MiniLM or bge-m3.
 - No cross-encoder reranker. Hybrid retrieval already reaches Recall@4 = 1.00 on the gold set, so it wasn't needed at this corpus size.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

@@ -2,6 +2,8 @@
 name = "real-estate-investment-companion"
 version = "0.1.0"
 description = "AI companion that helps real estate buyers compare units, financing and returns"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "alembic>=1.20",

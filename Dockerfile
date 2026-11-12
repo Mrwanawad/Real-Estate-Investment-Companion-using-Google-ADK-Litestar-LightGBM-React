@@ -2,9 +2,9 @@ FROM python:3.12-slim
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
-# WeasyPrint runtime libraries (reports extra)
+# WeasyPrint runtime libraries (reports extra) and OpenMP for LightGBM (ml extra)
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 \
+    && apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app

@@ -3,7 +3,7 @@
 Last updated: 2026-11-12. Full design: `architecture.md`. Build plan: `PLAN.md`.
 
 ## Current State
-- Build steps 1-12 done. Step 13: published to GitHub (public, CI green); deploy not started.
+- Build steps 1-13 done. Deployed 2026-11-12: UI https://reic-companion.mrwaanawad.workers.dev (Cloudflare, Workers static assets via `wrangler pages`), API https://reic-companion.fly.dev (Fly app `reic-companion`, fra, 1 shared CPU / 1 GB, auto-stop), DB Neon project `muddy-fog-02761591` (org-restless-pond-36388009, aws-eu-central-1, PG 18), migrated + seeded from this machine. Verified: /health, inventory search, CORS from UI origin, broker 401/200. Chat blocked only by Gemini free-tier daily quota (429).
 - Backend: 191 tests pass (unit + integration on embedded Postgres). ruff check, ruff format --check, 6/6 import-linter contracts pass.
 - Frontend: lint, typecheck, 10 vitest tests, build pass.
 - E2E: `scripts/smoke_e2e.py` passes against `scripts/dev_stack.py --provider fake` (EN journey, knowledge + citations, HTML report, broker handoff + broker queue auth, Arabic session). UI checked in Chrome in EN and AR (RTL), broker page loads leads.
@@ -39,10 +39,11 @@ Last updated: 2026-11-12. Full design: `architecture.md`. Build plan: `PLAN.md`.
 
 ## Next
 - Live eval on gemini-3.5-flash needs quota: enable billing on the Gemini key's project (cents per run) or wait for the daily reset, then `scripts/smoke_e2e.py --pause 15` and `scripts/eval_agent.py --provider gemini --pause 15`; record numbers in README.
-- Deploy: flyctl, neonctl, wrangler not installed; each needs an interactive login (Fly also wants a card). Fly.io (API) + Neon (DB) + Cloudflare Pages (UI).
+- Redeploy: API `flyctl deploy --remote-only --ha=false -a reic-companion`; UI `cd frontend && VITE_API_URL=https://reic-companion.fly.dev npm run build && wrangler pages deploy dist --project-name reic-companion --branch main`. Fly secrets: GEMINI_API_KEY, BROKER_API_KEY, DATABASE_URL, CORS_ORIGINS. Local copies outside repo: `%LOCALAPPDATA%eicroker_api_key.txt`, `neon_database_url.txt` (asyncpg URL uses `ssl=require`; `scripts/seed.py` needs `sslmode=require` instead).
 - Optional: async webhook; PDF in Docker (GTK in image).
 
 ## Gotchas
+- Image needs `libgomp1` for LightGBM (first deploy crashed without it). neonctl prompts for org interactively; pass `--org-id`.
 - `GEMINI_API_KEY` set system-wide here is invalid; tests force `LLM_PROVIDER=fake`.
 - `scripts/dev_stack.py` keeps pgdata in `%LOCALAPPDATA%\reic\pgdata` (pgserver breaks on spaced paths). API on :8000, broker key `dev-broker-key`.
 - ADK instruction is passed as a callable so the profile's braces are not treated as state templates.

@@ -1,11 +1,9 @@
+// Static UI on Cloudflare. Build with VITE_API_URL set, then `npx wrangler deploy`.
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "reic-frontend",
+  "name": "reic-companion",
   "compatibility_date": "2026-11-10",
-  "observability": {
-    "enabled": true
-  },
   "assets": {
+    "directory": "./dist",
     "not_found_handling": "single-page-application"
   }
 }

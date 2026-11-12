@@ -73,7 +73,7 @@ Live: UI https://reic-companion.mrwaanawad.workers.dev, API https://reic-compani
 
 Backend: `Dockerfile` and `fly.toml` (Fly.io app `reic-companion`, port 8080, `/health` check, machines auto-stop). The container runs `alembic upgrade head` and then the API. Set secrets with `fly secrets set DATABASE_URL=... GEMINI_API_KEY=... BROKER_API_KEY=... WEBHOOK_SECRET=...`; use a Postgres with pgvector (Neon). The image omits the `forecast` and `retrieval` extras to stay small.
 
-Frontend: Cloudflare Pages, build command `npm run build`, output directory `frontend/dist`, environment variable `VITE_API_URL` pointing at the API. Add the Pages origin to `CORS_ORIGINS`.
+Frontend: Cloudflare Workers static assets (`frontend/wrangler.jsonc`). From `frontend/`, run `VITE_API_URL=<API URL> npm run build` and then `npx wrangler deploy`. Add the Pages origin to `CORS_ORIGINS`.
 
 ## Limitations
 

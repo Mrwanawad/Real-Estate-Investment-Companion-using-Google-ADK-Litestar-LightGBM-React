@@ -4,8 +4,5 @@ dist
 .env
 .env.local
 
-# wrangler files
+# Wrangler local state
 .wrangler
-.dev.vars*
-!.dev.vars.example
-!.env.example

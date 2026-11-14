@@ -2,6 +2,8 @@
 
 A bilingual (English / Egyptian Arabic) AI companion for real estate buyers and small investors. It turns a conversation into a decision pack: a shortlist of units, a cash vs. installments vs. mortgage comparison, resale and rental projections as P10 / P50 / P90 ranges, a risk summary, cited answers from company policy documents, a shareable report, and a handoff to a broker.
 
+<p align="center"><img src="docs/demo.gif" width="100%" alt="Demo: a buyer asks for a rental investment in New Cairo with 5M EGP, the companion compares cash, installment and mortgage options with the cheapest route highlighted, answers a refund policy question with cited sources, and hands the buyer off to a broker."/></p>
+
 **Live demo:** UI https://reic-companion.mrwaanawad.workers.dev · API https://reic-companion.fly.dev/health · API docs https://reic-companion.fly.dev/schema/swagger
 
 **Try it:** *"I have 5M EGP and want to rent it out in New Cairo for 5 years"*, then *"What is the cancellation and refund policy?"*, *"Build my report"* and *"I want to talk to a broker"*. Switch to Arabic in the header, or open the broker queue at `#/broker`.

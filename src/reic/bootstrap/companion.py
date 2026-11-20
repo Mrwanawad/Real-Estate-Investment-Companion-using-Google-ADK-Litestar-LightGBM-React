@@ -19,6 +19,7 @@ from reic.modules.financing.application.use_cases import CompareFinancingOptions
 from reic.modules.handoff.application.service import HandoffService
 from reic.modules.inventory.adapters.outbound.sql_unit_store import SqlUnitStore
 from reic.modules.inventory.application.use_cases import BuildShortlist
+from reic.modules.inventory.domain.areas import AreaResolver
 from reic.modules.inventory.domain.errors import InventoryError
 from reic.modules.inventory.domain.models import UnitDetail, UnitQuery
 from reic.modules.knowledge.application.service import KnowledgeService
@@ -115,6 +116,7 @@ class AppBackend:
         self._scenarios = scenarios
         self._knowledge = knowledge
         self._handoff = handoff
+        self._areas: dict[str, Any] | None = None
 
     async def shortlist(self, criteria: dict[str, Any], goal: str, limit: int) -> dict[str, Any]:
         query = UnitQuery(
@@ -265,6 +267,13 @@ class AppBackend:
                 for h in hits
             ]
         }
+
+    async def areas_mentioned(self, text: str) -> list[str]:
+        if self._areas is None:  # areas never change at runtime; load them once
+            async with self._sessions() as session:
+                self._areas = {a.id: a for a in await SqlUnitStore(session).list_areas()}
+        ids = AreaResolver(self._areas.values()).mentioned(text)
+        return [self._areas[i].name_en for i in ids]
 
     async def create_lead(self, lead: dict[str, Any]) -> dict[str, Any]:
         return await self._handoff.create_lead(lead)

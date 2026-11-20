@@ -141,6 +141,12 @@ class ChatService:
             state.profile = state.profile.merge(language=language)
         lang = state.profile.language
         message = message[:MAX_MESSAGE_CHARS]
+        # Small models sometimes drop the area from update_profile; a named area is never lost.
+        try:
+            if mentioned := await self._backend.areas_mentioned(message):
+                state.profile = state.profile.merge(areas=mentioned)
+        except Exception:
+            log.warning("area detection failed", exc_info=True)
         toolbox = ToolBox(state, self._backend, pdf_available=self._pdf_available)
         answer: list[str] = []
         shown: list[dict[str, Any]] = []

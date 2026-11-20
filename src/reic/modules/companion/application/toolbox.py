@@ -134,7 +134,12 @@ class ToolBox:
             "missing_for_shortlist": missing,
             "missing_for_projection": missing_for(self.profile, "projection"),
         }
-        if not missing and not self.profile.unit_codes:
+        if (phone or email) and not self._state.lead_id:
+            result["next"] = (
+                "contact saved: if the buyer asked for a broker or to be contacted, "
+                "call create_lead now"
+            )
+        elif not missing and not self.profile.unit_codes:
             result["next"] = "goal and budget are known: call search_units now"
         return result
 

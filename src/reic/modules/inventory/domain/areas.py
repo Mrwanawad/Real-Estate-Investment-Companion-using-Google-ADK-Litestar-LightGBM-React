@@ -81,3 +81,12 @@ class AreaResolver:
             aid for name, aid in self._index.items() if len(name) >= 4 and f" {name} " in padded
         }
         return hits.pop() if len(hits) == 1 else None
+
+    def mentioned(self, text: str) -> list[str]:
+        """Area ids named anywhere in free text, in order of first mention."""
+        padded = f" {normalize(text)} "
+        found: dict[str, int] = {}
+        for name, aid in self._index.items():
+            if len(name) >= 4 and (at := padded.find(f" {name} ")) >= 0:
+                found[aid] = min(at, found.get(aid, at))
+        return sorted(found, key=found.__getitem__)

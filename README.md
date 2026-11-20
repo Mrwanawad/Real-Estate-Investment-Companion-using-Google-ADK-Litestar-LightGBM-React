@@ -16,7 +16,7 @@ A bilingual (English / Egyptian Arabic) AI real estate consultant for buyers and
 - **Ranges, not point guesses.** Area forecasts, unit values and returns come with calibrated intervals, and their coverage is measured in backtests.
 - **Every model beats a baseline it was gated against.** The area forecast beats seasonal naive (MAPE 5.9% vs 20.4%), and on the real listings the unit value model beats an area-median baseline (MAE 26.2k vs 29.8k EGP/m², 80% interval coverage 0.80).
 - **Arabic is part of the design.** Arabic documents, Arabic eval scenarios, an RTL interface, and Arabic risk text and reports.
-- **Built like a production service.** Hexagonal modules enforced by import-linter, 214 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
+- **Built like a production service.** Hexagonal modules enforced by import-linter, 216 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
 - **Deployed end to end on free tiers.** Vercel container function for the API, Neon Postgres, Cloudflare static UI.
 
 ## How it works
@@ -95,14 +95,14 @@ All numbers are real runs. The unit value row uses the real listings; the other 
 | Agent (10 scenarios, scripted provider, real listings) | Task success | 1.00 |
 | | Clarification when budget missing | 1.00 |
 | | Grounding (no untraced figures) | 1.00 |
-| Agent (10 scenarios, live `gemini-3.1-flash-lite`) | Task success | 0.70 (was 0.60) |
+| Agent (10 scenarios, live `gemini-3.1-flash-lite`, real listings) | Task success | 1.00 (last three runs 0.90 / 0.90 / 1.00; first run 0.60) |
 | | Clarification when budget missing | 1.00 |
-| | Grounding (no untraced figures) | 1.00 (was 0.70) |
-| | Mean seconds per scenario | 26 (Google 503/504 retries that day) |
+| | Grounding (no untraced figures) | 1.00 (first run 0.70) |
+| | Mean seconds per scenario | 11.6 |
 
 How to read the agent rows:
 - **Scripted provider:** this row tests the tools, streaming and guardrails, not language-model quality. On synthetic inventory it scored 0.90: an Arabic rent request in Madinaty under 4M EGP had no matching unit. The real listings have one.
-- **Live `flash-lite`:** the first run stopped after the shortlist and was flagged for untraced figures. Three fixes moved it to the numbers above: tool results now carry a `next` hint (search → financing → returns), the grounding check accepts figures from earlier turns and from the buyer, and "60 months" is no longer read as 60M. The misses left are the Arabic Madinaty case (no matching synthetic unit), a Google timeout mid-turn, and one run where the small model asked for a budget before handing a buyer to a broker.
+- **Live `flash-lite`:** the first run stopped after the shortlist and was flagged for untraced figures. Three fixes moved it to the numbers above: tool results now carry a `next` hint (search → financing → returns), the grounding check accepts figures from earlier turns and from the buyer, and "60 months" is no longer read as 60M. Two more deterministic aids closed the rest: an area named in the message always reaches the profile (the model sometimes dropped "مدينتي" and searched every area), and a saved phone or email carries a hint to call `create_lead`. A small model still varies run to run, hence the range.
 - **`gemini-3.5-flash`:** it completed the full English buyer journey (profile → search → financing → returns, all artifacts) in about 21 s in the live smoke test. Its full 10-scenario eval did not fit the free tier (5 requests/minute, 20/day). With a key that allows it, run `scripts/eval_agent.py --provider gemini --pause 15`.
 
 Tests: 203 backend tests (unit, API, seeded property tests, integration on embedded Postgres) and 12 frontend tests. `scripts/smoke_e2e.py` runs the full journey against a running stack: English buyer journey, knowledge answer with citations, HTML report, broker handoff with queue auth, and an Arabic session.

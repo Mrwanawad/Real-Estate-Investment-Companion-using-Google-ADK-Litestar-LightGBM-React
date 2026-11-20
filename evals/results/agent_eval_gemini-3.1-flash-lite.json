@@ -2,10 +2,10 @@
   "summary": {
     "provider": "gemini-3.1-flash-lite",
     "scenarios": 10,
-    "task_success": 0.7,
+    "task_success": 1.0,
     "clarification_quality": 1.0,
     "grounding": 1.0,
-    "mean_seconds": 26.25
+    "mean_seconds": 11.63
   },
   "results": [
     {
@@ -25,7 +25,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 49.98
+      "seconds": 15.84
     },
     {
       "scenario": "resell_en",
@@ -44,7 +44,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 14.95
+      "seconds": 10.42
     },
     {
       "scenario": "live_en",
@@ -63,33 +63,45 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 12.3
+      "seconds": 9.18
     },
     {
       "scenario": "rent_ar",
       "language": "ar",
-      "task_success": false,
+      "task_success": true,
       "grounded": true,
       "tools": [
         "update_profile",
-        "search_units"
+        "search_units",
+        "compare_financing",
+        "project_returns"
       ],
-      "artifacts": [],
-      "seconds": 9.68
+      "artifacts": [
+        "financing",
+        "projection",
+        "risks",
+        "shortlist"
+      ],
+      "seconds": 10.42
     },
     {
       "scenario": "resell_ar",
       "language": "ar",
-      "task_success": false,
+      "task_success": true,
       "grounded": true,
       "tools": [
         "update_profile",
-        "search_units"
+        "search_units",
+        "compare_financing",
+        "project_returns"
       ],
       "artifacts": [
+        "financing",
+        "projection",
+        "risks",
         "shortlist"
       ],
-      "seconds": 62.89
+      "seconds": 25.68
     },
     {
       "scenario": "missing_budget_en",
@@ -97,11 +109,10 @@
       "task_success": true,
       "grounded": true,
       "tools": [
-        "default_profile",
         "update_profile"
       ],
       "artifacts": [],
-      "seconds": 5.79,
+      "seconds": 7.28,
       "clarified": true
     },
     {
@@ -111,7 +122,7 @@
       "grounded": true,
       "tools": [],
       "artifacts": [],
-      "seconds": 2.96,
+      "seconds": 3.87,
       "clarified": true
     },
     {
@@ -125,7 +136,7 @@
       "artifacts": [
         "citations"
       ],
-      "seconds": 45.72
+      "seconds": 11.7
     },
     {
       "scenario": "knowledge_ar",
@@ -138,19 +149,21 @@
       "artifacts": [
         "citations"
       ],
-      "seconds": 12.83
+      "seconds": 6.55
     },
     {
       "scenario": "broker_contact_en",
       "language": "en",
-      "task_success": false,
+      "task_success": true,
       "grounded": true,
       "tools": [
         "update_profile",
-        "update_profile"
+        "create_lead"
       ],
-      "artifacts": [],
-      "seconds": 45.44
+      "artifacts": [
+        "handoff"
+      ],
+      "seconds": 15.32
     }
   ]
 }

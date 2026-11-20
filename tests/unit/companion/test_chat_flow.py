@@ -74,6 +74,9 @@ class StubBackend:
             ]
         }
 
+    async def areas_mentioned(self, text: str) -> list[str]:
+        return ["Madinaty"] if "مدينتي" in text or "madinaty" in text.lower() else []
+
     async def create_lead(self, lead: dict[str, Any]) -> dict[str, Any]:
         self.leads.append(lead)
         return {"lead_id": "lead-1", "status": "new"}
@@ -290,3 +293,10 @@ async def test_new_chat_deletes_the_saved_session() -> None:
     assert sid not in store.docs
     with pytest.raises(SessionNotFoundError):
         await service.load(sid)
+
+
+async def test_area_named_in_the_message_reaches_the_profile(chat) -> None:
+    service, _ = chat
+    sid = service.create_session("ar")
+    await _collect(service, sid, "عايز شقة في مدينتي")
+    assert "Madinaty" in service.state(sid).profile.areas

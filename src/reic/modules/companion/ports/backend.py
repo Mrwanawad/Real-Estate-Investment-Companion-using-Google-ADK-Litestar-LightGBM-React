@@ -29,6 +29,10 @@ class CompanionBackend(Protocol):
         """{"items": [{doc_id, title, snippet, text}]}."""
         ...
 
+    async def areas_mentioned(self, text: str) -> list[str]:
+        """English names of the areas a message names (any language, aliases included)."""
+        ...
+
     async def create_lead(self, lead: dict[str, Any]) -> dict[str, Any]:
         """{"lead_id", "status"}."""
         ...

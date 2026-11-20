@@ -4,7 +4,7 @@ A bilingual (English / Egyptian Arabic) AI companion for real estate buyers and 
 
 <p align="center"><img src="docs/demo.gif" width="100%" alt="Demo: a buyer asks for a rental investment in New Cairo with 5M EGP, the companion compares cash, installment and mortgage options with the cheapest route highlighted, answers a refund policy question with cited sources, and hands the buyer off to a broker."/></p>
 
-**Live demo:** UI https://reic-companion.mrwaanawad.workers.dev · API https://reic-companion.fly.dev/health · API docs https://reic-companion.fly.dev/schema/swagger
+**Live demo:** UI https://reic-companion.mrwaanawad.workers.dev · API https://reic-companion-api.vercel.app/health · API docs https://reic-companion-api.vercel.app/schema/swagger
 
 **Try it:** *"I have 5M EGP and want to rent it out in New Cairo for 5 years"*, then *"What is the cancellation and refund policy?"*, *"Build my report"* and *"I want to talk to a broker"*. Switch to Arabic in the header, or open the broker queue at `#/broker`.
 
@@ -16,8 +16,8 @@ A bilingual (English / Egyptian Arabic) AI companion for real estate buyers and 
 - **Ranges, not point guesses.** Area forecasts, unit values and returns come with calibrated intervals, and their coverage is measured in backtests.
 - **Every model beats a baseline it was gated against.** The area forecast beats seasonal naive (MAPE 5.9% vs 20.4%), and the unit value model beats an area-median baseline (MAE 7.8k vs 17.2k EGP/m²).
 - **Arabic is part of the design.** Arabic documents, Arabic eval scenarios, an RTL interface, and Arabic risk text and reports.
-- **Built like a production service.** Hexagonal modules enforced by import-linter, 201 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
-- **Deployed end to end.** Fly.io API, Neon Postgres, Cloudflare static UI.
+- **Built like a production service.** Hexagonal modules enforced by import-linter, 203 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
+- **Deployed end to end on free tiers.** Vercel container function for the API, Neon Postgres, Cloudflare static UI.
 
 ## How it works
 
@@ -102,7 +102,7 @@ How to read the agent rows:
 - **Live `flash-lite`:** the first run stopped after the shortlist and was flagged for untraced figures. Three fixes moved it to the numbers above: tool results now carry a `next` hint (search → financing → returns), the grounding check accepts figures from earlier turns and from the buyer, and "60 months" is no longer read as 60M. The misses left are the Arabic Madinaty case (no matching synthetic unit), a Google timeout mid-turn, and one run where the small model asked for a budget before handing a buyer to a broker.
 - **`gemini-3.5-flash`:** it completed the full English buyer journey (profile → search → financing → returns, all artifacts) in about 21 s in the live smoke test. Its full 10-scenario eval did not fit the free tier (5 requests/minute, 20/day). With a key that allows it, run `scripts/eval_agent.py --provider gemini --pause 15`.
 
-Tests: 201 backend tests (unit, API, seeded property tests, integration on embedded Postgres) and 12 frontend tests. `scripts/smoke_e2e.py` runs the full journey against a running stack: English buyer journey, knowledge answer with citations, HTML report, broker handoff with queue auth, and an Arabic session.
+Tests: 203 backend tests (unit, API, seeded property tests, integration on embedded Postgres) and 12 frontend tests. `scripts/smoke_e2e.py` runs the full journey against a running stack: English buyer journey, knowledge answer with citations, HTML report, broker handoff with queue auth, and an Arabic session.
 
 ## Engineering notes
 
@@ -110,7 +110,9 @@ Things the live runs taught us, now handled in code:
 - **Duplicated tool calls in streaming.** Gemini's SSE mode sends every function call twice, once as a partial chunk and again in the final event, so the trace showed each tool twice. Tool status now comes from final events only, with a regression test.
 - **Model churn.** `gemini-2.5-flash` was closed to new keys, and `gemini-3.8-flash` hung until a 504. The default moved to `gemini-3.5-flash`, and Gemini calls now have a 60 s timeout and retries with backoff on 429/5xx before the provider chain sees an error.
 - **Native dependencies in the image.** The first deploy crashed because LightGBM needs `libgomp1`, which slim Debian doesn't ship. It's now part of the image.
-- **Public write endpoints.** Lead creation and chat creation are rate limited per client. Behind Fly's proxy the client is identified by `Fly-Client-IP`, because every request arrives from the proxy's address.
+- **Public write endpoints.** Lead creation and chat creation are rate limited per client. Behind a proxy every request arrives from the proxy's address, so the client is the last `X-Forwarded-For` hop (the one the proxy appended; earlier hops can be forged).
+- **Stateless instances.** On Vercel, two requests of one chat can land on different instances. A session created in one instance's memory returned 404 on the next message, so sessions are now saved to Postgres when they are created and after every turn.
+- **Quoted secrets.** A key copied from `.env` with its quotes was rejected by Gemini (`API key not valid`). Secrets are now pushed unquoted.
 - **Schema-safe prompts.** ADK treats `{...}` in instructions as state templates, so the profile JSON broke prompts. The instruction is now passed as a callable.
 
 ## Quickstart
@@ -166,15 +168,15 @@ See `.env.example` for every setting.
 
 | Part | Where | Notes |
 | --- | --- | --- |
-| API | Fly.io app `reic-companion` (Frankfurt) | `Dockerfile` + `fly.toml`, remote builder, `/health` check, machines auto-stop. The container runs `alembic upgrade head` and then the API |
+| API | Vercel container function `reic-companion-api` (Frankfurt, Hobby plan) | `Dockerfile` run as a container through `vercel.json` services; scales to zero, cold start about 8 s. The container runs `alembic upgrade head` and then the API |
 | Database | Neon Postgres (Frankfurt) | Seeded with `scripts/seed.py` |
 | UI | Cloudflare Workers static assets | `frontend/wrangler.jsonc`, SPA fallback |
 
-API: set secrets with `fly secrets set DATABASE_URL=... GEMINI_API_KEY=... BROKER_API_KEY=... CORS_ORIGINS=...`, then run `fly deploy --remote-only`. The image leaves out the `retrieval` extra (sentence-transformers) to stay small.
+API: `vercel link`, then add `PORT=8080`, `APP_ENV=prod`, `LLM_PROVIDER=gemini`, `CLIENT_IP_HEADER=X-Forwarded-For`, `CORS_ORIGINS`, `DATABASE_URL`, `GEMINI_API_KEY` and `BROKER_API_KEY` with `vercel env add <NAME> production`, then run `vercel deploy --prod`. `.vercelignore` keeps the frontend, tests and docs out of the upload. The same `Dockerfile` runs on any container host (Fly.io, Cloud Run). The image leaves out the `retrieval` extra (sentence-transformers) to stay small.
 
 UI: from `frontend/`, run `VITE_API_URL=<API URL> npm run build`, then `npx wrangler deploy`. Add the UI origin to `CORS_ORIGINS`.
 
-The live demo runs on a free-tier Gemini key, so chat stops for the day after about 20 model requests. Every other endpoint keeps working.
+The live demo runs on a free-tier Gemini key. After about 20 `gemini-3.5-flash` requests a day, chat falls back to `gemini-3.1-flash-lite`; every other endpoint keeps working.
 
 ## Stack
 
@@ -186,7 +188,7 @@ Python 3.12 · uv · Litestar · Pydantic · SQLAlchemy 2 + Alembic · PostgreSQ
 - Backtests use 3 origins per area on a short synthetic series, so the metrics are optimistic about real markets.
 - The RAG eval uses the hashing embedder on a small corpus, and the gold set is easy.
 - Live agent numbers so far are from `gemini-3.1-flash-lite`. A full `gemini-3.5-flash` eval needs a paid-tier key.
-- Chat sessions persist in Postgres; after a restart the agent gets a short recap of the conversation, not the full model history. The knowledge index and rate limits live in memory (single machine).
+- Chat sessions persist in Postgres; after a restart the agent gets a short recap of the conversation, not the full model history. The knowledge index and rate limits live in memory, so each instance counts its own limit.
 - No user accounts: the browser keeps the session id. The privacy page (`#/privacy`) states what is stored and when contact details reach a broker.
 - The container uses the hashing embedder; add the `retrieval` extra for MiniLM or bge-m3.
 - No cross-encoder reranker. Hybrid retrieval already reaches Recall@4 = 1.00 on the gold set, so it wasn't needed at this corpus size.

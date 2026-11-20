@@ -24,7 +24,7 @@ def build_rate_limit(settings: Settings) -> DefineMiddleware | None:
 
     def identifier(request: Request[Any, Any, Any]) -> str:
         # Only trust the header when the deploy says a proxy sets it (Fly-Client-IP on Fly.io,
-        # X-Forwarded-For on Render). In a list, the last entry is the one the trusted
+        # X-Forwarded-For on Vercel). In a list, the last entry is the one the trusted
         # proxy appended; earlier entries come from the client and can be forged.
         if header and (value := request.headers.get(header)):
             return value.split(",")[-1].strip()

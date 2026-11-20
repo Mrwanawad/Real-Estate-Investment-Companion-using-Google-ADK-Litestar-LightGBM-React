@@ -38,9 +38,9 @@ def _sse(events: AsyncIterator[ChatEvent]) -> AsyncIterator[ServerSentEventMessa
 class ChatController(Controller):
     path = "/chat/sessions"
 
-    @post("/", status_code=201, sync_to_thread=False)
-    def create(self, data: NewSession, chat: ChatService) -> dict[str, str]:
-        return {"session_id": chat.create_session(data.language)}
+    @post("/", status_code=201)
+    async def create(self, data: NewSession, chat: ChatService) -> dict[str, str]:
+        return {"session_id": await chat.open_session(data.language)}
 
     @post("/{session_id:str}/messages")
     async def message(

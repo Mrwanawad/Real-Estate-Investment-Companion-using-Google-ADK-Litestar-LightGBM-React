@@ -250,3 +250,28 @@ async def test_numbers_from_the_buyer_and_earlier_turns_count_as_grounded() -> N
     from reic.modules.companion.domain.grounding import ungrounded_numbers
 
     assert ungrounded_numbers("Your 5M budget", [{"message": "I have 5,000,000 EGP"}]) == []
+
+
+async def test_opened_session_is_saved_before_the_first_message() -> None:
+    store = MemoryStore()
+    service = ChatService(AdkEngine(FakeLlm(), stream=False), StubBackend(), store=store)
+    sid = await service.open_session("ar")
+    other = ChatService(AdkEngine(FakeLlm(), stream=False), StubBackend(), store=store)
+    assert (await other.load(sid)).profile.language == "ar"
+
+
+async def test_stuck_model_ends_the_turn_with_an_error(monkeypatch) -> None:
+    import asyncio
+
+    from reic.modules.companion.application import chat as chat_module
+
+    class StuckEngine:
+        async def run_turn(self, *args: Any, **kwargs: Any):  # type: ignore[no-untyped-def]
+            await asyncio.sleep(10)
+            yield ChatEvent.delta("never")
+
+    monkeypatch.setattr(chat_module, "TURN_TIMEOUT_S", 0.05)
+    service = ChatService(StuckEngine(), StubBackend())  # type: ignore[arg-type]
+    sid = service.create_session("en")
+    events = await _collect(service, sid, "hello")
+    assert [e.kind for e in events] == ["error"]

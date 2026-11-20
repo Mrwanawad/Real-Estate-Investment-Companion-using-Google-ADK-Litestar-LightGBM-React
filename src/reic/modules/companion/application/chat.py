@@ -1,5 +1,6 @@
 """Chat sessions: runs a turn through the agent engine and streams events to the client."""
 
+import asyncio
 import logging
 import uuid
 from collections.abc import AsyncIterator
@@ -24,6 +25,8 @@ MAX_STORED_MESSAGES = 60
 MAX_STORED_RESULTS = 40
 RECAP_MESSAGES = 8
 RECAP_CHARS = 400
+# Below the host's request limit (300 s on Vercel), so a stuck model ends in a clean error.
+TURN_TIMEOUT_S = 240.0
 
 _GROUNDING_NOTE = {
     "en": "\n\n_Note: some figures above could not be traced to the calculators; "
@@ -62,6 +65,12 @@ class ChatService:
     def create_session(self, language: Language = "en") -> str:
         session_id = uuid.uuid4().hex
         self._remember(SessionState(session_id, BuyerProfile(language=language)))
+        return session_id
+
+    async def open_session(self, language: Language = "en") -> str:
+        """A new session, saved right away so any instance can serve its next request."""
+        session_id = self.create_session(language)
+        await self._save(self._sessions[session_id])
         return session_id
 
     def state(self, session_id: str) -> SessionState:
@@ -130,20 +139,21 @@ class ChatService:
         answer: list[str] = []
         shown: list[dict[str, Any]] = []
         try:
-            async for event in self._engine.run_turn(
-                session_id,
-                message,
-                build_instruction(state.profile, state.recap),
-                toolbox.tools(),
-            ):
-                if event.kind == "delta":
-                    answer.append(event.data["text"])
-                yield event
-                if event.kind == "tool" and event.data.get("status") == "finished":
-                    while toolbox.pending:
-                        kind, data = toolbox.pending.pop(0)
-                        shown.append({"kind": kind, "data": data})
-                        yield ChatEvent.artifact(kind, data)
+            async with asyncio.timeout(TURN_TIMEOUT_S):
+                async for event in self._engine.run_turn(
+                    session_id,
+                    message,
+                    build_instruction(state.profile, state.recap),
+                    toolbox.tools(),
+                ):
+                    if event.kind == "delta":
+                        answer.append(event.data["text"])
+                    yield event
+                    if event.kind == "tool" and event.data.get("status") == "finished":
+                        while toolbox.pending:
+                            kind, data = toolbox.pending.pop(0)
+                            shown.append({"kind": kind, "data": data})
+                            yield ChatEvent.artifact(kind, data)
         except Exception:
             log.exception("chat turn failed", extra={"session_id": session_id})
             yield ChatEvent("error", {"message": _FAILURE[lang]})

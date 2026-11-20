@@ -57,15 +57,15 @@ React UI (EN/AR, RTL) --SSE--> Litestar API --> ChatService --> AdkEngine (Googl
 - **Market:** backtest and holdout metrics written by `scripts/train_market_models.py`.
 - **RAG:** a 26-question EN/AR gold set, scored by Recall@4 and MRR for the BM25, vector and hybrid modes (`scripts/eval_rag.py`).
 - **Agent:** 10 EN/AR scenarios (full journeys, missing budget, knowledge questions, broker contact), scored on task success, clarification quality, grounding and latency (`scripts/eval_agent.py`).
-- **System:** `scripts/smoke_e2e.py` runs the whole buyer journey against a running stack, plus 192 backend and 10 frontend tests in CI.
+- **System:** `scripts/smoke_e2e.py` runs the whole buyer journey against a running stack, plus about 200 backend and 12 frontend tests in CI.
 
 ## Deployment
-- **API:** Fly.io (Frankfurt), image `python:3.12-slim` with pango, fonts and libgomp. Runs `alembic upgrade head` on start; machines stop when idle.
+- **API:** Vercel container function (Frankfurt), image `python:3.12-slim` with pango, fonts and libgomp. Runs `alembic upgrade head` on start; instances scale to zero, so nothing that must survive a request lives only in memory.
 - **DB:** Neon Postgres (Frankfurt) with the pgvector extension enabled.
 - **UI:** Cloudflare Workers static assets with SPA fallback.
 
 ## Trade-offs and what is not built
-- The knowledge index and chat sessions are in memory. The corpus is small and the app runs as one machine; pgvector is enabled for when the corpus grows.
+- Chat sessions persist in Postgres (one JSONB document per session); a restored session gives the agent a recap, not the full model history. The knowledge index is built in memory at start because the corpus is small; pgvector is enabled for when it grows.
 - No cross-encoder reranker. Hybrid RRF already reaches Recall@4 = 1.00 on the gold set.
 - Observability is OpenTelemetry tracing per request. Token cost and drop-off dashboards are not built.
 - The forecast is retrained in memory at startup (about 2 s). A monthly retrain job and drift monitoring are the next step for real data.

@@ -28,3 +28,6 @@ hf_cache/
 PLAN.md
 CHECKPOINT.md
 docs/demo/build/
+
+.vercel
+.env*

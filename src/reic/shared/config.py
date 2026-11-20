@@ -36,6 +36,6 @@ class Settings(BaseSettings):
     cors_origins: list[str] = ["http://localhost:5173"]
     # Per-client limit on POST /leads and chat session/message creation; 0 disables.
     rate_limit_per_minute: int = 20
-    # Header a trusted proxy sets to the real client IP (Fly-Client-IP on Fly.io).
+    # Header a trusted proxy sets to the real client IP (X-Forwarded-For on Vercel).
     client_ip_header: str | None = None
     otel_enabled: bool = False

@@ -1,0 +1,12 @@
+/.venv
+/.git
+/frontend
+/tests
+/docs
+/evals
+/.env
+/.env.*
+**/__pycache__
+**/node_modules
+/PLAN.md
+/CHECKPOINT.md

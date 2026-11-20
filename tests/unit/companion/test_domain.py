@@ -64,3 +64,24 @@ def test_scale_suffix_must_end_the_word() -> None:
         (5e6, False),
     ]
     assert ungrounded_numbers("Pay over 60 months", []) == []
+
+
+async def test_spent_daily_quota_skips_the_model_until_cooldown() -> None:
+    from google.adk.models.llm_request import LlmRequest
+
+    from reic.modules.companion.adapters.outbound.llm import FakeLlm, FallbackLlm
+
+    class QuotaSpent(FakeLlm):
+        calls: int = 0
+
+        async def generate_content_async(self, llm_request, stream=False):  # type: ignore[no-untyped-def]
+            self.calls += 1
+            raise RuntimeError("429 RESOURCE_EXHAUSTED GenerateRequestsPerDayPerProjectPerModel")
+            yield  # pragma: no cover
+
+    spent, backup = QuotaSpent(model="main"), FakeLlm(model="backup")
+    llm = FallbackLlm(model="fallback", models=[spent, backup])
+    for _ in range(3):
+        responses = [r async for r in llm.generate_content_async(LlmRequest())]
+        assert responses
+    assert spent.calls == 1  # tripped on the first quota error, skipped afterwards

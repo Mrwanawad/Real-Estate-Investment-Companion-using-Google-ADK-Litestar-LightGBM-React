@@ -21,18 +21,28 @@ from pydantic import PrivateAttr
 log = logging.getLogger(__name__)
 
 
+QUOTA_COOLDOWN_S = 3600.0  # a spent daily quota won't come back in a minute
+_QUOTA_MARKERS = ("RESOURCE_EXHAUSTED", "PerDay", "quota")
+
+
+def _quota_exhausted(exc: BaseException) -> bool:
+    text = str(exc)
+    return "429" in text and any(marker in text for marker in _QUOTA_MARKERS)
+
+
 class _Breaker:
     def __init__(self, threshold: int = 3, cooldown_s: float = 60.0) -> None:
         self.threshold = threshold
         self.cooldown_s = cooldown_s
         self.failures = 0
         self.opened_at: float | None = None
+        self._open_for = cooldown_s
 
     @property
     def open(self) -> bool:
         if self.opened_at is None:
             return False
-        if time.monotonic() - self.opened_at >= self.cooldown_s:
+        if time.monotonic() - self.opened_at >= self._open_for:
             self.opened_at = None  # half-open: let one call through
             self.failures = self.threshold - 1
             return False
@@ -46,6 +56,13 @@ class _Breaker:
         self.failures += 1
         if self.failures >= self.threshold:
             self.opened_at = time.monotonic()
+            self._open_for = self.cooldown_s
+
+    def trip(self, seconds: float) -> None:
+        """Open now, for `seconds`."""
+        self.failures = self.threshold
+        self.opened_at = time.monotonic()
+        self._open_for = seconds
 
 
 class FallbackLlm(BaseLlm):
@@ -75,7 +92,10 @@ class FallbackLlm(BaseLlm):
             except Exception as exc:
                 if started:
                     raise
-                breaker.failure()
+                if _quota_exhausted(exc):
+                    breaker.trip(QUOTA_COOLDOWN_S)
+                else:
+                    breaker.failure()
                 last_error = exc
                 log.warning("llm %s failed, falling back: %s", model.model, exc)
                 continue
@@ -357,8 +377,11 @@ def build_llm(
                 Gemini(
                     model=name,
                     client_kwargs={"api_key": gemini_key, "http_options": http},
+                    # 429 is not retried: the next model in the chain answers sooner.
                     retry_options=types.HttpRetryOptions(
-                        attempts=GEMINI_ATTEMPTS, initial_delay=1.0
+                        attempts=GEMINI_ATTEMPTS,
+                        initial_delay=1.0,
+                        http_status_codes=[408, 500, 502, 503, 504],
                     ),
                 )
             )

@@ -100,3 +100,23 @@ async def test_broker_directory_counts_open_leads(engine: AsyncEngine) -> None:
     )
     assert created["broker"]["id"] == "B1"
     assert (await directory.open_leads())["B1"] >= 1
+
+
+def test_postgres_rate_limit_is_shared_by_instances(migrated: PostgresUrls) -> None:
+    from litestar.testing import TestClient
+
+    from reic.bootstrap.app import create_app
+    from reic.shared.config import Settings
+
+    settings = Settings(
+        database_url=migrated.asynchronous,
+        llm_provider="fake",
+        rate_limit_per_minute=1,
+        rate_limit_store="postgres",
+    )
+    with (
+        TestClient(app=create_app(settings)) as first,
+        TestClient(app=create_app(settings)) as second,
+    ):
+        assert first.post("/chat/sessions", json={}).status_code == 201
+        assert second.post("/chat/sessions", json={}).status_code == 429

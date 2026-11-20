@@ -16,7 +16,7 @@ A bilingual (English / Egyptian Arabic) AI real estate consultant for buyers and
 - **Ranges, not point guesses.** Area forecasts, unit values and returns come with calibrated intervals, and their coverage is measured in backtests.
 - **Every model beats a baseline it was gated against.** The area forecast beats seasonal naive (MAPE 5.9% vs 20.4%), and on the real listings the unit value model beats an area-median baseline (MAE 26.2k vs 29.8k EGP/m², 80% interval coverage 0.80).
 - **Arabic is part of the design.** Arabic documents, Arabic eval scenarios, an RTL interface, and Arabic risk text and reports.
-- **Built like a production service.** Hexagonal modules enforced by import-linter, 211 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
+- **Built like a production service.** Hexagonal modules enforced by import-linter, 214 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
 - **Deployed end to end on free tiers.** Vercel container function for the API, Neon Postgres, Cloudflare static UI.
 
 ## How it works
@@ -115,6 +115,7 @@ Things the live runs taught us, now handled in code:
 - **Native dependencies in the image.** The first deploy crashed because LightGBM needs `libgomp1`, which slim Debian doesn't ship. It's now part of the image.
 - **Public write endpoints.** Lead creation and chat creation are rate limited per client. Behind a proxy every request arrives from the proxy's address, so the client is the last `X-Forwarded-For` hop (the one the proxy appended; earlier hops can be forged).
 - **Stateless instances.** On Vercel, two requests of one chat can land on different instances. A session created in one instance's memory returned 404 on the next message, so sessions are now saved to Postgres when they are created and after every turn.
+- **Spent daily quota.** Once the main Gemini model's free daily quota runs out, every call used to retry the 429 before falling back, which stretched one buyer turn to almost 3 minutes. 429s are no longer retried, and a quota error benches that model for an hour.
 - **Quoted secrets.** A key copied from `.env` with its quotes was rejected by Gemini (`API key not valid`). Secrets are now pushed unquoted.
 - **Schema-safe prompts.** ADK treats `{...}` in instructions as state templates, so the profile JSON broke prompts. The instruction is now passed as a callable.
 
@@ -149,7 +150,7 @@ Design details: [`architecture.md`](architecture.md).
 
 - **LLM:** set `LLM_PROVIDER` to `fake` (default), `gemini` (`GEMINI_API_KEY`, `GEMINI_MODEL`, default `gemini-3.5-flash`; `GEMINI_FALLBACK_MODELS`, default `["gemini-3.1-flash-lite"]`) or `anthropic` (`ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`). In `anthropic` mode, Gemini is the fallback when a Gemini key exists.
 - **Financing assumptions:** discount rate 22%, mortgage 24% over 10 years with 20% down, inflation 15%. They are settings, and the outputs show them.
-- **Abuse protection:** `RATE_LIMIT_PER_MINUTE` (default 20) applies per client to `POST /leads` and chat session/message creation. `CLIENT_IP_HEADER` names a trusted proxy header (`Fly-Client-IP` on Fly.io).
+- **Abuse protection:** `RATE_LIMIT_PER_MINUTE` (default 20) applies per client to `POST /leads` and chat session/message creation. `RATE_LIMIT_STORE=postgres` shares the counters across instances (in-memory by default). `CLIENT_IP_HEADER` names a trusted proxy header (`Fly-Client-IP` on Fly.io).
 - **Broker handoff:** `BROKER_API_KEY` guards the broker queue. `WEBHOOK_URL` + `WEBHOOK_SECRET` turn on the signed lead webhook (`X-REIC-Signature: sha256=<hex>`, `X-REIC-Timestamp`).
 - **Observability:** `OTEL_ENABLED=true` traces every HTTP request with OpenTelemetry (OTLP export).
 
@@ -175,7 +176,7 @@ See `.env.example` for every setting.
 | Database | Neon Postgres (Frankfurt) | Seeded with `scripts/seed.py` |
 | UI | Cloudflare Workers static assets | `frontend/wrangler.jsonc`, SPA fallback |
 
-API: `vercel link`, then add `PORT=8080`, `APP_ENV=prod`, `LLM_PROVIDER=gemini`, `CLIENT_IP_HEADER=X-Forwarded-For`, `CORS_ORIGINS`, `DATABASE_URL`, `GEMINI_API_KEY` and `BROKER_API_KEY` with `vercel env add <NAME> production`, then run `vercel deploy --prod`. `.vercelignore` keeps the frontend, tests and docs out of the upload. The same `Dockerfile` runs on any container host (Fly.io, Cloud Run). The image leaves out the `retrieval` extra (sentence-transformers) to stay small.
+API: `vercel link`, then add `PORT=8080`, `APP_ENV=prod`, `LLM_PROVIDER=gemini`, `CLIENT_IP_HEADER=X-Forwarded-For`, `RATE_LIMIT_STORE=postgres`, `CORS_ORIGINS`, `DATABASE_URL`, `GEMINI_API_KEY` and `BROKER_API_KEY` with `vercel env add <NAME> production`, then run `vercel deploy --prod`. `.vercelignore` keeps the frontend, tests and docs out of the upload. The same `Dockerfile` runs on any container host (Fly.io, Cloud Run). The image leaves out the `retrieval` extra (sentence-transformers) to stay small.
 
 UI: from `frontend/`, run `VITE_API_URL=<API URL> npm run build`, then `npx wrangler deploy`. Add the UI origin to `CORS_ORIGINS`.
 
@@ -191,7 +192,7 @@ Python 3.12 · uv · Litestar · Pydantic · SQLAlchemy 2 + Alembic · PostgreSQ
 - Backtests use 3 origins per area on a short synthetic series, so the metrics are optimistic about real markets.
 - The RAG eval uses the hashing embedder on a small corpus, and the gold set is easy.
 - Live agent numbers so far are from `gemini-3.1-flash-lite`. A full `gemini-3.5-flash` eval needs a paid-tier key.
-- Chat sessions persist in Postgres; after a restart the agent gets a short recap of the conversation, not the full model history. The knowledge index and rate limits live in memory, so each instance counts its own limit.
+- Chat sessions persist in Postgres; after a restart the agent gets a short recap of the conversation, not the full model history. The knowledge index lives in memory. Rate-limit counters live in Postgres (`RATE_LIMIT_STORE=postgres`), so every instance shares one limit.
 - No user accounts: the browser keeps the session id. The privacy page (`#/privacy`) states what is stored and when contact details reach a broker.
 - The container uses the hashing embedder; add the `retrieval` extra for MiniLM or bge-m3.
 - No cross-encoder reranker. Hybrid retrieval already reaches Recall@4 = 1.00 on the gold set, so it wasn't needed at this corpus size.

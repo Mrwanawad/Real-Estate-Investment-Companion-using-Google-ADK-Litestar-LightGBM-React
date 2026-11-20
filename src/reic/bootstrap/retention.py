@@ -10,6 +10,7 @@ log = logging.getLogger(__name__)
 _PURGE = (
     text("DELETE FROM chat_sessions WHERE updated_at < now() - make_interval(days => :days)"),
     text("DELETE FROM leads WHERE updated_at < now() - make_interval(days => :days)"),
+    text("DELETE FROM kv_store WHERE expires_at < now() - make_interval(days => :days)"),
 )
 
 

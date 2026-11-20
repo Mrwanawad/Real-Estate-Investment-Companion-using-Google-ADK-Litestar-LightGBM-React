@@ -38,6 +38,8 @@ class Settings(BaseSettings):
     rate_limit_per_minute: int = 20
     # Header a trusted proxy sets to the real client IP (X-Forwarded-For on Vercel).
     client_ip_header: str | None = None
+    # memory: per process (dev, tests). postgres: shared by every instance (serverless deploys).
+    rate_limit_store: Literal["memory", "postgres"] = "memory"
     otel_enabled: bool = False
     # Chats and leads older than this are deleted at startup; 0 keeps everything.
     retention_days: int = 90

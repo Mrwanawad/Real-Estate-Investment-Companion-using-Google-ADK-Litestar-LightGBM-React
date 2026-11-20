@@ -11,6 +11,7 @@ from reic.bootstrap.handoff import build_handoff_router, build_handoff_service
 from reic.bootstrap.inventory import build_inventory_router
 from reic.bootstrap.knowledge import build_knowledge_router, build_knowledge_service
 from reic.bootstrap.market import build_market_router, build_market_service
+from reic.bootstrap.pg_store import PostgresStore
 from reic.bootstrap.rate_limit import build_rate_limit
 from reic.bootstrap.reports import build_report_service
 from reic.bootstrap.retention import purge_expired
@@ -73,6 +74,11 @@ def create_app(settings: Settings | None = None) -> Litestar:
         ],
         cors_config=CORSConfig(allow_origins=settings.cors_origins),
         middleware=[rate_limit] if rate_limit else [],
+        stores=(
+            {"rate_limit": PostgresStore(session_factory)}
+            if settings.rate_limit_store == "postgres"
+            else None
+        ),
         on_startup=[lambda: purge_expired(session_factory, settings.retention_days)],
         plugins=_plugins(settings),
         debug=settings.app_env == "dev",

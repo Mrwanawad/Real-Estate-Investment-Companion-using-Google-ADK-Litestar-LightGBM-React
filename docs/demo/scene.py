@@ -1,9 +1,11 @@
 """Demo scene for docs/demo.gif. Needs the stack running (fake provider, no key needed):
   python scripts/dev_stack.py --provider fake --port 8710
-  cd frontend && VITE_API_URL=http://localhost:8710 npx vite --port 8711   (API CORS_ORIGINS must allow it)
+  cd frontend && VITE_API_URL=http://localhost:8710 npx vite --port 8711
+  (API CORS_ORIGINS must allow it)
 Record:  python docs/demo/scene.py
 Compose: python ~/.claude/skills/demo-gif/scripts/compose.py docs/demo/build --out docs/demo.gif
 """
+
 import asyncio
 import os
 import sys

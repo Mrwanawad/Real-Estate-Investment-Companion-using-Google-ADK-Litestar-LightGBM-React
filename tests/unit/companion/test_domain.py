@@ -30,3 +30,37 @@ def test_grounding_flags_only_invented_material_numbers() -> None:
 def test_grounding_reads_numbers_inside_labels() -> None:
     sources = [{"cheapest_label": "5% down / 9 years quarterly"}]
     assert ungrounded_numbers("Cheapest: 5% down over 9 years", sources) == []
+
+
+def test_gemini_fallback_chain() -> None:
+    from reic.modules.companion.adapters.outbound.llm import FallbackLlm, build_llm
+
+    llm = build_llm(
+        "gemini",
+        anthropic_model="x",
+        gemini_model="gemini-3.5-flash",
+        anthropic_api_key=None,
+        gemini_api_key="test-key",
+        gemini_fallback_models=["gemini-3.1-flash-lite", "gemini-3.5-flash"],
+    )
+    assert isinstance(llm, FallbackLlm)
+    assert [m.model for m in llm.models] == ["gemini-3.5-flash", "gemini-3.1-flash-lite"]
+
+
+def test_profile_round_trips_through_dict() -> None:
+    from reic.modules.companion.domain.profile import BuyerProfile
+
+    profile = BuyerProfile(language="ar", budget_egp=5_000_000, areas=("New Cairo",))
+    assert BuyerProfile.from_dict(profile.to_dict()) == profile
+
+
+def test_scale_suffix_must_end_the_word() -> None:
+    from reic.modules.companion.domain.grounding import extract_numbers, ungrounded_numbers
+
+    assert extract_numbers("over 60 months") == [(60.0, False)]
+    assert extract_numbers("120 m² for 5M or 5 million") == [
+        (120.0, False),
+        (5e6, False),
+        (5e6, False),
+    ]
+    assert ungrounded_numbers("Pay over 60 months", []) == []

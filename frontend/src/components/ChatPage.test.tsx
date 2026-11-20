@@ -34,7 +34,10 @@ function streamOf(text: string, split: number): Response {
   return new Response(body, { status: 200, headers: { "Content-Type": "text/event-stream" } });
 }
 
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => {
+  vi.unstubAllGlobals();
+  window.localStorage.clear();
+});
 
 describe("ChatPage", () => {
   it("renders streamed text, a shortlist card and a citation", async () => {
@@ -67,5 +70,38 @@ describe("ChatPage", () => {
       "http://localhost:8000/chat/sessions/s1/messages",
       expect.objectContaining({ method: "POST" }),
     );
+  });
+
+  it("restores a saved conversation and remembers new sessions", async () => {
+    window.localStorage.setItem("reic.session.en", "saved-1");
+    const fetchMock = vi.fn((url: string) =>
+      Promise.resolve(
+        new Response(
+          JSON.stringify({
+            messages: [
+              { role: "user", text: "my budget is 5M" },
+              { role: "assistant", text: "Here is **one** unit.", artifacts: [{ kind: "shortlist", data: { units: [unit] } }] },
+            ],
+          }),
+          { status: url.endsWith("/chat/sessions/saved-1") ? 200 : 404 },
+        ),
+      ),
+    );
+    vi.stubGlobal("fetch", fetchMock);
+
+    render(<ChatPage />);
+    expect(await screen.findByText("my budget is 5M")).toBeInTheDocument();
+    expect(await screen.findByText("Palm Gardens")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "New chat" }));
+    expect(window.localStorage.getItem("reic.session.en")).toBeNull();
+    expect(screen.queryByText("my budget is 5M")).not.toBeInTheDocument();
+  });
+
+  it("forgets a session the server no longer has", async () => {
+    window.localStorage.setItem("reic.session.en", "gone");
+    vi.stubGlobal("fetch", vi.fn(() => Promise.resolve(new Response("{}", { status: 404 }))));
+    render(<ChatPage />);
+    await vi.waitFor(() => expect(window.localStorage.getItem("reic.session.en")).toBeNull());
   });
 });

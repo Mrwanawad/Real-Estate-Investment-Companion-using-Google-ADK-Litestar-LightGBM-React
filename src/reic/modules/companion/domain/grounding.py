@@ -10,7 +10,9 @@ from typing import Any
 
 _ARABIC_DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩٫٬", "0123456789.,")
 _NUMBER = re.compile(
-    r"(?<![\w.])(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d+))?\s*(%|k|m|mn|million|bn|billion|ألف|مليون)?",
+    # A scale suffix must end the word: "60 months" and "120 m²" are not millions.
+    r"(?<![\w.])(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d+))?\s*"
+    r"(%|(?:k|m|mn|million|bn|billion|ألف|مليون)(?![\w²]))?",
     re.IGNORECASE,
 )
 _SCALE = {

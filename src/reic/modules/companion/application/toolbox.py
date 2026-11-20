@@ -4,6 +4,7 @@ returns a compact, model-facing summary. All numbers come from the backend, neve
 import functools
 import logging
 from dataclasses import dataclass, field
+from datetime import UTC, datetime
 from typing import Any
 
 from reic.modules.companion.domain.errors import ToolInputError
@@ -34,6 +35,11 @@ class SessionState:
     profile: BuyerProfile
     artifacts: dict[str, dict[str, Any]] = field(default_factory=dict)
     lead_id: str | None = None
+    # Transcript for the client, and every tool result so far, for the grounding check.
+    messages: list[dict[str, Any]] = field(default_factory=list)
+    results: list[dict[str, Any]] = field(default_factory=list)
+    # Earlier conversation, set when the session was restored after a restart.
+    recap: str | None = None
 
 
 def _error(message: str) -> dict[str, Any]:
@@ -122,11 +128,15 @@ class ToolBox:
             phone=phone,
             email=email,
         )
-        return {
+        missing = missing_for(self.profile, "shortlist")
+        result: dict[str, Any] = {
             "profile": self.profile.to_dict(),
-            "missing_for_shortlist": missing_for(self.profile, "shortlist"),
+            "missing_for_shortlist": missing,
             "missing_for_projection": missing_for(self.profile, "projection"),
         }
+        if not missing and not self.profile.unit_codes:
+            result["next"] = "goal and budget are known: call search_units now"
+        return result
 
     async def search_units(
         self,
@@ -171,8 +181,14 @@ class ToolBox:
             return self._done({"units": [], "note": "no available unit matches; relax a filter"})
         self._emit("shortlist", result)
         self._state.profile = profile.merge(unit_codes=[u["code"] for u in units])
+        top = units[0]["code"]
+        if self.profile.horizon_years:
+            next_step = f"now call compare_financing and project_returns for {top}"
+        else:
+            next_step = f"now call compare_financing for {top}, then ask for the holding horizon"
         return self._done(
             {
+                "next": next_step,
                 "units": [
                     {
                         k: u.get(k)
@@ -191,7 +207,7 @@ class ToolBox:
                         )
                     }
                     for u in units
-                ]
+                ],
             }
         )
 
@@ -210,6 +226,8 @@ class ToolBox:
             return _error(str(exc))
         result = await self._backend.compare_financing(unit)
         self._emit("financing", result)
+        if self.profile.horizon_years and "projection" not in self._state.artifacts:
+            result = {**result, "next": f"now call project_returns for {unit['code']}"}
         return self._done(result)
 
     async def project_returns(
@@ -284,15 +302,19 @@ class ToolBox:
             }
         )
 
-    async def create_lead(self, summary: str) -> dict[str, Any]:
+    async def create_lead(self, summary: str, buyer_consented: bool) -> dict[str, Any]:
         """Hand the buyer to a human broker. Needs the buyer's phone or email in the profile.
 
         Args:
             summary: Two or three sentences for the broker: goal, budget, units of interest.
+            buyer_consented: True only if the buyer asked to be contacted or said yes to
+                sharing their name and contact details with a broker.
         """
         profile = self.profile
         if not profile.has_contact:
             return _error("ask the buyer for a phone number or email first")
+        if not buyer_consented:
+            return _error("ask the buyer if they agree to share their contact with a broker")
         if self._state.lead_id:
             return self._done({"lead_id": self._state.lead_id, "status": "already_created"})
         result = await self._backend.create_lead(
@@ -303,7 +325,10 @@ class ToolBox:
                 "language": profile.language,
                 "goal": profile.goal,
                 "budget_egp": profile.budget_egp,
-                "profile": profile.to_dict(),
+                "profile": {
+                    **profile.to_dict(),
+                    "consent_at": datetime.now(UTC).isoformat(timespec="seconds"),
+                },
                 "summary": summary,
                 "unit_codes": list(profile.unit_codes),
                 "session_id": self._state.session_id,

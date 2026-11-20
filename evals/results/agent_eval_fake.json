@@ -5,7 +5,7 @@
     "task_success": 0.9,
     "clarification_quality": 1.0,
     "grounding": 1.0,
-    "mean_seconds": 0.21
+    "mean_seconds": 0.27
   },
   "results": [
     {
@@ -25,7 +25,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 0.57
+      "seconds": 0.73
     },
     {
       "scenario": "resell_en",
@@ -44,7 +44,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 0.48
+      "seconds": 0.67
     },
     {
       "scenario": "live_en",
@@ -63,7 +63,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 0.56
+      "seconds": 0.61
     },
     {
       "scenario": "rent_ar",
@@ -75,7 +75,7 @@
         "search_units"
       ],
       "artifacts": [],
-      "seconds": 0.02
+      "seconds": 0.03
     },
     {
       "scenario": "resell_ar",
@@ -94,7 +94,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 0.35
+      "seconds": 0.51
     },
     {
       "scenario": "missing_budget_en",
@@ -115,7 +115,7 @@
       "grounded": true,
       "tools": [],
       "artifacts": [],
-      "seconds": 0.01,
+      "seconds": 0.02,
       "clarified": true
     },
     {
@@ -129,7 +129,7 @@
       "artifacts": [
         "citations"
       ],
-      "seconds": 0.02
+      "seconds": 0.03
     },
     {
       "scenario": "knowledge_ar",
@@ -157,7 +157,7 @@
       "artifacts": [
         "handoff"
       ],
-      "seconds": 0.04
+      "seconds": 0.05
     }
   ]
 }

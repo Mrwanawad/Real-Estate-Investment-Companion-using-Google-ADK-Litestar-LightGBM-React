@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import BrokerPage from "./components/BrokerPage";
 import ChatPage from "./components/ChatPage";
+import PrivacyPage from "./components/PrivacyPage";
 import { directionFor } from "./i18n";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
 
   const toggle = () => void i18n.changeLanguage(language === "en" ? "ar-EG" : "en");
   const broker = hash === "#/broker";
+  const privacy = hash === "#/privacy";
 
   return (
     <main>
@@ -32,13 +34,13 @@ export default function App() {
       <header className="top">
         <h1>{t("app.title")}</h1>
         <nav>
-          <a href={broker ? "#/" : "#/broker"}>{broker ? t("nav.chat") : t("nav.broker")}</a>
+          <a href={broker || privacy ? "#/" : "#/broker"}>{broker || privacy ? t("nav.chat") : t("nav.broker")}</a>
           <button type="button" className="secondary" onClick={toggle}>
             {t("language.toggle")}
           </button>
         </nav>
       </header>
-      {broker ? <BrokerPage /> : <ChatPage key={language} />}
+      {broker ? <BrokerPage /> : privacy ? <PrivacyPage /> : <ChatPage key={language} />}
     </main>
   );
 }

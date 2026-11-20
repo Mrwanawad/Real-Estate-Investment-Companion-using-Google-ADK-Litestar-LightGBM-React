@@ -81,6 +81,20 @@ export async function createSession(language: ApiLanguage): Promise<string> {
   return ((await res.json()) as { session_id: string }).session_id;
 }
 
+export interface StoredMessage {
+  role: "user" | "assistant";
+  text: string;
+  artifacts?: Artifact[];
+}
+
+/** The saved conversation, or null when the server no longer knows the session. */
+export async function getTranscript(sessionId: string): Promise<StoredMessage[] | null> {
+  const res = await fetch(`${API_BASE}/chat/sessions/${sessionId}`);
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return ((await res.json()) as { messages: StoredMessage[] }).messages;
+}
+
 function toStreamEvent(event: string, raw: string): StreamEvent | null {
   let data: Record<string, unknown>;
   try {

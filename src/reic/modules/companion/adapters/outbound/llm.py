@@ -9,7 +9,7 @@ import logging
 import os
 import re
 import time
-from collections.abc import AsyncGenerator
+from collections.abc import AsyncGenerator, Sequence
 from typing import Any
 
 from google.adk.models.base_llm import BaseLlm
@@ -228,7 +228,11 @@ class FakeLlm(BaseLlm):
         if _BROKER.search(message):
             if "create_lead" not in done:
                 return _call(
-                    "create_lead", {"summary": f"Buyer asked for a broker: {message[:200]}"}
+                    "create_lead",
+                    {
+                        "summary": f"Buyer asked for a broker: {message[:200]}",
+                        "buyer_consented": True,
+                    },
                 )
             return _text(self._lead_text(done["create_lead"], arabic))
         if _REPORT.search(message):
@@ -327,6 +331,7 @@ def build_llm(
     gemini_model: str,
     anthropic_api_key: str | None,
     gemini_api_key: str | None,
+    gemini_fallback_models: Sequence[str] = (),
 ) -> BaseLlm:
     if provider == "fake":
         return FakeLlm()
@@ -347,13 +352,16 @@ def build_llm(
         # Fail a stuck call instead of hanging the chat turn, and retry Google's transient
         # 429/5xx ("high demand") with backoff before the fallback chain sees the error.
         http = types.HttpOptions(timeout=GEMINI_TIMEOUT_MS)
-        models.append(
-            Gemini(
-                model=gemini_model,
-                client_kwargs={"api_key": gemini_key, "http_options": http},
-                retry_options=types.HttpRetryOptions(attempts=GEMINI_ATTEMPTS, initial_delay=1.0),
+        for name in dict.fromkeys([gemini_model, *gemini_fallback_models]):
+            models.append(
+                Gemini(
+                    model=name,
+                    client_kwargs={"api_key": gemini_key, "http_options": http},
+                    retry_options=types.HttpRetryOptions(
+                        attempts=GEMINI_ATTEMPTS, initial_delay=1.0
+                    ),
+                )
             )
-        )
     if not models:
         raise RuntimeError(f"LLM_PROVIDER={provider} but no API key is configured")
     return models[0] if len(models) == 1 else FallbackLlm(model="fallback", models=models)

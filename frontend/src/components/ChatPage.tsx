@@ -1,7 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { createSession, streamMessage, type ApiLanguage, type Artifact, type StreamEvent } from "../api";
+import {
+  createSession,
+  getTranscript,
+  streamMessage,
+  type ApiLanguage,
+  type Artifact,
+  type StreamEvent,
+} from "../api";
 import { ArtifactView, CitationList } from "./Artifacts";
 import { Markdown } from "./markdown";
 
@@ -23,6 +30,24 @@ const KNOWN_TOOLS = [
   "build_report",
 ];
 
+// Browser storage can be blocked (private mode); the chat still works without it.
+function readSaved(key: string): string | null {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function writeSaved(key: string, value: string | null): void {
+  try {
+    if (value === null) window.localStorage.removeItem(key);
+    else window.localStorage.setItem(key, value);
+  } catch {
+    /* ignore */
+  }
+}
+
 export default function ChatPage() {
   const { t, i18n } = useTranslation();
   const apiLang: ApiLanguage = (i18n.resolvedLanguage ?? "en").startsWith("ar") ? "ar" : "en";
@@ -34,7 +59,38 @@ export default function ChatPage() {
   const nextId = useRef(1);
   const endRef = useRef<HTMLDivElement>(null);
 
-  // App remounts this page (key=language), so each language gets a fresh session.
+  // App remounts this page (key=language); each language keeps its own saved session.
+  const storageKey = `reic.session.${apiLang}`;
+
+  useEffect(() => {
+    const saved = readSaved(storageKey);
+    if (!saved) return;
+    let cancelled = false;
+    getTranscript(saved)
+      .then((stored) => {
+        if (cancelled) return;
+        if (stored === null) {
+          writeSaved(storageKey, null);
+          return;
+        }
+        sessionRef.current = Promise.resolve(saved);
+        setMessages(
+          stored.map((m) => ({ id: nextId.current++, role: m.role, text: m.text, artifacts: m.artifacts ?? [] })),
+        );
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [storageKey]);
+
+  const newChat = () => {
+    writeSaved(storageKey, null);
+    sessionRef.current = null;
+    setMessages([]);
+    setError(null);
+  };
+
   useEffect(() => {
     endRef.current?.scrollIntoView?.({ block: "end" });
   }, [messages]);
@@ -63,7 +119,10 @@ export default function ChatPage() {
         else patch((m) => ({ ...m, tool: null }));
       };
       try {
-        sessionRef.current ??= createSession(apiLang);
+        sessionRef.current ??= createSession(apiLang).then((id) => {
+          writeSaved(storageKey, id);
+          return id;
+        });
         const id = await sessionRef.current;
         await streamMessage(id, message, apiLang, onEvent);
       } catch {
@@ -74,7 +133,7 @@ export default function ChatPage() {
         setStreaming(false);
       }
     },
-    [streaming, apiLang, t],
+    [streaming, apiLang, storageKey, t],
   );
 
   return (
@@ -141,7 +200,15 @@ export default function ChatPage() {
         <button type="button" className="secondary" disabled={streaming} onClick={() => void send(t("chat.brokerMessage"))}>
           {t("chat.contactBroker")}
         </button>
+        {messages.length > 0 && (
+          <button type="button" className="secondary" disabled={streaming} onClick={newChat}>
+            {t("chat.newChat")}
+          </button>
+        )}
       </form>
+      <p className="disclaimer">
+        {t("legal.disclaimer")} <a href="#/privacy">{t("legal.privacyLink")}</a>
+      </p>
     </section>
   );
 }

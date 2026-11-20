@@ -1,6 +1,6 @@
 """Buyer profile and the clarification policy. Pure: no framework imports."""
 
-from dataclasses import asdict, dataclass, field, replace
+from dataclasses import asdict, dataclass, field, fields, replace
 from typing import Any, Literal
 
 Goal = Literal["live", "rent", "resell"]
@@ -67,6 +67,14 @@ class BuyerProfile:
         data["areas"] = list(self.areas)
         data["unit_codes"] = list(self.unit_codes)
         return data
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> "BuyerProfile":
+        known = {f.name for f in fields(cls)}
+        values = {k: v for k, v in data.items() if k in known}
+        for key in ("areas", "unit_codes"):
+            values[key] = tuple(values.get(key) or ())
+        return cls(**values)
 
 
 def missing_for(profile: BuyerProfile, step: str) -> list[str]:

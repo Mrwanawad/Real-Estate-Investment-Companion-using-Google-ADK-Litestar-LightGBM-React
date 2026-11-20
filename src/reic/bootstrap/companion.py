@@ -12,6 +12,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from reic.modules.companion.adapters.outbound.adk_engine import AdkEngine
 from reic.modules.companion.adapters.outbound.llm import build_llm
+from reic.modules.companion.adapters.outbound.sql_session_store import SqlSessionStore
 from reic.modules.companion.application.chat import ChatService
 from reic.modules.financing.application.dto import CompareFinancingInput
 from reic.modules.financing.application.use_cases import CompareFinancingOptions
@@ -283,6 +284,7 @@ def build_chat_service(
         gemini_model=settings.gemini_model,
         anthropic_api_key=secret(settings.anthropic_api_key),
         gemini_api_key=secret(settings.gemini_api_key),
+        gemini_fallback_models=settings.gemini_fallback_models,
     )
     backend = AppBackend(session_factory, settings, market, scenarios, knowledge, handoff)
     return ChatService(
@@ -290,4 +292,5 @@ def build_chat_service(
         backend,
         reports,
         pdf_available=reports.pdf_available,
+        store=SqlSessionStore(session_factory),
     )

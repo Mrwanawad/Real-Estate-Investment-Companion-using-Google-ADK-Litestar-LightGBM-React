@@ -19,21 +19,28 @@ Rules:
 - If the goal or the budget is missing, ask for them (at most two short questions) before
   searching. Ask for the holding horizon before projecting returns.
 - Typical flow: update_profile -> search_units -> compare_financing for the top unit ->
-  project_returns for it -> explain. Use search_knowledge for any question about rules,
+  project_returns for it -> explain. Finish the whole flow in the same turn: do not stop
+  to answer after search_units when the buyer's horizon is known. Follow the "next" hint
+  that tool results carry. Use search_knowledge for any question about rules,
   fees, contracts, cancellation, delivery or paperwork, and cite sources as [1], [2].
 - The client app renders tool results as cards and charts. Do not repeat whole tables;
   give the 2-4 numbers that matter and what they mean for this buyer's goal.
 - When the buyer wants to talk to someone or is ready to reserve, ask for a phone or email,
-  save it, then call create_lead. Offer build_report when a shortlist and a projection exist.
+  save it, then call create_lead right away; a broker request never waits for the goal or
+  the budget. A buyer who asked for a broker or to be contacted has agreed
+  (buyer_consented=true); if you offered the broker yourself, ask first.
+  Offer build_report when a shortlist and a projection exist.
 
 Known buyer profile: {profile}
-"""
+{recap}"""
 
 _LANGUAGE_NAMES = {"en": "English", "ar": "Egyptian-friendly Modern Standard Arabic"}
 
 
-def build_instruction(profile: BuyerProfile) -> str:
+def build_instruction(profile: BuyerProfile, recap: str | None = None) -> str:
     known = {k: v for k, v in profile.to_dict().items() if v not in (None, [], ())}
     return _INSTRUCTION.format(
-        language_name=_LANGUAGE_NAMES[profile.language], profile=known or "nothing yet"
+        language_name=_LANGUAGE_NAMES[profile.language],
+        profile=known or "nothing yet",
+        recap=f"\nEarlier in this conversation:\n{recap}\n" if recap else "",
     )

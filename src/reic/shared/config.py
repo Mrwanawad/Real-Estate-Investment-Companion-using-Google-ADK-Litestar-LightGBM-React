@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     llm_provider: Literal["anthropic", "gemini", "fake"] = "fake"
     anthropic_model: str = "claude-sonnet-5-5"
     gemini_model: str = "gemini-3.5-flash"
+    # Tried in order when the main Gemini model fails (e.g. its daily free quota ran out).
+    gemini_fallback_models: list[str] = ["gemini-3.1-flash-lite"]
     anthropic_api_key: SecretStr | None = None
     gemini_api_key: SecretStr | None = None
 

@@ -1,9 +1,18 @@
 {
-  "app": { "title": "Real Estate Investment Companion" },
-  "banner": { "synthetic": "Synthetic demo data" },
+  "app": {
+    "title": "Real Estate Investment Companion"
+  },
+  "banner": {
+    "synthetic": "Synthetic demo data"
+  },
   "welcome": "Compare units, financing and returns with a guided companion.",
-  "language": { "toggle": "العربية" },
-  "nav": { "chat": "Back to chat", "broker": "Broker view" },
+  "language": {
+    "toggle": "العربية"
+  },
+  "nav": {
+    "chat": "Back to chat",
+    "broker": "Broker view"
+  },
   "chat": {
     "placeholder": "Ask about units, financing or returns",
     "send": "Send",
@@ -12,7 +21,8 @@
     "error": "Something went wrong. Please try again.",
     "suggestion1": "I have 5M EGP, want to rent out in New Cairo, 5 year horizon",
     "suggestion2": "Compare payment plans for a 2 bedroom apartment",
-    "suggestion3": "What are the risks of buying off-plan?"
+    "suggestion3": "What are the risks of buying off-plan?",
+    "newChat": "New chat"
   },
   "tool": {
     "working": "Working on it…",
@@ -62,8 +72,17 @@
     "year": "Year",
     "chartLabel": "Fan chart of projected value with P10 to P90 band and median line"
   },
-  "risk": { "low": "Low", "medium": "Medium", "high": "High" },
-  "status": { "new": "New", "contacted": "Contacted", "qualified": "Qualified", "closed": "Closed" },
+  "risk": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "status": {
+    "new": "New",
+    "contacted": "Contacted",
+    "qualified": "Qualified",
+    "closed": "Closed"
+  },
   "broker": {
     "title": "Broker leads",
     "apiKey": "API key",
@@ -81,5 +100,16 @@
     "budget": "Budget",
     "status": "Status",
     "summary": "Summary"
+  },
+  "legal": {
+    "disclaimer": "Figures are model estimates on sample data, not financial advice or a price offer.",
+    "privacyLink": "Privacy and terms",
+    "privacyTitle": "Privacy and terms",
+    "privacyBody": [
+      "This companion gives estimates from statistical models. Prices, payments, values and returns are scenarios, not promises, and not financial, legal or tax advice. Check every figure with the developer and a licensed professional before you sign or pay.",
+      "What we keep: your chat messages and the profile you share (goal, budget, horizon, areas) so the conversation continues when you come back. Your browser keeps only a session id.",
+      "Your contact details (name, phone, email) go to a broker only when you ask to be contacted or agree to it in the chat. The time of your agreement is saved with the lead.",
+      "We do not sell your data. Personal data is handled under Egypt's Personal Data Protection Law (No. 151 of 2020). To see or delete your data, contact the broker who called you, or start a new chat to stop using the saved one."
+    ]
   }
 }

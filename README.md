@@ -12,11 +12,11 @@ A bilingual (English / Egyptian Arabic) AI companion for real estate buyers and 
 
 ## Highlights
 
-- **The LLM never does the math.** Every number in a reply comes from a deterministic tool (Decimal financing calculators, trained models, Monte Carlo). A grounding check compares the figures in each reply against that turn's tool outputs and flags anything it cannot trace.
+- **The LLM never does the math.** Every number in a reply comes from a deterministic tool (Decimal financing calculators, trained models, Monte Carlo). A grounding check compares the figures in each reply against the session's tool outputs and the buyer's own numbers, and flags anything it cannot trace.
 - **Ranges, not point guesses.** Area forecasts, unit values and returns come with calibrated intervals, and their coverage is measured in backtests.
 - **Every model beats a baseline it was gated against.** The area forecast beats seasonal naive (MAPE 5.9% vs 20.4%), and the unit value model beats an area-median baseline (MAE 7.8k vs 17.2k EGP/m²).
 - **Arabic is part of the design.** Arabic documents, Arabic eval scenarios, an RTL interface, and Arabic risk text and reports.
-- **Built like a production service.** Hexagonal modules enforced by import-linter, 192 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
+- **Built like a production service.** Hexagonal modules enforced by import-linter, 201 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
 - **Deployed end to end.** Fly.io API, Neon Postgres, Cloudflare static UI.
 
 ## How it works
@@ -55,13 +55,13 @@ A typical turn: the buyer says *"I have 5M EGP and want to rent it out in New Ca
 
 | Module | What it does | Method |
 | --- | --- | --- |
-| `companion` | Chat agent, buyer profile, clarification policy, grounding check, SSE streaming | Google ADK `LlmAgent` with 7 function tools. Provider chain Anthropic → Gemini with a circuit breaker, 60 s timeout and retries on 429/5xx. Scripted `FakeLlm` for tests and offline demos |
+| `companion` | Chat agent, buyer profile, clarification policy, grounding check, SSE streaming | Google ADK `LlmAgent` with 7 function tools. Provider chain Anthropic → Gemini → Gemini fallback models (default `gemini-3.1-flash-lite`, used when the main model's quota runs out) with a circuit breaker, 60 s timeout and retries on 429/5xx. Sessions and transcripts persist in Postgres. Scripted `FakeLlm` for tests and offline demos |
 | `inventory` | Unit search and goal-weighted shortlist | SQL filters + a scoring function per goal (live / rent / resell) |
 | `financing` | Installments, mortgage, present-value comparison | Pure `Decimal` math, checked against reference values and seeded property tests |
 | `market` | Area price forecast, unit value, rent | ARIMA(1,1,0) with drift on log prices and a rolling-origin backtest. LightGBM quantile regression (P10/P50/P90) widened by split conformal and promoted only if it beats the baseline. LightGBM rent model |
 | `scenarios` | Value, rent, IRR, break-even, sensitivity | NumPy Monte Carlo over price growth (log-normal), inflation and vacancy (beta), plus a sensitivity table. Rule-based risk summary in EN/AR |
 | `knowledge` | Cited answers from policy documents | BM25 + vectors (hashing / MiniLM / bge-m3) fused with reciprocal rank fusion. 16 EN/AR docs |
-| `handoff` | Broker leads | Leads table, broker queue behind `X-API-Key`, webhook signed with HMAC-SHA256 over `timestamp.body` |
+| `handoff` | Broker leads | Leads table, broker queue behind `X-API-Key`, webhook signed with HMAC-SHA256 over `timestamp.body`, sent in the background. Leads need the buyer's consent, stored with a timestamp |
 | `reports` | Shareable report | Jinja2 HTML in EN/AR (RTL) with inline SVG charts. PDF through WeasyPrint (works in the deployed image, Arabic included; locally it needs GTK) |
 
 Each module follows `domain / ports / application / adapters`. import-linter enforces 6 contracts: layers point inward, modules don't import each other, and domain/application code stays free of frameworks and vendors (no Litestar, SQLAlchemy, LightGBM or Google imports in the core). Cross-module calls go through gateways in `src/reic/bootstrap/`.
@@ -92,17 +92,17 @@ All numbers are real runs on synthetic data. Raw results are in `evals/results/`
 | Agent (10 scenarios, scripted provider) | Task success | 0.90 |
 | | Clarification when budget missing | 1.00 |
 | | Grounding (no untraced figures) | 1.00 |
-| Agent (10 scenarios, live `gemini-3.1-flash-lite`) | Task success | 0.60 |
+| Agent (10 scenarios, live `gemini-3.1-flash-lite`) | Task success | 0.70 (was 0.60) |
 | | Clarification when budget missing | 1.00 |
-| | Grounding (no untraced figures) | 0.70 |
-| | Mean seconds per scenario | 5.3 |
+| | Grounding (no untraced figures) | 1.00 (was 0.70) |
+| | Mean seconds per scenario | 26 (Google 503/504 retries that day) |
 
 How to read the agent rows:
 - **Scripted provider:** this row tests the tools, streaming and guardrails, not language-model quality. Its one miss is an Arabic rent request (Madinaty, 4M EGP) that has no matching synthetic unit.
-- **Live `flash-lite`:** the small model clarifies and cites well, but it often stops after the shortlist and sometimes states figures no tool returned. The grounding check catches and flags those, which is why the score is measured.
+- **Live `flash-lite`:** the first run stopped after the shortlist and was flagged for untraced figures. Three fixes moved it to the numbers above: tool results now carry a `next` hint (search → financing → returns), the grounding check accepts figures from earlier turns and from the buyer, and "60 months" is no longer read as 60M. The misses left are the Arabic Madinaty case (no matching synthetic unit), a Google timeout mid-turn, and one run where the small model asked for a budget before handing a buyer to a broker.
 - **`gemini-3.5-flash`:** it completed the full English buyer journey (profile → search → financing → returns, all artifacts) in about 21 s in the live smoke test. Its full 10-scenario eval did not fit the free tier (5 requests/minute, 20/day). With a key that allows it, run `scripts/eval_agent.py --provider gemini --pause 15`.
 
-Tests: 192 backend tests (unit, API, seeded property tests, integration on embedded Postgres) and 10 frontend tests. `scripts/smoke_e2e.py` runs the full journey against a running stack: English buyer journey, knowledge answer with citations, HTML report, broker handoff with queue auth, and an Arabic session.
+Tests: 201 backend tests (unit, API, seeded property tests, integration on embedded Postgres) and 12 frontend tests. `scripts/smoke_e2e.py` runs the full journey against a running stack: English buyer journey, knowledge answer with citations, HTML report, broker handoff with queue auth, and an Arabic session.
 
 ## Engineering notes
 
@@ -142,7 +142,7 @@ Design details: [`architecture.md`](architecture.md).
 
 ## Configuration
 
-- **LLM:** set `LLM_PROVIDER` to `fake` (default), `gemini` (`GEMINI_API_KEY`, `GEMINI_MODEL`, default `gemini-3.5-flash`) or `anthropic` (`ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`). In `anthropic` mode, Gemini is the fallback when a Gemini key exists.
+- **LLM:** set `LLM_PROVIDER` to `fake` (default), `gemini` (`GEMINI_API_KEY`, `GEMINI_MODEL`, default `gemini-3.5-flash`; `GEMINI_FALLBACK_MODELS`, default `["gemini-3.1-flash-lite"]`) or `anthropic` (`ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`). In `anthropic` mode, Gemini is the fallback when a Gemini key exists.
 - **Financing assumptions:** discount rate 22%, mortgage 24% over 10 years with 20% down, inflation 15%. They are settings, and the outputs show them.
 - **Abuse protection:** `RATE_LIMIT_PER_MINUTE` (default 20) applies per client to `POST /leads` and chat session/message creation. `CLIENT_IP_HEADER` names a trusted proxy header (`Fly-Client-IP` on Fly.io).
 - **Broker handoff:** `BROKER_API_KEY` guards the broker queue. `WEBHOOK_URL` + `WEBHOOK_SECRET` turn on the signed lead webhook (`X-REIC-Signature: sha256=<hex>`, `X-REIC-Timestamp`).
@@ -153,7 +153,7 @@ See `.env.example` for every setting.
 ## API
 
 - `GET /health`
-- `POST /chat/sessions`, `POST /chat/sessions/{id}/messages` (SSE), `GET /chat/sessions/{id}/profile`
+- `POST /chat/sessions`, `POST /chat/sessions/{id}/messages` (SSE), `GET /chat/sessions/{id}` (saved transcript), `GET /chat/sessions/{id}/profile`
 - `GET /reports/{session_id}?lang=en|ar&format=html|pdf`
 - `POST /financing/installments`, `/financing/mortgage`, `/financing/compare`
 - `POST /inventory/search`, `/inventory/shortlist`; `GET /inventory/units/{code}`, `/inventory/areas`
@@ -186,7 +186,8 @@ Python 3.12 · uv · Litestar · Pydantic · SQLAlchemy 2 + Alembic · PostgreSQ
 - Backtests use 3 origins per area on a short synthetic series, so the metrics are optimistic about real markets.
 - The RAG eval uses the hashing embedder on a small corpus, and the gold set is easy.
 - Live agent numbers so far are from `gemini-3.1-flash-lite`. A full `gemini-3.5-flash` eval needs a paid-tier key.
-- Chat sessions and the knowledge index live in memory (single machine). Rate limits use an in-memory store.
+- Chat sessions persist in Postgres; after a restart the agent gets a short recap of the conversation, not the full model history. The knowledge index and rate limits live in memory (single machine).
+- No user accounts: the browser keeps the session id. The privacy page (`#/privacy`) states what is stored and when contact details reach a broker.
 - The container uses the hashing embedder; add the `retrieval` extra for MiniLM or bge-m3.
 - No cross-encoder reranker. Hybrid retrieval already reaches Recall@4 = 1.00 on the gold set, so it wasn't needed at this corpus size.
 

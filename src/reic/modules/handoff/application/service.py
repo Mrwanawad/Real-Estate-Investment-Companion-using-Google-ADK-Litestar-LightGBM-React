@@ -1,3 +1,4 @@
+import asyncio
 import json
 from typing import Annotated, Any
 
@@ -45,6 +46,7 @@ class HandoffService:
     def __init__(self, store: LeadStore, notifier: LeadNotifier) -> None:
         self._store = store
         self._notifier = notifier
+        self._deliveries: set[asyncio.Task[None]] = set()
 
     async def create_lead(self, data: dict[str, Any]) -> dict[str, Any]:
         try:
@@ -56,8 +58,16 @@ class HandoffService:
             raise LeadValidationError(problems) from exc
         lead = Lead.create(**parsed.model_dump())
         await self._store.add(lead)
-        await self._notifier.notify(lead)
+        # The webhook runs in the background so a slow broker endpoint never stalls the chat.
+        task = asyncio.create_task(self._notifier.notify(lead))
+        self._deliveries.add(task)
+        task.add_done_callback(self._deliveries.discard)
         return {"lead_id": lead.id, "status": lead.status}
+
+    async def drain(self) -> None:
+        """Wait for webhook deliveries in flight (tests, shutdown)."""
+        if self._deliveries:
+            await asyncio.gather(*self._deliveries, return_exceptions=True)
 
     async def list_leads(self, status: str | None = None, limit: int = 50) -> list[dict[str, Any]]:
         if status is not None:

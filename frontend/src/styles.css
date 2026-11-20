@@ -344,3 +344,17 @@ tr.highlight {
     max-width: 100%;
   }
 }
+
+.disclaimer {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-block: 0.5rem 0;
+}
+
+.privacy {
+  max-width: 40rem;
+}
+
+.privacy h2 {
+  margin-block-end: 1rem;
+}

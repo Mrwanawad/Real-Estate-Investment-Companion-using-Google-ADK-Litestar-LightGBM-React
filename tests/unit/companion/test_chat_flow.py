@@ -193,3 +193,60 @@ async def test_streamed_tool_calls_are_reported_once() -> None:
     started = [e.data["name"] for e in events if e.kind == "tool" and e.data["status"] == "started"]
     assert started == ["update_profile", "search_units", "compare_financing", "project_returns"]
     assert events[-1].kind == "done"
+
+
+class MemoryStore:
+    def __init__(self) -> None:
+        self.docs: dict[str, dict[str, Any]] = {}
+
+    async def load(self, session_id: str) -> dict[str, Any] | None:
+        return self.docs.get(session_id)
+
+    async def save(self, session_id: str, data: dict[str, Any]) -> None:
+        self.docs[session_id] = data
+
+
+async def test_session_survives_a_restart_with_transcript_and_recap() -> None:
+    store = MemoryStore()
+    first = ChatService(AdkEngine(FakeLlm(), stream=False), StubBackend(), store=store)
+    sid = first.create_session("en")
+    await _collect(first, sid, "I have 5M EGP, want to rent it out in New Cairo for 5 years")
+    assert sid in store.docs
+
+    restarted = ChatService(AdkEngine(FakeLlm(), stream=False), StubBackend(), store=store)
+    transcript = await restarted.transcript(sid)
+    assert [m["role"] for m in transcript["messages"]] == ["user", "assistant"]
+    kinds = [a["kind"] for a in transcript["messages"][1]["artifacts"]]
+    assert kinds == ["shortlist", "financing", "projection", "risks"]
+    state = await restarted.load(sid)
+    assert state.profile.budget_egp == 5_000_000 and state.recap
+    payload = restarted.report_payload(sid)
+    assert {"shortlist", "projection"} <= payload.keys()
+
+
+async def test_unknown_session_is_not_found() -> None:
+    from reic.modules.companion.domain.errors import SessionNotFoundError
+
+    service = ChatService(AdkEngine(FakeLlm(), stream=False), StubBackend(), store=MemoryStore())
+    with pytest.raises(SessionNotFoundError):
+        await service.load("missing")
+
+
+async def test_lead_needs_consent() -> None:
+    from reic.modules.companion.application.toolbox import SessionState, ToolBox
+    from reic.modules.companion.domain.profile import BuyerProfile
+
+    backend = StubBackend()
+    state = SessionState("s1", BuyerProfile(phone="01012345678"))
+    box = ToolBox(state, backend)
+    refused = await box.create_lead("wants a call", buyer_consented=False)
+    assert "error" in refused and backend.leads == []
+    created = await box.create_lead("wants a call", buyer_consented=True)
+    assert created["lead_id"] == "lead-1"
+    assert backend.leads[0]["profile"]["consent_at"]
+
+
+async def test_numbers_from_the_buyer_and_earlier_turns_count_as_grounded() -> None:
+    from reic.modules.companion.domain.grounding import ungrounded_numbers
+
+    assert ungrounded_numbers("Your 5M budget", [{"message": "I have 5,000,000 EGP"}]) == []

@@ -99,6 +99,7 @@ async def test_service_create_list_update() -> None:
     service = HandoffService(MemoryStore(), notifier)
     created = await service.create_lead(LEAD)
     assert created["status"] == "new"
+    await service.drain()
     assert len(notifier.seen) == 1
     assert [x["id"] for x in await service.list_leads("new", 10)] == [created["lead_id"]]
     assert await service.list_leads("closed", 10) == []

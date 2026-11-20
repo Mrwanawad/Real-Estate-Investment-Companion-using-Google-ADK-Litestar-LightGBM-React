@@ -1,6 +1,7 @@
+import asyncio
 import json
 from collections.abc import AsyncIterator
-from typing import Literal
+from typing import Any, Literal
 
 from litestar import Controller, Response, get, post
 from litestar.exceptions import NotFoundException, ValidationException
@@ -46,16 +47,23 @@ class ChatController(Controller):
         self, session_id: str, data: NewMessage, chat: ChatService
     ) -> ServerSentEvent:
         try:
-            chat.state(session_id)
+            await chat.load(session_id)
         except SessionNotFoundError as exc:
             raise NotFoundException(str(exc)) from exc
         stream = chat.send(session_id, data.message.strip(), data.language)
         return ServerSentEvent(_sse(stream), headers={"Cache-Control": "no-cache"})
 
-    @get("/{session_id:str}/profile", sync_to_thread=False)
-    def profile(self, session_id: str, chat: ChatService) -> dict[str, object]:
+    @get("/{session_id:str}")
+    async def transcript(self, session_id: str, chat: ChatService) -> dict[str, Any]:
         try:
-            return chat.state(session_id).profile.to_dict()
+            return await chat.transcript(session_id)
+        except SessionNotFoundError as exc:
+            raise NotFoundException(str(exc)) from exc
+
+    @get("/{session_id:str}/profile")
+    async def profile(self, session_id: str, chat: ChatService) -> dict[str, Any]:
+        try:
+            return (await chat.load(session_id)).profile.to_dict()
         except SessionNotFoundError as exc:
             raise NotFoundException(str(exc)) from exc
 
@@ -63,8 +71,8 @@ class ChatController(Controller):
 class ReportController(Controller):
     path = "/reports"
 
-    @get("/{session_id:str}", sync_to_thread=True)
-    def report(
+    @get("/{session_id:str}")
+    async def report(
         self,
         session_id: str,
         chat: ChatService,
@@ -72,7 +80,8 @@ class ReportController(Controller):
         format: Literal["html", "pdf"] = "html",  # noqa: A002 - public query name
     ) -> Response[bytes | str]:
         try:
-            body = chat.render_report(session_id, lang, format)
+            await chat.load(session_id)
+            body = await asyncio.to_thread(chat.render_report, session_id, lang, format)
         except SessionNotFoundError as exc:
             raise NotFoundException(str(exc)) from exc
         if body is None:

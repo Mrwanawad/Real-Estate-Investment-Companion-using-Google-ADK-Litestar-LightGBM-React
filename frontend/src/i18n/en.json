@@ -3,7 +3,7 @@
     "title": "Real Estate Investment Companion"
   },
   "banner": {
-    "synthetic": "Synthetic demo data"
+    "synthetic": "Listings: PropertyFinder Egypt, August 2025 (Kaggle, CC BY-SA 4.0). Market history and brokers are simulated."
   },
   "welcome": "Compare units, financing and returns with a guided companion.",
   "language": {
@@ -40,7 +40,8 @@
     "m2": "m²",
     "delivery": "Delivery {{year}}",
     "tier": "Developer tier {{tier}}",
-    "score": "Match score {{score}}"
+    "score": "Match score {{score}}",
+    "listing": "View listing"
   },
   "artifact": {
     "financing": "Financing options for {{code}}",
@@ -49,7 +50,9 @@
     "sources": "Sources",
     "handoff": "A broker will contact you. Reference: {{id}}.",
     "reportHtml": "Open report",
-    "reportPdf": "Download PDF"
+    "reportPdf": "Download PDF",
+    "handoffBroker": "Assigned to {{name}} ({{phone}}). Reference: {{id}}.",
+    "simulatedBroker": "This broker is simulated for the demo; no one will call."
   },
   "financing": {
     "option": "Option",
@@ -99,17 +102,20 @@
     "goal": "Goal",
     "budget": "Budget",
     "status": "Status",
-    "summary": "Summary"
+    "summary": "Summary",
+    "assigned": "Broker"
   },
   "legal": {
-    "disclaimer": "Figures are model estimates on sample data, not financial advice or a price offer.",
+    "disclaimer": "Prices are public asking prices from Aug 2025; projections are model estimates, not financial advice.",
     "privacyLink": "Privacy and terms",
     "privacyTitle": "Privacy and terms",
     "privacyBody": [
-      "This companion gives estimates from statistical models. Prices, payments, values and returns are scenarios, not promises, and not financial, legal or tax advice. Check every figure with the developer and a licensed professional before you sign or pay.",
-      "What we keep: your chat messages and the profile you share (goal, budget, horizon, areas) so the conversation continues when you come back. Your browser keeps only a session id.",
-      "Your contact details (name, phone, email) go to a broker only when you ask to be contacted or agree to it in the chat. The time of your agreement is saved with the lead.",
-      "We do not sell your data. Personal data is handled under Egypt's Personal Data Protection Law (No. 151 of 2020). To see or delete your data, contact the broker who called you, or start a new chat to stop using the saved one."
+      "This companion gives estimates from statistical models. It works for you, not for any developer or brokerage. Prices, payments, values and returns are scenarios, not promises, and not financial, legal or tax advice. Check every figure with the seller and a licensed professional before you sign or pay.",
+      "Data sources: unit prices, sizes and payment methods are public asking prices from PropertyFinder Egypt, collected in August 2025 and published on Kaggle under CC BY-SA 4.0. Some payment terms, delivery years and finishing are inferred from the listing text. Area price history, rents, policy documents and brokers are simulated.",
+      "What we keep: your chat messages and the profile you share (goal, budget, horizon, areas), so the conversation continues when you come back. Your browser keeps only a session id. \"New chat\" deletes the saved conversation. Chats and leads are deleted automatically after 90 days.",
+      "Who processes it: your messages are sent to Google's Gemini API to generate replies. The app runs on Vercel, the database on Neon (Frankfurt) and the web page on Cloudflare, so data is processed outside Egypt.",
+      "Brokers: contact details (name, phone, email) are passed on only when you ask to be contacted or agree to it in the chat, and the time you agreed is saved. The brokers in this demo are simulated; nobody will call you.",
+      "We do not sell your data. Personal data is handled with Egypt's Personal Data Protection Law (No. 151 of 2020) in mind. Do not share sensitive details (national ID, bank data) in the chat."
     ]
   }
 }

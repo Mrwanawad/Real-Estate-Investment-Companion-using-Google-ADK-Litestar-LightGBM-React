@@ -1,6 +1,6 @@
 # Real Estate Investment Companion
 
-A bilingual (English / Egyptian Arabic) AI companion for real estate buyers and small investors. It turns a conversation into a decision pack: a shortlist of units, a cash vs. installments vs. mortgage comparison, resale and rental projections as P10 / P50 / P90 ranges, a risk summary, cited answers from company policy documents, a shareable report, and a handoff to a broker.
+A bilingual (English / Egyptian Arabic) AI real estate consultant for buyers and small investors in Egypt. It works for the buyer, not for any developer or brokerage. It turns a conversation into a decision pack: a shortlist from 16,000 real public listings, a cash vs. installments vs. mortgage comparison, resale and rental projections as P10 / P50 / P90 ranges, a risk summary, cited answers from policy documents, a shareable report, and a handoff to a broker.
 
 <p align="center"><img src="docs/demo.gif" width="100%" alt="Demo: a buyer asks for a rental investment in New Cairo with 5M EGP, the companion compares cash, installment and mortgage options with the cheapest route highlighted, answers a refund policy question with cited sources, and hands the buyer off to a broker."/></p>
 
@@ -8,15 +8,15 @@ A bilingual (English / Egyptian Arabic) AI companion for real estate buyers and 
 
 **Try it:** *"I have 5M EGP and want to rent it out in New Cairo for 5 years"*, then *"What is the cancellation and refund policy?"*, *"Build my report"* and *"I want to talk to a broker"*. Switch to Arabic in the header, or open the broker queue at `#/broker`.
 
-> **All inventory, market data and documents in this repo are synthetic.** Nothing here is real pricing, a real listing, or investment advice.
+> **Data:** unit prices are real public asking prices from PropertyFinder Egypt (August 2025, [Kaggle dataset](https://www.kaggle.com/datasets/hassankhaled21/egyptian-real-estate-listings), CC BY-SA 4.0). Area price history, rents, policy documents and brokers are simulated. Nothing here is investment advice.
 
 ## Highlights
 
 - **The LLM never does the math.** Every number in a reply comes from a deterministic tool (Decimal financing calculators, trained models, Monte Carlo). A grounding check compares the figures in each reply against the session's tool outputs and the buyer's own numbers, and flags anything it cannot trace.
 - **Ranges, not point guesses.** Area forecasts, unit values and returns come with calibrated intervals, and their coverage is measured in backtests.
-- **Every model beats a baseline it was gated against.** The area forecast beats seasonal naive (MAPE 5.9% vs 20.4%), and the unit value model beats an area-median baseline (MAE 7.8k vs 17.2k EGP/m²).
+- **Every model beats a baseline it was gated against.** The area forecast beats seasonal naive (MAPE 5.9% vs 20.4%), and on the real listings the unit value model beats an area-median baseline (MAE 26.2k vs 29.8k EGP/m², 80% interval coverage 0.80).
 - **Arabic is part of the design.** Arabic documents, Arabic eval scenarios, an RTL interface, and Arabic risk text and reports.
-- **Built like a production service.** Hexagonal modules enforced by import-linter, 203 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
+- **Built like a production service.** Hexagonal modules enforced by import-linter, 211 backend tests (integration tests on real Postgres), seeded property tests for the financing math, CI on every push, OpenTelemetry, provider fallback with a circuit breaker, rate limits, and HMAC-signed webhooks.
 - **Deployed end to end on free tiers.** Vercel container function for the API, Neon Postgres, Cloudflare static UI.
 
 ## How it works
@@ -70,26 +70,29 @@ Each module follows `domain / ports / application / adapters`. import-linter enf
 
 | Set | Content | Provenance |
 | --- | --- | --- |
-| Inventory | 12 real Egyptian districts, 15 fictional developers, 40 projects, 1,500 units, 82 payment plans | Synthetic, `scripts/generate_synthetic_data.py`, fixed seed, sha256 manifest |
-| Market | Monthly price index per area 2015-2026 with the 2016, 2022, 2023 and 2024 devaluation jumps; 5,000 rental listings | Synthetic, driven by the macro series below |
+| Inventory (served) | 16,112 for-sale units in 990 compounds across the 12 areas, 1,724 payment plans, each unit linked to its listing | Real asking prices, PropertyFinder Egypt, Aug 2025, via Kaggle (CC BY-SA 4.0). `scripts/import_listings.py`; fields the listings lack are labelled assumptions, see [`demo_data/listings/README.md`](demo_data/listings/README.md) |
+| Inventory (tests) | 12 districts, 15 fictional developers, 40 projects, 1,500 units, 82 payment plans | Synthetic, `scripts/generate_synthetic_data.py`, fixed seed, sha256 manifest; `scripts/seed.py --synthetic` |
+| Brokers | 8 brokers with languages and covered areas; leads go to the least busy broker who speaks the buyer's language and covers their area | Simulated (`demo_data/synthetic/brokers.json`); the UI says so |
+| Market | Monthly price index per area 2015-2026 with the 2016, 2022, 2023 and 2024 devaluation jumps; 5,000 rental listings | Synthetic, driven by the macro series below. With the real inventory, rents are scaled per area to real price levels |
 | Macro | CPI, EGP/USD, CBE overnight rates | Real anchors from the World Bank and the CBE, each row with source URL and retrieval time (`demo_data/public/`). Monthly series are interpolated and labelled as such |
-| Knowledge | 16 policy documents (10 EN, 6 AR): cancellation, installments, mortgage, registration (Shahr Akary), resale fees, delivery delays, maintenance, rentals | Synthetic, written for the demo |
+| Knowledge | 16 policy documents (10 EN, 6 AR): cancellation, installments, mortgage, registration (Shahr Akary), resale fees, delivery delays, maintenance, rentals | Sample policies written for the demo, typical of Egyptian developers, not any one company's |
 
 ## Evaluation
 
-All numbers are real runs on synthetic data. Raw results are in `evals/results/`; regenerate them with `scripts/train_market_models.py`, `scripts/eval_rag.py` and `scripts/eval_agent.py`.
+All numbers are real runs. The unit value row uses the real listings; the other market rows use synthetic data. Raw results are in `evals/results/`; regenerate them with `scripts/train_market_models.py`, `scripts/eval_rag.py` and `scripts/eval_agent.py`.
 
 | Area | Metric | Result |
 | --- | --- | --- |
 | Area price forecast (ARIMA, rolling origin, 12 areas, 12-month horizon) | MAPE | **5.9%** (seasonal naive 20.4%) |
 | | MASE | **0.94** (seasonal naive 3.03) |
 | | 80% interval coverage | **0.77** (seasonal naive 0.32) |
-| Unit value (LightGBM quantile, EGP/m²) | Holdout MAE | **7,807** (baseline 17,176) |
-| | 80% interval coverage after conformal | 0.74 |
+| Unit value on real listings (LightGBM quantile, EGP/m², 16k units) | Holdout MAE | **26,171** (area-median baseline 29,764) |
+| | 80% interval coverage after conformal | 0.80 |
+| Unit value on synthetic units | Holdout MAE | 7,807 (baseline 17,176), coverage 0.74 |
 | Rent (LightGBM) | Holdout MAE / MAPE | 6,587 EGP / 10.2% |
 | RAG (26 questions, EN+AR, k=4, hashing embedder) | Recall@4, BM25 / vector / hybrid | 1.00 / 1.00 / 1.00 |
 | | MRR, BM25 / vector / hybrid | 0.981 / 0.923 / 0.962 |
-| Agent (10 scenarios, scripted provider) | Task success | 0.90 |
+| Agent (10 scenarios, scripted provider, real listings) | Task success | 1.00 |
 | | Clarification when budget missing | 1.00 |
 | | Grounding (no untraced figures) | 1.00 |
 | Agent (10 scenarios, live `gemini-3.1-flash-lite`) | Task success | 0.70 (was 0.60) |
@@ -98,7 +101,7 @@ All numbers are real runs on synthetic data. Raw results are in `evals/results/`
 | | Mean seconds per scenario | 26 (Google 503/504 retries that day) |
 
 How to read the agent rows:
-- **Scripted provider:** this row tests the tools, streaming and guardrails, not language-model quality. Its one miss is an Arabic rent request (Madinaty, 4M EGP) that has no matching synthetic unit.
+- **Scripted provider:** this row tests the tools, streaming and guardrails, not language-model quality. On synthetic inventory it scored 0.90: an Arabic rent request in Madinaty under 4M EGP had no matching unit. The real listings have one.
 - **Live `flash-lite`:** the first run stopped after the shortlist and was flagged for untraced figures. Three fixes moved it to the numbers above: tool results now carry a `next` hint (search → financing → returns), the grounding check accepts figures from earlier turns and from the buyer, and "60 months" is no longer read as 60M. The misses left are the Arabic Madinaty case (no matching synthetic unit), a Google timeout mid-turn, and one run where the small model asked for a budget before handing a buyer to a broker.
 - **`gemini-3.5-flash`:** it completed the full English buyer journey (profile → search → financing → returns, all artifacts) in about 21 s in the live smoke test. Its full 10-scenario eval did not fit the free tier (5 requests/minute, 20/day). With a key that allows it, run `scripts/eval_agent.py --provider gemini --pause 15`.
 

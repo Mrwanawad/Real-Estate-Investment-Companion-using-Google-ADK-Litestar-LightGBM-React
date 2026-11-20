@@ -80,6 +80,8 @@ class SqlUnitStore:
             stmt = stmt.where(t.units.c.delivery_year <= query.delivery_by_year)
         if query.status is not None:
             stmt = stmt.where(t.units.c.status == query.status)
+        if query.budget_max_egp is not None:  # candidates nearest the budget, not the cheapest
+            stmt = stmt.order_by(None).order_by(t.units.c.price_egp.desc(), t.units.c.code)
         rows = (await self._session.execute(stmt.limit(limit))).all()
         return await self._hydrate(rows)
 
@@ -156,6 +158,7 @@ class SqlUnitStore:
                 status=cast(Any, r.status),
                 price_egp=r.price_egp,
                 view=r.view,
+                source_url=r.source_url,
             )
             developer = Developer(
                 id=r.developer_id,

@@ -1,0 +1,10 @@
+[
+  {"id": "B01", "name": "Mariam Adel", "phone": "+20 100 000 0101", "email": "mariam.adel@brokers.example", "languages": ["ar", "en"], "areas": ["New Cairo", "القاهرة الجديدة", "Mostakbal City", "مستقبل سيتي", "Madinaty", "مدينتي"]},
+  {"id": "B02", "name": "Omar Fathy", "phone": "+20 100 000 0102", "email": "omar.fathy@brokers.example", "languages": ["ar"], "areas": ["New Cairo", "القاهرة الجديدة", "New Administrative Capital", "العاصمة الإدارية الجديدة", "Heliopolis", "مصر الجديدة"]},
+  {"id": "B03", "name": "Nour El Sherif", "phone": "+20 100 000 0103", "email": "nour.elsherif@brokers.example", "languages": ["ar", "en"], "areas": ["Sheikh Zayed", "الشيخ زايد", "6th of October", "السادس من أكتوبر"]},
+  {"id": "B04", "name": "Karim Mansour", "phone": "+20 100 000 0104", "email": "karim.mansour@brokers.example", "languages": ["ar"], "areas": ["6th of October", "السادس من أكتوبر", "Sheikh Zayed", "الشيخ زايد"]},
+  {"id": "B05", "name": "Salma Youssef", "phone": "+20 100 000 0105", "email": "salma.youssef@brokers.example", "languages": ["ar", "en"], "areas": ["North Coast", "الساحل الشمالي", "New Alamein", "العلمين الجديدة"]},
+  {"id": "B06", "name": "Hassan Ragab", "phone": "+20 100 000 0106", "email": "hassan.ragab@brokers.example", "languages": ["ar"], "areas": ["Ain Sokhna", "العين السخنة", "North Coast", "الساحل الشمالي"]},
+  {"id": "B07", "name": "Laila Hamdy", "phone": "+20 100 000 0107", "email": "laila.hamdy@brokers.example", "languages": ["ar", "en"], "areas": ["Maadi", "المعادي", "Zamalek", "الزمالك", "Heliopolis", "مصر الجديدة"]},
+  {"id": "B08", "name": "Youssef Kamel", "phone": "+20 100 000 0108", "email": "youssef.kamel@brokers.example", "languages": ["en"], "areas": ["New Cairo", "Sheikh Zayed", "North Coast", "New Administrative Capital"]}
+]

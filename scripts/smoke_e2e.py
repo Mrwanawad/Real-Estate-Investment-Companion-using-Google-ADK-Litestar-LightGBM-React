@@ -84,7 +84,10 @@ def main() -> None:
     report = turn["artifacts"].get("report")
     check(report is not None, "report artifact")
     html = client.get(report["url_html"]).text
-    check("<svg" in html and "SYNTHETIC" in html.upper(), "HTML report has charts and disclaimer")
+    check(
+        "<svg" in html and "NOT INVESTMENT ADVICE" in html.upper(),
+        "HTML report has charts and disclaimer",
+    )
 
     print("5. broker handoff")
     chat(client, sid, "I want to talk to a broker")

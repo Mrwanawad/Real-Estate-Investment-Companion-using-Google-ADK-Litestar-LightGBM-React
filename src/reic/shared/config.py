@@ -39,3 +39,5 @@ class Settings(BaseSettings):
     # Header a trusted proxy sets to the real client IP (X-Forwarded-For on Vercel).
     client_ip_header: str | None = None
     otel_enabled: bool = False
+    # Chats and leads older than this are deleted at startup; 0 keeps everything.
+    retention_days: int = 90

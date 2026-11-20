@@ -39,6 +39,7 @@ class Lead:
     summary: str
     unit_codes: list[str] = field(default_factory=list)
     session_id: str | None = None
+    broker_id: str | None = None
 
     @classmethod
     def create(
@@ -108,4 +109,5 @@ class Lead:
             "summary": self.summary,
             "unit_codes": self.unit_codes,
             "session_id": self.session_id,
+            "broker_id": self.broker_id,
         }

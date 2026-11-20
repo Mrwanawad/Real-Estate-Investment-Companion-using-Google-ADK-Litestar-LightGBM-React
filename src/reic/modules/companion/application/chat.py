@@ -118,6 +118,12 @@ class ChatService:
         except Exception:  # the buyer already has the answer; keep serving from memory
             log.exception("saving chat session failed", extra={"session_id": state.session_id})
 
+    async def delete_session(self, session_id: str) -> None:
+        """Forget a conversation (the buyer's "new chat"). Leads already sent are kept."""
+        self._sessions.pop(session_id, None)
+        if self._store is not None:
+            await self._store.delete(session_id)
+
     async def transcript(self, session_id: str) -> dict[str, Any]:
         state = await self.load(session_id)
         return {

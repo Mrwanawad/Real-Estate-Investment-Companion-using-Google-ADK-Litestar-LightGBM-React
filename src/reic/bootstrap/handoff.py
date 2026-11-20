@@ -12,6 +12,7 @@ from reic.modules.handoff.adapters.inbound.controller import (
 )
 from reic.modules.handoff.adapters.inbound.guards import broker_guard
 from reic.modules.handoff.adapters.outbound.notifiers import HmacWebhookNotifier, NullNotifier
+from reic.modules.handoff.adapters.outbound.sql_broker_directory import SqlBrokerDirectory
 from reic.modules.handoff.adapters.outbound.sql_lead_store import SqlLeadStore
 from reic.modules.handoff.application.service import HandoffService
 from reic.modules.handoff.ports.lead_notifier import LeadNotifier
@@ -29,7 +30,9 @@ def build_handoff_service(
         notifier = HmacWebhookNotifier(settings.webhook_url, secret)
     elif settings.webhook_url:
         logger.warning("WEBHOOK_URL is set but WEBHOOK_SECRET is empty; lead webhook disabled")
-    return HandoffService(SqlLeadStore(session_factory), notifier)
+    return HandoffService(
+        SqlLeadStore(session_factory), notifier, SqlBrokerDirectory(session_factory)
+    )
 
 
 def build_handoff_router(service: HandoffService, settings: Settings) -> Router:

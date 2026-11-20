@@ -33,5 +33,6 @@ leads = Table(
     Column("summary", Text, nullable=False),
     Column("unit_codes", JSONB, nullable=False, server_default=text("'[]'::jsonb")),
     Column("session_id", String(64)),
+    Column("broker_id", String(16)),
     Index("ix_leads_status_created_at", "status", "created_at"),
 )

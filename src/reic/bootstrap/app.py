@@ -13,6 +13,7 @@ from reic.bootstrap.knowledge import build_knowledge_router, build_knowledge_ser
 from reic.bootstrap.market import build_market_router, build_market_service
 from reic.bootstrap.rate_limit import build_rate_limit
 from reic.bootstrap.reports import build_report_service
+from reic.bootstrap.retention import purge_expired
 from reic.bootstrap.scenarios import build_scenarios_router
 from reic.modules.companion.adapters.inbound.controller import ChatController, ReportController
 from reic.modules.financing.adapters.inbound.controller import FinancingController
@@ -72,6 +73,7 @@ def create_app(settings: Settings | None = None) -> Litestar:
         ],
         cors_config=CORSConfig(allow_origins=settings.cors_origins),
         middleware=[rate_limit] if rate_limit else [],
+        on_startup=[lambda: purge_expired(session_factory, settings.retention_days)],
         plugins=_plugins(settings),
         debug=settings.app_env == "dev",
     )

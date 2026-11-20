@@ -64,6 +64,7 @@ units = Table(
     Column("status", String(16), nullable=False),
     Column("price_egp", BigInteger, nullable=False),
     Column("view", String(32), nullable=False),
+    Column("source_url", Text),
     Index("ix_units_status_price", "status", "price_egp"),
 )
 

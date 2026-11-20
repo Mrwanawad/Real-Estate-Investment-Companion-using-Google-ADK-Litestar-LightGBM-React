@@ -28,6 +28,7 @@ from reic.modules.scenarios.application.service import ScenarioService
 from reic.shared.config import Settings
 
 AS_OF_YEAR = 2026
+UNLISTED_DEVELOPER = "DNL"  # scripts/import_listings.py
 _COMPONENT_REASONS = {
     "budget_fit": "fits the budget",
     "affordability": "payment plan fits the monthly capacity",
@@ -55,11 +56,13 @@ def _shortlist_item(scored: Any) -> dict[str, Any]:
         "bua_m2": d.unit.bua_m2,
         "price_egp": d.unit.price_egp,
         "delivery_year": d.unit.delivery_year,
-        "developer_tier": d.developer.tier,
+        # Listings carry no developer; don't show the placeholder's assumed tier as a fact.
+        "developer_tier": d.developer.tier if d.developer.id != UNLISTED_DEVELOPER else None,
         "score": round(scored.score, 3),
         "reasons": reasons,
         "monthly_installment_egp": round(scored.best_plan.monthly_installment_egp),
         "down_payment_egp": round(scored.best_plan.down_payment_egp),
+        "source_url": d.unit.source_url,
     }
 
 
@@ -143,6 +146,8 @@ class AppBackend:
         months_to_delivery = max(0, (unit["delivery_year"] - AS_OF_YEAR) * 12)
         plans = []
         for i, p in enumerate(unit["plans"], start=1):
+            if p["down_payment_pct"] >= 1:  # a "Cash" plan; cash is always compared below
+                continue
             plans.append(
                 {
                     "label": p["name"] or f"Plan {i}",

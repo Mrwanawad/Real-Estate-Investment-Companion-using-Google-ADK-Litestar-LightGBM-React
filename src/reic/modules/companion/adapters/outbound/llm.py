@@ -314,7 +314,7 @@ class FakeLlm(BaseLlm):
             )
         elif not has_horizon:
             lines.append("- How many years do you plan to hold it? I can then project returns.")
-        lines.append("These are scenarios on synthetic data, not a promise.")
+        lines.append("These are estimates from listing prices and models, not a promise.")
         if arabic:
             lines.insert(0, "إليك النتائج (الأرقام في البطاقات أدناه):")
         return "\n".join(lines)

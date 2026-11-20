@@ -3,7 +3,7 @@
 import json
 from typing import Any
 
-from sqlalchemy import Column, DateTime, MetaData, String, Table, func, select
+from sqlalchemy import Column, DateTime, MetaData, String, Table, delete, func, select
 from sqlalchemy.dialects.postgresql import JSONB, insert
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
@@ -47,3 +47,7 @@ class SqlSessionStore:
         )
         async with self._sessions() as session, session.begin():
             await session.execute(stmt)
+
+    async def delete(self, session_id: str) -> None:
+        async with self._sessions() as session, session.begin():
+            await session.execute(delete(chat_sessions).where(chat_sessions.c.id == session_id))

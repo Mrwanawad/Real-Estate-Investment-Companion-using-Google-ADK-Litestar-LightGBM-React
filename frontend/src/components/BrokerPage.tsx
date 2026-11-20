@@ -101,6 +101,7 @@ export default function BrokerPage() {
                 <th>{t("broker.budget")}</th>
                 <th>{t("broker.status")}</th>
                 <th>{t("broker.summary")}</th>
+                <th>{t("broker.assigned")}</th>
               </tr>
             </thead>
             <tbody>
@@ -127,6 +128,7 @@ export default function BrokerPage() {
                     </select>
                   </td>
                   <td>{l.summary ?? "-"}</td>
+                  <td>{l.broker_id ?? "-"}</td>
                 </tr>
               ))}
             </tbody>

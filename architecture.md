@@ -45,6 +45,8 @@ React UI (EN/AR, RTL) --SSE--> Litestar API --> ChatService --> AdkEngine (Googl
 - **Knowledge:** markdown policy documents (10 EN, 6 AR) chunked by heading. Retrieval is BM25 with Arabic-aware normalisation plus vectors (hashing, MiniLM or bge-m3), fused with reciprocal rank fusion. Answers cite their chunks.
 
 ## Data
+- **Real listings** (`scripts/import_listings.py`, served by default): 16,112 for-sale units from PropertyFinder Egypt, August 2025, via a CC BY-SA 4.0 Kaggle dataset. Compounds become projects; developer, delivery year, finishing and payment terms the listings lack are filled by documented rules (`demo_data/listings/README.md`). The unit value model trains on these prices.
+- **Simulated brokers** (`demo_data/synthetic/brokers.json`): leads go to the least busy broker who speaks the buyer's language and covers one of their areas.
 - **Synthetic** (`scripts/generate_synthetic_data.py`, fixed seed, sha256 manifest): 12 real Egyptian districts, 15 fictional developers, 40 projects, 1,500 units, 82 payment plans, 5,000 rental listings, and monthly area indices 2015-2026 with the 2016-2024 devaluation jumps.
 - **Public anchors** (`demo_data/public/`, source URL and retrieval time on every row): World Bank CPI and EGP/USD annual series, the current CBE overnight rates, and recent CPI prints. The synthetic monthly macro series is interpolated from them and labelled as such.
 

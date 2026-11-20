@@ -34,9 +34,12 @@ def build_market_service(session_factory: async_sessionmaker[AsyncSession]) -> M
     return _service(SqlMarketDataSource(session_factory))
 
 
-def build_csv_market_service(directory: Path = SYNTHETIC_DIR) -> MarketService:
-    """Same service over the synthetic CSVs (tests, scripts, no database)."""
-    return _service(CsvMarketDataSource(directory))
+def build_csv_market_service(
+    directory: Path = SYNTHETIC_DIR, inventory_dir: Path | None = None
+) -> MarketService:
+    """Same service over the CSVs (tests, scripts, no database); `inventory_dir` swaps in
+    another set of units, e.g. demo_data/listings."""
+    return _service(CsvMarketDataSource(directory, inventory_dir))
 
 
 def build_market_router(service: MarketService) -> Router:

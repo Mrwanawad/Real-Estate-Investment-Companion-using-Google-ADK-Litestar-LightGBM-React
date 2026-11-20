@@ -205,6 +205,9 @@ class MemoryStore:
     async def save(self, session_id: str, data: dict[str, Any]) -> None:
         self.docs[session_id] = data
 
+    async def delete(self, session_id: str) -> None:
+        self.docs.pop(session_id, None)
+
 
 async def test_session_survives_a_restart_with_transcript_and_recap() -> None:
     store = MemoryStore()
@@ -275,3 +278,15 @@ async def test_stuck_model_ends_the_turn_with_an_error(monkeypatch) -> None:
     sid = service.create_session("en")
     events = await _collect(service, sid, "hello")
     assert [e.kind for e in events] == ["error"]
+
+
+async def test_new_chat_deletes_the_saved_session() -> None:
+    from reic.modules.companion.domain.errors import SessionNotFoundError
+
+    store = MemoryStore()
+    service = ChatService(AdkEngine(FakeLlm(), stream=False), StubBackend(), store=store)
+    sid = await service.open_session("en")
+    await service.delete_session(sid)
+    assert sid not in store.docs
+    with pytest.raises(SessionNotFoundError):
+        await service.load(sid)

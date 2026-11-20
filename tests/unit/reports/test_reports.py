@@ -103,7 +103,7 @@ PAYLOAD: dict[str, Any] = {
     },
 }
 
-DISCLAIMER_EN = "SYNTHETIC DATA — NOT INVESTMENT ADVICE"
+DISCLAIMER_EN = "ESTIMATES ONLY — NOT INVESTMENT ADVICE"
 
 
 @pytest.fixture(scope="module")
@@ -126,16 +126,14 @@ def test_english_full_payload(service: ReportService) -> None:
 def test_arabic_full_payload_is_rtl(service: ReportService) -> None:
     html = service.render_html(PAYLOAD, "ar")
     assert 'lang="ar"' in html and 'dir="rtl"' in html
-    assert "بيانات وهمية — ليست نصيحة استثمارية" in html
+    assert "تقديرات فقط — ليست نصيحة استثمارية" in html
     assert "تأخر المطور في تسليم مشروعات سابقة." in html
     assert "Developer delivered late" not in html
     assert html.count("<svg") == 3
     assert "6,250,000" in html
 
 
-@pytest.mark.parametrize(
-    ("language", "disclaimer"), [("en", DISCLAIMER_EN), ("ar", "بيانات وهمية")]
-)
+@pytest.mark.parametrize(("language", "disclaimer"), [("en", DISCLAIMER_EN), ("ar", "تقديرات فقط")])
 def test_empty_payload(service: ReportService, language: str, disclaimer: str) -> None:
     html = service.render_html({}, language)
     assert disclaimer in html

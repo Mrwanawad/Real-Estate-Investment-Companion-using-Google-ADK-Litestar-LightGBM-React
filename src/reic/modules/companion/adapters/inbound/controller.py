@@ -3,7 +3,7 @@ import json
 from collections.abc import AsyncIterator
 from typing import Any, Literal
 
-from litestar import Controller, Response, get, post
+from litestar import Controller, Response, delete, get, post
 from litestar.exceptions import NotFoundException, ValidationException
 from litestar.response import ServerSentEvent
 from litestar.response.sse import ServerSentEventMessage
@@ -59,6 +59,10 @@ class ChatController(Controller):
             return await chat.transcript(session_id)
         except SessionNotFoundError as exc:
             raise NotFoundException(str(exc)) from exc
+
+    @delete("/{session_id:str}", status_code=204)
+    async def forget(self, session_id: str, chat: ChatService) -> None:
+        await chat.delete_session(session_id)
 
     @get("/{session_id:str}/profile")
     async def profile(self, session_id: str, chat: ChatService) -> dict[str, Any]:

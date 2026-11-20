@@ -72,6 +72,7 @@ class Unit:
     status: UnitStatus
     price_egp: int
     view: str
+    source_url: str | None = None  # the public listing, when the unit came from one
 
 
 @dataclass(frozen=True, slots=True)

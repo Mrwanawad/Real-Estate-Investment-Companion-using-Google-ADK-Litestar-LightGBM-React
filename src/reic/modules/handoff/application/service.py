@@ -5,12 +5,14 @@ from typing import Annotated, Any
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_validator
 from pydantic import ValidationError as PydanticValidationError
 
+from reic.modules.handoff.domain.brokers import pick_broker
 from reic.modules.handoff.domain.errors import (
     InvalidStatusTransitionError,
     LeadNotFoundError,
     LeadValidationError,
 )
 from reic.modules.handoff.domain.models import Lead, check_status
+from reic.modules.handoff.ports.broker_directory import BrokerDirectory
 from reic.modules.handoff.ports.lead_notifier import LeadNotifier
 from reic.modules.handoff.ports.lead_store import LeadStore
 
@@ -43,9 +45,15 @@ class NewLeadInput(BaseModel):
 
 
 class HandoffService:
-    def __init__(self, store: LeadStore, notifier: LeadNotifier) -> None:
+    def __init__(
+        self,
+        store: LeadStore,
+        notifier: LeadNotifier,
+        directory: BrokerDirectory | None = None,
+    ) -> None:
         self._store = store
         self._notifier = notifier
+        self._directory = directory
         self._deliveries: set[asyncio.Task[None]] = set()
 
     async def create_lead(self, data: dict[str, Any]) -> dict[str, Any]:
@@ -57,12 +65,24 @@ class HandoffService:
             )
             raise LeadValidationError(problems) from exc
         lead = Lead.create(**parsed.model_dump())
+        broker = None
+        if self._directory is not None:
+            broker = pick_broker(
+                await self._directory.brokers(),
+                lead.language,
+                [str(a) for a in lead.profile.get("areas") or []],
+                await self._directory.open_leads(),
+            )
+            lead.broker_id = broker.id if broker else None
         await self._store.add(lead)
         # The webhook runs in the background so a slow broker endpoint never stalls the chat.
         task = asyncio.create_task(self._notifier.notify(lead))
         self._deliveries.add(task)
         task.add_done_callback(self._deliveries.discard)
-        return {"lead_id": lead.id, "status": lead.status}
+        result: dict[str, Any] = {"lead_id": lead.id, "status": lead.status}
+        if broker is not None:
+            result["broker"] = broker.public()
+        return result
 
     async def drain(self) -> None:
         """Wait for webhook deliveries in flight (tests, shutdown)."""

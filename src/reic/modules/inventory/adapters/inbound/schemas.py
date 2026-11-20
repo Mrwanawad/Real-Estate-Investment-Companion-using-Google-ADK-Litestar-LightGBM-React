@@ -78,6 +78,7 @@ class UnitOut(BaseModel):
     status: str
     price_egp: int
     view: str
+    source_url: str | None = None
     project_id: str
     project_name_en: str
     project_name_ar: str
@@ -104,6 +105,7 @@ class UnitOut(BaseModel):
             status=u.status,
             price_egp=u.price_egp,
             view=u.view,
+            source_url=u.source_url,
             project_id=detail.project.id,
             project_name_en=detail.project.name_en,
             project_name_ar=detail.project.name_ar,

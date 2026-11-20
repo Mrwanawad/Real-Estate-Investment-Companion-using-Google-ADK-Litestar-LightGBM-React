@@ -164,7 +164,8 @@ export function ArtifactView({ artifact }: { artifact: Artifact }) {
               </p>
               <p className="price num">{money(u.price_egp)} EGP</p>
               <p className="meta">
-                {t("unit.delivery", { year: u.delivery_year })} · {t("unit.tier", { tier: u.developer_tier })} ·{" "}
+                {t("unit.delivery", { year: u.delivery_year })} ·{" "}
+                {u.developer_tier ? `${t("unit.tier", { tier: u.developer_tier })} · ` : ""}
                 {t("unit.score", { score: u.score })}
               </p>
               <ul>
@@ -172,7 +173,17 @@ export function ArtifactView({ artifact }: { artifact: Artifact }) {
                   <li key={r}>{r}</li>
                 ))}
               </ul>
-              <p className="code">{u.code}</p>
+              <p className="code">
+                {u.code}
+                {u.source_url && (
+                  <>
+                    {" · "}
+                    <a href={u.source_url} target="_blank" rel="noreferrer">
+                      {t("unit.listing")}
+                    </a>
+                  </>
+                )}
+              </p>
             </article>
           ))}
         </div>
@@ -200,7 +211,14 @@ export function ArtifactView({ artifact }: { artifact: Artifact }) {
     case "handoff":
       return (
         <p className="note" role="status">
-          {t("artifact.handoff", { id: artifact.data.lead_id })}
+          {artifact.data.broker
+            ? t("artifact.handoffBroker", {
+                id: artifact.data.lead_id,
+                name: artifact.data.broker.name,
+                phone: artifact.data.broker.phone,
+              })
+            : t("artifact.handoff", { id: artifact.data.lead_id })}
+          {artifact.data.broker?.simulated && ` ${t("artifact.simulatedBroker")}`}
         </p>
       );
     case "report": {

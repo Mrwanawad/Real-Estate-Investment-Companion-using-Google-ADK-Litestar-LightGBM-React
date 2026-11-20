@@ -19,7 +19,7 @@ describe("directionFor", () => {
 describe("App", () => {
   it("shows the synthetic data banner", () => {
     render(<App />);
-    expect(screen.getByRole("status")).toHaveTextContent("Synthetic demo data");
+    expect(screen.getByRole("status")).toHaveTextContent("PropertyFinder Egypt");
   });
 
   it("switches document direction when the language toggles", async () => {
@@ -27,11 +27,11 @@ describe("App", () => {
     expect(document.documentElement.dir).toBe("ltr");
 
     fireEvent.click(screen.getByRole("button", { name: "العربية" }));
-    await screen.findByText("بيانات تجريبية مصطنعة");
+    await screen.findByText(/PropertyFinder مصر/);
     expect(document.documentElement.dir).toBe("rtl");
 
     fireEvent.click(screen.getByRole("button", { name: "English" }));
-    await screen.findByText("Synthetic demo data");
+    await screen.findByText(/Listings: PropertyFinder Egypt/);
     expect(document.documentElement.dir).toBe("ltr");
   });
 });

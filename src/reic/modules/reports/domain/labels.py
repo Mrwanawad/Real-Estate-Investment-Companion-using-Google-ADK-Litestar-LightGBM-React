@@ -1,10 +1,11 @@
 LABELS: dict[str, dict[str, str]] = {
     "en": {
         "title": "Real Estate Investment Report",
-        "disclaimer": "SYNTHETIC DATA — NOT INVESTMENT ADVICE",
+        "disclaimer": "ESTIMATES ONLY — NOT INVESTMENT ADVICE",
         "disclaimer_note": (
-            "All projects, prices, policies and projections in this report are synthetic "
-            "demonstration data. Nothing here is an offer or a recommendation."
+            "Unit prices are public asking prices from PropertyFinder Egypt (August 2025, "
+            "CC BY-SA 4.0); some payment terms are inferred. Market history, policies and "
+            "projections are simulated estimates. Nothing here is an offer or a recommendation."
         ),
         "generated": "Generated",
         "empty": "No sections were provided for this report.",
@@ -53,14 +54,15 @@ LABELS: dict[str, dict[str, str]] = {
         "level_low": "low",
         "level_medium": "medium",
         "level_high": "high",
-        "synthetic_source": "Source: synthetic corpus",
+        "synthetic_source": "Source: sample policy documents",
     },
     "ar": {
         "title": "تقرير الاستثمار العقاري",
-        "disclaimer": "بيانات وهمية — ليست نصيحة استثمارية",
+        "disclaimer": "تقديرات فقط — ليست نصيحة استثمارية",
         "disclaimer_note": (
-            "جميع المشروعات والأسعار والسياسات والتوقعات في هذا التقرير بيانات وهمية "
-            "للعرض التجريبي فقط، وليست عرضا ولا توصية."
+            "أسعار الوحدات أسعار معلنة من PropertyFinder مصر (أغسطس 2025، CC BY-SA 4.0)، "
+            "وشروط السداد مستنتجة جزئيا. تاريخ السوق والسياسات والتوقعات تقديرات محاكاة، "
+            "وليست عرضا ولا توصية."
         ),
         "generated": "تاريخ الإصدار",
         "empty": "لم تقدم أي أقسام لهذا التقرير.",
@@ -109,7 +111,7 @@ LABELS: dict[str, dict[str, str]] = {
         "level_low": "منخفض",
         "level_medium": "متوسط",
         "level_high": "مرتفع",
-        "synthetic_source": "المصدر: مستندات وهمية",
+        "synthetic_source": "المصدر: مستندات سياسات نموذجية",
     },
 }
 

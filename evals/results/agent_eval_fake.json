@@ -2,10 +2,10 @@
   "summary": {
     "provider": "fake",
     "scenarios": 10,
-    "task_success": 0.9,
+    "task_success": 1.0,
     "clarification_quality": 1.0,
     "grounding": 1.0,
-    "mean_seconds": 0.27
+    "mean_seconds": 0.33
   },
   "results": [
     {
@@ -25,7 +25,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 0.73
+      "seconds": 0.64
     },
     {
       "scenario": "resell_en",
@@ -44,7 +44,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 0.67
+      "seconds": 0.72
     },
     {
       "scenario": "live_en",
@@ -63,19 +63,26 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 0.61
+      "seconds": 0.59
     },
     {
       "scenario": "rent_ar",
       "language": "ar",
-      "task_success": false,
+      "task_success": true,
       "grounded": true,
       "tools": [
         "update_profile",
-        "search_units"
+        "search_units",
+        "compare_financing",
+        "project_returns"
       ],
-      "artifacts": [],
-      "seconds": 0.03
+      "artifacts": [
+        "financing",
+        "projection",
+        "risks",
+        "shortlist"
+      ],
+      "seconds": 0.65
     },
     {
       "scenario": "resell_ar",
@@ -94,7 +101,7 @@
         "risks",
         "shortlist"
       ],
-      "seconds": 0.51
+      "seconds": 0.52
     },
     {
       "scenario": "missing_budget_en",
@@ -129,7 +136,7 @@
       "artifacts": [
         "citations"
       ],
-      "seconds": 0.03
+      "seconds": 0.02
     },
     {
       "scenario": "knowledge_ar",
@@ -142,7 +149,7 @@
       "artifacts": [
         "citations"
       ],
-      "seconds": 0.02
+      "seconds": 0.03
     },
     {
       "scenario": "broker_contact_en",
@@ -157,7 +164,7 @@
       "artifacts": [
         "handoff"
       ],
-      "seconds": 0.05
+      "seconds": 0.08
     }
   ]
 }

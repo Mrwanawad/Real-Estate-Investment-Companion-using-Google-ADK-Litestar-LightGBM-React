@@ -206,3 +206,42 @@ def test_broker_patch(keyed: TestClient[Any]) -> None:
         == 404
     )
     assert keyed.patch(f"/broker/leads/{lead_id}", json={"status": "closed"}).status_code == 401
+
+
+def _broker(broker_id: str, languages: tuple[str, ...], areas: tuple[str, ...]):  # type: ignore[no-untyped-def]
+    from reic.modules.handoff.domain.brokers import Broker
+
+    return Broker(
+        broker_id, f"Broker {broker_id}", "+20", f"{broker_id}@x.example", languages, areas
+    )
+
+
+def test_pick_broker_prefers_language_area_then_lowest_load() -> None:
+    from reic.modules.handoff.domain.brokers import pick_broker
+
+    roster = [
+        _broker("B1", ("en",), ("New Cairo",)),
+        _broker("B2", ("ar",), ("New Cairo", "القاهرة الجديدة")),
+        _broker("B3", ("ar",), ("القاهرة الجديدة",)),
+        _broker("B4", ("ar",), ("North Coast",)),
+    ]
+    picked = pick_broker(roster, "ar", ["القاهرة الجديدة"], {"B2": 3, "B3": 1})
+    assert picked is not None and picked.id == "B3"
+    assert pick_broker(roster, "ar", ["Zamalek"], {"B2": 1, "B3": 1, "B4": 0}).id == "B4"  # type: ignore[union-attr]
+    assert pick_broker(roster, "fr", ["Zamalek"], {}).id == "B1"  # type: ignore[union-attr]
+    assert pick_broker([], "ar", [], {}) is None
+
+
+async def test_service_assigns_a_broker_and_returns_it() -> None:
+    class Directory:
+        async def brokers(self):  # type: ignore[no-untyped-def]
+            return [_broker("B1", ("ar",), ("New Cairo",)), _broker("B2", ("ar",), ("Zayed",))]
+
+        async def open_leads(self) -> dict[str, int]:
+            return {"B1": 2}
+
+    store = MemoryStore()
+    service = HandoffService(store, RecordingNotifier(), Directory())
+    created = await service.create_lead({**LEAD, "profile": {"areas": ["New Cairo"]}})
+    assert created["broker"]["id"] == "B1" and created["broker"]["simulated"] is True
+    assert store.rows[created["lead_id"]].broker_id == "B1"

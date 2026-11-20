@@ -13,9 +13,10 @@ export interface Unit {
   bua_m2: number;
   price_egp: number | string;
   delivery_year: number;
-  developer_tier: string;
+  developer_tier: string | null;
   score: number;
   reasons: string[];
+  source_url?: string | null;
 }
 export interface FinancingOption {
   label: string;
@@ -61,7 +62,14 @@ export type Artifact =
   | { kind: "projection"; data: Projection }
   | { kind: "risks"; data: { items: RiskItem[] } }
   | { kind: "citations"; data: { items: Citation[] } }
-  | { kind: "handoff"; data: { lead_id: string | number; status: string } }
+  | {
+      kind: "handoff";
+      data: {
+        lead_id: string | number;
+        status: string;
+        broker?: { name: string; phone: string; email: string; simulated: boolean };
+      };
+    }
   | { kind: "report"; data: { url_html: string; url_pdf: string | null } };
 
 export type StreamEvent =
@@ -93,6 +101,11 @@ export async function getTranscript(sessionId: string): Promise<StoredMessage[] 
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return ((await res.json()) as { messages: StoredMessage[] }).messages;
+}
+
+/** Best effort: the server forgets the conversation. */
+export async function deleteSession(sessionId: string): Promise<void> {
+  await fetch(`${API_BASE}/chat/sessions/${sessionId}`, { method: "DELETE" }).catch(() => undefined);
 }
 
 function toStreamEvent(event: string, raw: string): StreamEvent | null {
@@ -159,6 +172,7 @@ export interface Lead {
   budget_egp: number | null;
   status: string;
   summary: string | null;
+  broker_id?: string | null;
 }
 
 export class BrokerError extends Error {

@@ -1,0 +1,1725 @@
+id,project_id,name,down_payment_pct,years,frequency,delivery_payment_pct,maintenance_pct,cash_discount_pct
+AL-0992a955-I1,AL-0992a955,50% down / 5 years quarterly,0.5,5,quarterly,0.0,0.08,0.0
+AL-0992a955-I2,AL-0992a955,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+AL-0992a955-I3,AL-0992a955,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+AL-0992a955-C,AL-0992a955,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-152d67cb-C,AL-152d67cb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-1eb231fa-C,AL-1eb231fa,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-24ebe978-I1,AL-24ebe978,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+AL-24ebe978-I2,AL-24ebe978,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+AL-24ebe978-C,AL-24ebe978,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-252fdde7-I1,AL-252fdde7,50% down / 2 years quarterly,0.5,2,quarterly,0.0,0.08,0.0
+AL-252fdde7-C,AL-252fdde7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-41263e05-I1,AL-41263e05,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+AL-41263e05-C,AL-41263e05,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-42dcb318-C,AL-42dcb318,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-44f875a3-C,AL-44f875a3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-4a9c57bc-C,AL-4a9c57bc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-5a0b6afb-I1,AL-5a0b6afb,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+AL-5a0b6afb-I2,AL-5a0b6afb,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+AL-5a0b6afb-I3,AL-5a0b6afb,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+AL-5a0b6afb-C,AL-5a0b6afb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-5cbbe229-I1,AL-5cbbe229,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+AL-5cbbe229-I2,AL-5cbbe229,34% down / 7 years quarterly,0.34,7,quarterly,0.0,0.08,0.0
+AL-5cbbe229-I3,AL-5cbbe229,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+AL-5cbbe229-C,AL-5cbbe229,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-71baddf1-I1,AL-71baddf1,9% down / 7 years quarterly,0.09,7,quarterly,0.0,0.08,0.0
+AL-71baddf1-C,AL-71baddf1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-73a26c55-C,AL-73a26c55,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-773f9e73-C,AL-773f9e73,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-82afd34f-C,AL-82afd34f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-8610834b-C,AL-8610834b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-8688de31-I1,AL-8688de31,7% down / 7 years quarterly,0.07,7,quarterly,0.0,0.08,0.0
+AL-8688de31-I2,AL-8688de31,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+AL-8688de31-I3,AL-8688de31,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+AL-8688de31-C,AL-8688de31,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-86c8f8ea-I1,AL-86c8f8ea,15% down / 6 years quarterly,0.15,6,quarterly,0.0,0.08,0.0
+AL-86c8f8ea-C,AL-86c8f8ea,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-8abad467-C,AL-8abad467,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-9046d854-I1,AL-9046d854,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+AL-9046d854-I2,AL-9046d854,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+AL-9046d854-C,AL-9046d854,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-91b886b8-I1,AL-91b886b8,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+AL-91b886b8-I2,AL-91b886b8,8% down / 10 years quarterly,0.08,10,quarterly,0.0,0.08,0.0
+AL-91b886b8-I3,AL-91b886b8,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+AL-a190dc66-C,AL-a190dc66,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-b20dea87-I1,AL-b20dea87,10% down / 3 years quarterly,0.1,3,quarterly,0.0,0.08,0.0
+AL-b20dea87-I2,AL-b20dea87,28% down / 7 years quarterly,0.28,7,quarterly,0.0,0.08,0.0
+AL-b20dea87-I3,AL-b20dea87,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+AL-b20dea87-C,AL-b20dea87,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-b68e49a3-I1,AL-b68e49a3,10% down / 5 years quarterly,0.1,5,quarterly,0.0,0.08,0.0
+AL-bc61888a-C,AL-bc61888a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-bfc6ec17-C,AL-bfc6ec17,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-c16b4d11-I1,AL-c16b4d11,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+AL-c16b4d11-I2,AL-c16b4d11,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+AL-c16b4d11-I3,AL-c16b4d11,27% down / 7 years quarterly,0.27,7,quarterly,0.0,0.08,0.0
+AL-c16b4d11-C,AL-c16b4d11,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-c75c5733-I1,AL-c75c5733,4% down / 3 years quarterly,0.04,3,quarterly,0.0,0.08,0.0
+AL-c75c5733-I2,AL-c75c5733,12% down / 7 years quarterly,0.12,7,quarterly,0.0,0.08,0.0
+AL-c75c5733-I3,AL-c75c5733,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+AL-c75c5733-C,AL-c75c5733,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-c800467a-I1,AL-c800467a,6% down / 7 years quarterly,0.06,7,quarterly,0.0,0.08,0.0
+AL-c800467a-I2,AL-c800467a,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+AL-c800467a-I3,AL-c800467a,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+AL-c800467a-C,AL-c800467a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-cf9dfbd0-C,AL-cf9dfbd0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-d4e3f236-C,AL-d4e3f236,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-dfff1a67-C,AL-dfff1a67,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-e069da54-C,AL-e069da54,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-e66faa24-I1,AL-e66faa24,41% down / 7 years quarterly,0.41,7,quarterly,0.0,0.08,0.0
+AL-e66faa24-C,AL-e66faa24,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-f3f9c73f-I1,AL-f3f9c73f,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+AL-f3f9c73f-C,AL-f3f9c73f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+AL-f4f4cd2c-I1,AL-f4f4cd2c,31% down / 7 years quarterly,0.31,7,quarterly,0.0,0.08,0.0
+AL-fadfd45c-C,AL-fadfd45c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-078175a3-C,HE-078175a3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-1479a43c-C,HE-1479a43c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-195082be-C,HE-195082be,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-1c907c04-C,HE-1c907c04,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-1e016057-C,HE-1e016057,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-24a4c4f6-C,HE-24a4c4f6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-2cd4169d-C,HE-2cd4169d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-2e14b2b7-C,HE-2e14b2b7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-31032a0d-C,HE-31032a0d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-34f4270f-C,HE-34f4270f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-3828a084-C,HE-3828a084,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-3a8d7dc7-C,HE-3a8d7dc7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-42aae5a5-I1,HE-42aae5a5,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+HE-42aae5a5-C,HE-42aae5a5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-4951a293-C,HE-4951a293,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-4a6a4ddc-C,HE-4a6a4ddc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-535f5949-C,HE-535f5949,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-54a1e52e-C,HE-54a1e52e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-54c51a2e-C,HE-54c51a2e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-54c9659d-C,HE-54c9659d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-5f53071a-C,HE-5f53071a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-64357058-C,HE-64357058,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-72f24997-C,HE-72f24997,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-8415688d-C,HE-8415688d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-8de09c61-C,HE-8de09c61,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-a96ba0e7-C,HE-a96ba0e7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-a99a7986-C,HE-a99a7986,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-aca9e4e5-C,HE-aca9e4e5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-ae4ea0cd-C,HE-ae4ea0cd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-b6829af3-C,HE-b6829af3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-b8c77f72-C,HE-b8c77f72,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-bdc18c5d-C,HE-bdc18c5d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-c4cc1879-C,HE-c4cc1879,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-cda08067-C,HE-cda08067,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-eb0c6272-C,HE-eb0c6272,Cash,1.0,1,quarterly,0.0,0.08,0.0
+HE-f8c91889-C,HE-f8c91889,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-046f974f-C,MA-046f974f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-09f0376d-I1,MA-09f0376d,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+MA-09f0376d-C,MA-09f0376d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-0b8515b1-C,MA-0b8515b1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-12a387fd-C,MA-12a387fd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-12c505e4-C,MA-12c505e4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-1ca8ded4-C,MA-1ca8ded4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-1cd8d0ba-I1,MA-1cd8d0ba,43% down / 7 years quarterly,0.43,7,quarterly,0.0,0.08,0.0
+MA-1cd8d0ba-C,MA-1cd8d0ba,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-1dee2107-C,MA-1dee2107,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-225a0fe7-C,MA-225a0fe7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-23bfeca9-C,MA-23bfeca9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-36158781-C,MA-36158781,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-3c51cca7-C,MA-3c51cca7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-3caaf3d1-C,MA-3caaf3d1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-4f6ed1ef-C,MA-4f6ed1ef,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-612caae0-C,MA-612caae0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-66f506ef-C,MA-66f506ef,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-70e61867-C,MA-70e61867,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-722f9b2e-C,MA-722f9b2e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-74f9960d-C,MA-74f9960d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-76540bdb-C,MA-76540bdb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-7f7fa1fb-C,MA-7f7fa1fb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-8ffe9bb2-I1,MA-8ffe9bb2,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+MA-8ffe9bb2-I2,MA-8ffe9bb2,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+MA-8ffe9bb2-I3,MA-8ffe9bb2,17% down / 8 years quarterly,0.17,8,quarterly,0.0,0.08,0.0
+MA-8ffe9bb2-C,MA-8ffe9bb2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-911b0238-C,MA-911b0238,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-91dd5d08-I1,MA-91dd5d08,20% down / 4 years quarterly,0.2,4,quarterly,0.0,0.08,0.0
+MA-91dd5d08-C,MA-91dd5d08,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-93e18f29-C,MA-93e18f29,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-95c1e906-C,MA-95c1e906,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-9932d16c-C,MA-9932d16c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-aaa13b57-C,MA-aaa13b57,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-b1bf28e9-C,MA-b1bf28e9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-bae3efdb-C,MA-bae3efdb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-bc54a2ed-C,MA-bc54a2ed,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-c94f0e12-C,MA-c94f0e12,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-cd28679d-C,MA-cd28679d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-e9664b5e-C,MA-e9664b5e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-ece50955-I1,MA-ece50955,25% down / 7 years quarterly,0.25,7,quarterly,0.0,0.08,0.0
+MA-ece50955-C,MA-ece50955,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-f968a2ab-C,MA-f968a2ab,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-fd3aab95-C,MA-fd3aab95,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MA-fecb4c17-C,MA-fecb4c17,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MD-8356f4c8-I1,MD-8356f4c8,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+MD-8356f4c8-I2,MD-8356f4c8,41% down / 7 years quarterly,0.41,7,quarterly,0.0,0.08,0.0
+MD-8356f4c8-I3,MD-8356f4c8,50% down / 12 years quarterly,0.5,12,quarterly,0.0,0.08,0.0
+MD-8356f4c8-C,MD-8356f4c8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-06f9680b-I1,MS-06f9680b,29% down / 7 years quarterly,0.29,7,quarterly,0.0,0.08,0.0
+MS-06f9680b-I2,MS-06f9680b,34% down / 7 years quarterly,0.34,7,quarterly,0.0,0.08,0.0
+MS-06f9680b-C,MS-06f9680b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-1280db5d-I1,MS-1280db5d,10% down / 2 years quarterly,0.1,2,quarterly,0.0,0.08,0.0
+MS-21a92621-C,MS-21a92621,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-23d9720b-I1,MS-23d9720b,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+MS-2e857035-I1,MS-2e857035,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+MS-2e857035-C,MS-2e857035,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-32df37f5-I1,MS-32df37f5,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+MS-3b0c99b6-I1,MS-3b0c99b6,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+MS-3b0c99b6-I2,MS-3b0c99b6,24% down / 7 years quarterly,0.24,7,quarterly,0.0,0.08,0.0
+MS-3b0c99b6-C,MS-3b0c99b6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-4ab10612-I1,MS-4ab10612,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+MS-4ab10612-I2,MS-4ab10612,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+MS-4ab10612-C,MS-4ab10612,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-53c43964-C,MS-53c43964,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-60969188-I1,MS-60969188,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+MS-60969188-C,MS-60969188,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-61bcd955-I1,MS-61bcd955,9% down / 7 years quarterly,0.09,7,quarterly,0.0,0.08,0.0
+MS-61bcd955-I2,MS-61bcd955,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+MS-61bcd955-C,MS-61bcd955,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-65b9ce26-I1,MS-65b9ce26,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+MS-65b9ce26-I2,MS-65b9ce26,43% down / 9 years quarterly,0.43,9,quarterly,0.0,0.08,0.0
+MS-65b9ce26-C,MS-65b9ce26,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-72b27dce-C,MS-72b27dce,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-74657238-I1,MS-74657238,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+MS-74657238-I2,MS-74657238,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+MS-74657238-C,MS-74657238,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-786756d0-I1,MS-786756d0,25% down / 7 years quarterly,0.25,7,quarterly,0.0,0.08,0.0
+MS-786756d0-C,MS-786756d0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-78cfb9ac-I1,MS-78cfb9ac,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+MS-78cfb9ac-I2,MS-78cfb9ac,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+MS-78cfb9ac-I3,MS-78cfb9ac,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+MS-78cfb9ac-C,MS-78cfb9ac,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-796d1228-I1,MS-796d1228,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+MS-796d1228-I2,MS-796d1228,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+MS-7999bb8c-C,MS-7999bb8c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-8612b245-I1,MS-8612b245,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+MS-8612b245-I2,MS-8612b245,26% down / 7 years quarterly,0.26,7,quarterly,0.0,0.08,0.0
+MS-8612b245-I3,MS-8612b245,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+MS-8612b245-C,MS-8612b245,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-868f1d63-C,MS-868f1d63,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-8ba60424-I1,MS-8ba60424,6% down / 7 years quarterly,0.06,7,quarterly,0.0,0.08,0.0
+MS-8ba60424-I2,MS-8ba60424,44% down / 7 years quarterly,0.44,7,quarterly,0.0,0.08,0.0
+MS-8ba60424-I3,MS-8ba60424,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+MS-8ba60424-C,MS-8ba60424,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-aab79b79-C,MS-aab79b79,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-bd62618e-C,MS-bd62618e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-c0d303f8-I1,MS-c0d303f8,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+MS-c0d303f8-I2,MS-c0d303f8,20% down / 8 years quarterly,0.2,8,quarterly,0.0,0.08,0.0
+MS-c0d303f8-C,MS-c0d303f8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-cc9db3a7-I1,MS-cc9db3a7,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+MS-ce886d1a-C,MS-ce886d1a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-d742e7e5-I1,MS-d742e7e5,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+MS-d742e7e5-I2,MS-d742e7e5,39% down / 7 years quarterly,0.39,7,quarterly,0.0,0.08,0.0
+MS-d742e7e5-I3,MS-d742e7e5,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+MS-d742e7e5-C,MS-d742e7e5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-d7b79367-I1,MS-d7b79367,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+MS-df247993-I1,MS-df247993,17% down / 7 years quarterly,0.17,7,quarterly,0.0,0.08,0.0
+MS-df247993-I2,MS-df247993,25% down / 9 years quarterly,0.25,9,quarterly,0.0,0.08,0.0
+MS-df247993-I3,MS-df247993,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+MS-f6bdb663-C,MS-f6bdb663,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-f77fd1fd-I1,MS-f77fd1fd,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+MS-f77fd1fd-I2,MS-f77fd1fd,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+MS-f77fd1fd-C,MS-f77fd1fd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-f7e6c125-I1,MS-f7e6c125,1% down / 7 years quarterly,0.01,7,quarterly,0.0,0.08,0.0
+MS-f7e6c125-I2,MS-f7e6c125,30% down / 7 years quarterly,0.3,7,quarterly,0.0,0.08,0.0
+MS-f7e6c125-I3,MS-f7e6c125,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+MS-f7e6c125-C,MS-f7e6c125,Cash,1.0,1,quarterly,0.0,0.08,0.0
+MS-fa78dee6-C,MS-fa78dee6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-00daf3e8-I1,NA-00daf3e8,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-0274ffd0-I1,NA-0274ffd0,15% down / 6 years quarterly,0.15,6,quarterly,0.0,0.08,0.0
+NA-09ffce44-C,NA-09ffce44,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-0db85687-C,NA-0db85687,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-0f02f55c-C,NA-0f02f55c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-1616976b-I1,NA-1616976b,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NA-1616976b-I2,NA-1616976b,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-1616976b-C,NA-1616976b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-1a8dbf8b-I1,NA-1a8dbf8b,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NA-1a8dbf8b-I2,NA-1a8dbf8b,20% down / 12 years quarterly,0.2,12,quarterly,0.0,0.08,0.0
+NA-1a8dbf8b-C,NA-1a8dbf8b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-1ad2c8a3-C,NA-1ad2c8a3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-21bc3f3f-I1,NA-21bc3f3f,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NA-21bc3f3f-I2,NA-21bc3f3f,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NA-21bc3f3f-C,NA-21bc3f3f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-24d195a1-C,NA-24d195a1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-26003760-C,NA-26003760,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-2877b258-I1,NA-2877b258,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+NA-293d74fd-I1,NA-293d74fd,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NA-2a56c9a3-I1,NA-2a56c9a3,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NA-2a56c9a3-I2,NA-2a56c9a3,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NA-2c5e77fc-C,NA-2c5e77fc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-2fb82732-C,NA-2fb82732,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-37f382a5-C,NA-37f382a5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-3b055ce0-C,NA-3b055ce0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-49ff04bb-I1,NA-49ff04bb,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NA-49ff04bb-I2,NA-49ff04bb,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NA-49ff04bb-I3,NA-49ff04bb,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NA-49ff04bb-C,NA-49ff04bb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-5036020b-I1,NA-5036020b,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NA-5036020b-C,NA-5036020b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-5385f178-I1,NA-5385f178,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NA-5385f178-C,NA-5385f178,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-538db1d7-I1,NA-538db1d7,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NA-538db1d7-I2,NA-538db1d7,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-538db1d7-I3,NA-538db1d7,48% down / 10 years quarterly,0.48,10,quarterly,0.0,0.08,0.0
+NA-538db1d7-C,NA-538db1d7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-569aae5b-C,NA-569aae5b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-64d1325e-I1,NA-64d1325e,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+NA-674453a7-I1,NA-674453a7,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-674453a7-C,NA-674453a7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-6aeaba56-C,NA-6aeaba56,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-6cd372ba-I1,NA-6cd372ba,9% down / 5 years quarterly,0.09,5,quarterly,0.0,0.08,0.0
+NA-6cd372ba-I2,NA-6cd372ba,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NA-6cd372ba-C,NA-6cd372ba,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-7286d212-C,NA-7286d212,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-73f83108-I1,NA-73f83108,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-7c6ee61a-C,NA-7c6ee61a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-83cb4e9e-I1,NA-83cb4e9e,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-851cad6a-I1,NA-851cad6a,21% down / 7 years quarterly,0.21,7,quarterly,0.0,0.08,0.0
+NA-851cad6a-I2,NA-851cad6a,22% down / 7 years quarterly,0.22,7,quarterly,0.0,0.08,0.0
+NA-851cad6a-C,NA-851cad6a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-8c0e46c7-I1,NA-8c0e46c7,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NA-93d2b245-C,NA-93d2b245,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-97071674-I1,NA-97071674,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+NA-9c35094d-I1,NA-9c35094d,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NA-9c35094d-I2,NA-9c35094d,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-9d937c04-I1,NA-9d937c04,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NA-9d937c04-I2,NA-9d937c04,22% down / 8 years quarterly,0.22,8,quarterly,0.0,0.08,0.0
+NA-9d937c04-C,NA-9d937c04,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-9de97cb3-C,NA-9de97cb3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-a04e9cc2-I1,NA-a04e9cc2,8% down / 10 years quarterly,0.08,10,quarterly,0.0,0.08,0.0
+NA-a04e9cc2-C,NA-a04e9cc2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-af1de253-I1,NA-af1de253,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-aff1c2c6-I1,NA-aff1c2c6,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NA-aff1c2c6-C,NA-aff1c2c6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-bc5e56f0-I1,NA-bc5e56f0,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+NA-d519be8a-C,NA-d519be8a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-e4a2dc09-I1,NA-e4a2dc09,15% down / 7 years quarterly,0.15,7,quarterly,0.0,0.08,0.0
+NA-e4a2dc09-C,NA-e4a2dc09,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-e558f2c7-I1,NA-e558f2c7,5% down / 3 years quarterly,0.05,3,quarterly,0.0,0.08,0.0
+NA-e558f2c7-I2,NA-e558f2c7,36% down / 7 years quarterly,0.36,7,quarterly,0.0,0.08,0.0
+NA-e558f2c7-I3,NA-e558f2c7,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NA-e558f2c7-C,NA-e558f2c7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-ee71a061-C,NA-ee71a061,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-eebada3d-I1,NA-eebada3d,30% down / 7 years quarterly,0.3,7,quarterly,0.0,0.08,0.0
+NA-f250c33f-C,NA-f250c33f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-f31e45f1-I1,NA-f31e45f1,15% down / 6 years quarterly,0.15,6,quarterly,0.0,0.08,0.0
+NA-f31e45f1-I2,NA-f31e45f1,26% down / 7 years quarterly,0.26,7,quarterly,0.0,0.08,0.0
+NA-f31e45f1-I3,NA-f31e45f1,38% down / 10 years quarterly,0.38,10,quarterly,0.0,0.08,0.0
+NA-f31e45f1-C,NA-f31e45f1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NA-fb568d94-C,NA-fb568d94,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-01ab6116-C,NC-01ab6116,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-02110fbb-C,NC-02110fbb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0395ab5a-C,NC-0395ab5a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-03ea1159-C,NC-03ea1159,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-040d7f93-C,NC-040d7f93,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-04d42b40-C,NC-04d42b40,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-05458f2c-C,NC-05458f2c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-05747e83-C,NC-05747e83,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-05fe4a5b-C,NC-05fe4a5b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-06c39258-C,NC-06c39258,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-07380ea5-C,NC-07380ea5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-07b96f9f-C,NC-07b96f9f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-08213ad7-I1,NC-08213ad7,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-08213ad7-I2,NC-08213ad7,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+NC-08213ad7-C,NC-08213ad7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-084fd9f4-C,NC-084fd9f4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0a067689-C,NC-0a067689,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0c321af9-C,NC-0c321af9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0ced6cc4-C,NC-0ced6cc4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0d394f38-C,NC-0d394f38,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0d518dcc-C,NC-0d518dcc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0dd2202f-I1,NC-0dd2202f,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NC-0dd2202f-I2,NC-0dd2202f,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NC-0dd2202f-I3,NC-0dd2202f,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+NC-0dd2202f-C,NC-0dd2202f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0ee9c799-C,NC-0ee9c799,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0f0611b3-C,NC-0f0611b3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0f497fd1-C,NC-0f497fd1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-0f9a1b82-C,NC-0f9a1b82,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-102d9342-I1,NC-102d9342,15% down / 6 years quarterly,0.15,6,quarterly,0.0,0.08,0.0
+NC-102d9342-I2,NC-102d9342,25% down / 7 years quarterly,0.25,7,quarterly,0.0,0.08,0.0
+NC-102d9342-I3,NC-102d9342,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-102d9342-C,NC-102d9342,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-10e5d371-I1,NC-10e5d371,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+NC-10e5d371-C,NC-10e5d371,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-11da9a4c-I1,NC-11da9a4c,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-11da9a4c-I2,NC-11da9a4c,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+NC-11da9a4c-I3,NC-11da9a4c,11% down / 12 years quarterly,0.11,12,quarterly,0.0,0.08,0.0
+NC-11da9a4c-C,NC-11da9a4c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-123f8421-C,NC-123f8421,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-126733b0-C,NC-126733b0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-128b3842-I1,NC-128b3842,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-128b3842-C,NC-128b3842,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1359e7fe-C,NC-1359e7fe,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-14479d9d-I1,NC-14479d9d,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-14479d9d-C,NC-14479d9d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1649fb79-C,NC-1649fb79,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-19b7c61f-C,NC-19b7c61f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1acd9ecc-C,NC-1acd9ecc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1c8563db-C,NC-1c8563db,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1c907c04-C,NC-1c907c04,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1c98c56b-I1,NC-1c98c56b,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+NC-1c98c56b-I2,NC-1c98c56b,36% down / 7 years quarterly,0.36,7,quarterly,0.0,0.08,0.0
+NC-1c98c56b-I3,NC-1c98c56b,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+NC-1c98c56b-C,NC-1c98c56b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1d7b51bb-C,NC-1d7b51bb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1e8d6695-C,NC-1e8d6695,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1f4ccd5a-C,NC-1f4ccd5a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-1f9476e8-I1,NC-1f9476e8,18% down / 7 years quarterly,0.18,7,quarterly,0.0,0.08,0.0
+NC-1fa28e39-C,NC-1fa28e39,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-2309d496-C,NC-2309d496,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-248b0ab7-C,NC-248b0ab7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-2583c2d7-C,NC-2583c2d7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-275c6dea-C,NC-275c6dea,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-27bcc291-I1,NC-27bcc291,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+NC-27bcc291-C,NC-27bcc291,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-27daae84-C,NC-27daae84,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-27e2a4cf-C,NC-27e2a4cf,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-2a9c7d50-C,NC-2a9c7d50,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-2ce63864-C,NC-2ce63864,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-2dd843c1-C,NC-2dd843c1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-2ea06d46-C,NC-2ea06d46,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-2fc55a3b-C,NC-2fc55a3b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-2feba9fd-C,NC-2feba9fd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-31368c42-C,NC-31368c42,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-31b58ed3-C,NC-31b58ed3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-31cebf87-I1,NC-31cebf87,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-31cebf87-C,NC-31cebf87,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-33a6ed52-C,NC-33a6ed52,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-33f4d9cd-C,NC-33f4d9cd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-356924e7-C,NC-356924e7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-3646d093-C,NC-3646d093,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-36b28ad7-C,NC-36b28ad7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-3930a92f-C,NC-3930a92f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-3a2c17bb-C,NC-3a2c17bb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-3a95e047-I1,NC-3a95e047,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-3a95e047-C,NC-3a95e047,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-3aff33dc-C,NC-3aff33dc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-43269901-C,NC-43269901,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-451b5db0-C,NC-451b5db0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-452ce3bb-C,NC-452ce3bb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-454c845d-C,NC-454c845d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-46cddcf0-I1,NC-46cddcf0,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-46fc0ac1-C,NC-46fc0ac1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-47cea7f2-I1,NC-47cea7f2,21% down / 7 years quarterly,0.21,7,quarterly,0.0,0.08,0.0
+NC-47cea7f2-I2,NC-47cea7f2,35% down / 7 years quarterly,0.35,7,quarterly,0.0,0.08,0.0
+NC-47cea7f2-I3,NC-47cea7f2,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NC-47cea7f2-C,NC-47cea7f2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-483bf161-C,NC-483bf161,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-499a701b-C,NC-499a701b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-4a8e0085-I1,NC-4a8e0085,5% down / 9 years quarterly,0.05,9,quarterly,0.0,0.08,0.0
+NC-4a8e0085-C,NC-4a8e0085,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-4aecf5a7-C,NC-4aecf5a7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-4bfcce02-C,NC-4bfcce02,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-4caa9f23-I1,NC-4caa9f23,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-4caa9f23-I2,NC-4caa9f23,34% down / 7 years quarterly,0.34,7,quarterly,0.0,0.08,0.0
+NC-4caa9f23-I3,NC-4caa9f23,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NC-4caa9f23-C,NC-4caa9f23,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-4d65bb2d-C,NC-4d65bb2d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-4df7dddf-C,NC-4df7dddf,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-4e8c3771-C,NC-4e8c3771,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-4f74b7cc-C,NC-4f74b7cc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-5111f6fd-C,NC-5111f6fd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-517e9c13-I1,NC-517e9c13,25% down / 7 years quarterly,0.25,7,quarterly,0.0,0.08,0.0
+NC-517e9c13-C,NC-517e9c13,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-529619e1-C,NC-529619e1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-52a8145f-I1,NC-52a8145f,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-52a8145f-I2,NC-52a8145f,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-52a8145f-C,NC-52a8145f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-53cce67a-I1,NC-53cce67a,41% down / 11 years quarterly,0.41,11,quarterly,0.0,0.08,0.0
+NC-53cce67a-C,NC-53cce67a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-54023137-C,NC-54023137,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-554537bc-I1,NC-554537bc,0% down / 8 years quarterly,0.0,8,quarterly,0.0,0.08,0.0
+NC-554e1fd4-I1,NC-554e1fd4,21% down / 7 years quarterly,0.21,7,quarterly,0.0,0.08,0.0
+NC-554e1fd4-I2,NC-554e1fd4,34% down / 7 years quarterly,0.34,7,quarterly,0.0,0.08,0.0
+NC-554e1fd4-I3,NC-554e1fd4,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-554e1fd4-C,NC-554e1fd4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-55f7a315-C,NC-55f7a315,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-56e30813-C,NC-56e30813,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-58105b47-C,NC-58105b47,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-58b1d632-C,NC-58b1d632,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-5c3e958b-C,NC-5c3e958b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-5ce9e501-C,NC-5ce9e501,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-5e69b2a0-C,NC-5e69b2a0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-5e84e406-C,NC-5e84e406,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6039c238-C,NC-6039c238,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-609d7298-C,NC-609d7298,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-60dc5895-C,NC-60dc5895,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-61f8659a-I1,NC-61f8659a,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+NC-61f8659a-C,NC-61f8659a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-62658ec0-C,NC-62658ec0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6464192a-I1,NC-6464192a,40% down / 6 years quarterly,0.4,6,quarterly,0.0,0.08,0.0
+NC-6464192a-I2,NC-6464192a,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-6464192a-C,NC-6464192a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-64c6a6b6-I1,NC-64c6a6b6,20% down / 5 years quarterly,0.2,5,quarterly,0.0,0.08,0.0
+NC-64c6a6b6-I2,NC-64c6a6b6,8% down / 7 years quarterly,0.08,7,quarterly,0.0,0.08,0.0
+NC-64c6a6b6-I3,NC-64c6a6b6,21% down / 7 years quarterly,0.21,7,quarterly,0.0,0.08,0.0
+NC-64c6a6b6-C,NC-64c6a6b6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-665179d1-C,NC-665179d1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-672c945c-I1,NC-672c945c,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-672c945c-I2,NC-672c945c,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+NC-672c945c-I3,NC-672c945c,3% down / 12 years quarterly,0.03,12,quarterly,0.0,0.08,0.0
+NC-681cadce-I1,NC-681cadce,33% down / 7 years quarterly,0.33,7,quarterly,0.0,0.08,0.0
+NC-681cadce-I2,NC-681cadce,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NC-682dd13b-C,NC-682dd13b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6876b192-C,NC-6876b192,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-68b6bb99-I1,NC-68b6bb99,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+NC-68b6bb99-C,NC-68b6bb99,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-693cb5b4-C,NC-693cb5b4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-69545170-C,NC-69545170,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-696c8d3f-I1,NC-696c8d3f,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-6afc2834-I1,NC-6afc2834,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-6afc2834-I2,NC-6afc2834,11% down / 7 years quarterly,0.11,7,quarterly,0.0,0.08,0.0
+NC-6b7bd563-C,NC-6b7bd563,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6c0f7103-C,NC-6c0f7103,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6c758f60-C,NC-6c758f60,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6d2f9a2f-C,NC-6d2f9a2f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6d66c94c-I1,NC-6d66c94c,39% down / 7 years quarterly,0.39,7,quarterly,0.0,0.08,0.0
+NC-6d66c94c-I2,NC-6d66c94c,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+NC-6d66c94c-C,NC-6d66c94c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6eeca43f-C,NC-6eeca43f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6fdb5adf-C,NC-6fdb5adf,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-6fe166af-I1,NC-6fe166af,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NC-6fe166af-I2,NC-6fe166af,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NC-6fe166af-I3,NC-6fe166af,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-6fe166af-C,NC-6fe166af,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-70c54494-C,NC-70c54494,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-70cc7b37-C,NC-70cc7b37,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-756c182c-C,NC-756c182c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-75a5185a-I1,NC-75a5185a,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-75a5185a-C,NC-75a5185a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-75e72051-I1,NC-75e72051,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NC-75e72051-I2,NC-75e72051,15% down / 7 years quarterly,0.15,7,quarterly,0.0,0.08,0.0
+NC-75e72051-I3,NC-75e72051,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-75e72051-C,NC-75e72051,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-76bf3840-C,NC-76bf3840,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-771be39b-C,NC-771be39b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-77beb896-C,NC-77beb896,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-798f2062-C,NC-798f2062,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-7a0e0f6b-I1,NC-7a0e0f6b,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+NC-7a0e0f6b-I2,NC-7a0e0f6b,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-7a0e0f6b-I3,NC-7a0e0f6b,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+NC-7a0e0f6b-C,NC-7a0e0f6b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-7a200e45-I1,NC-7a200e45,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+NC-7a200e45-I2,NC-7a200e45,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-7a200e45-I3,NC-7a200e45,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NC-7a200e45-C,NC-7a200e45,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-7bb813a0-I1,NC-7bb813a0,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-7bb813a0-I2,NC-7bb813a0,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-7bb813a0-C,NC-7bb813a0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-7c58b53f-I1,NC-7c58b53f,26% down / 7 years quarterly,0.26,7,quarterly,0.0,0.08,0.0
+NC-7c58b53f-I2,NC-7c58b53f,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-7c58b53f-C,NC-7c58b53f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-7c86b0c9-C,NC-7c86b0c9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-7e6f14f9-C,NC-7e6f14f9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-7ee8cf9a-C,NC-7ee8cf9a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-80db55c7-C,NC-80db55c7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-815cf33f-I1,NC-815cf33f,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NC-815cf33f-I2,NC-815cf33f,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-815cf33f-C,NC-815cf33f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-817af568-C,NC-817af568,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-818bc558-C,NC-818bc558,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-838b1b45-I1,NC-838b1b45,24% down / 7 years quarterly,0.24,7,quarterly,0.0,0.08,0.0
+NC-838b1b45-I2,NC-838b1b45,0% down / 8 years quarterly,0.0,8,quarterly,0.0,0.08,0.0
+NC-838b1b45-I3,NC-838b1b45,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+NC-838b1b45-C,NC-838b1b45,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-84917563-C,NC-84917563,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-84963054-C,NC-84963054,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-84e55b71-I1,NC-84e55b71,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-84e55b71-I2,NC-84e55b71,45% down / 7 years quarterly,0.45,7,quarterly,0.0,0.08,0.0
+NC-84e55b71-I3,NC-84e55b71,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-84e55b71-C,NC-84e55b71,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-84eca69c-C,NC-84eca69c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8511dc47-I1,NC-8511dc47,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-8511dc47-C,NC-8511dc47,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-85a0804c-C,NC-85a0804c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-85ad2d5e-I1,NC-85ad2d5e,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-85ad2d5e-I2,NC-85ad2d5e,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-85d4a31d-C,NC-85d4a31d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-86992e77-C,NC-86992e77,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-86c226f7-I1,NC-86c226f7,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-86c226f7-C,NC-86c226f7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-87a0304b-C,NC-87a0304b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-883cef96-C,NC-883cef96,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8898207b-C,NC-8898207b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8978c18c-C,NC-8978c18c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8a333f56-C,NC-8a333f56,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8c10402a-I1,NC-8c10402a,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-8c10402a-I2,NC-8c10402a,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-8c10402a-C,NC-8c10402a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8e3d742f-C,NC-8e3d742f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8ec4ce3b-C,NC-8ec4ce3b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8f416e82-I1,NC-8f416e82,0% down / 3 years quarterly,0.0,3,quarterly,0.0,0.08,0.0
+NC-8f416e82-I2,NC-8f416e82,25% down / 3 years quarterly,0.25,3,quarterly,0.0,0.08,0.0
+NC-8f416e82-C,NC-8f416e82,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-8fab701a-I1,NC-8fab701a,5% down / 5 years quarterly,0.05,5,quarterly,0.0,0.08,0.0
+NC-8fab701a-I2,NC-8fab701a,34% down / 7 years quarterly,0.34,7,quarterly,0.0,0.08,0.0
+NC-8fab701a-I3,NC-8fab701a,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-8fab701a-C,NC-8fab701a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-91b886b8-I1,NC-91b886b8,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NC-91b886b8-C,NC-91b886b8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-930358b4-C,NC-930358b4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-945495c6-C,NC-945495c6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-956d3dc8-C,NC-956d3dc8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-95c83405-C,NC-95c83405,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-95e02188-I1,NC-95e02188,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-95e02188-C,NC-95e02188,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-9772e0c2-C,NC-9772e0c2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-97a9151c-C,NC-97a9151c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-97f167e8-I1,NC-97f167e8,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NC-97f167e8-I2,NC-97f167e8,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-97f167e8-I3,NC-97f167e8,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+NC-97f167e8-C,NC-97f167e8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-9802157b-I1,NC-9802157b,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-9802157b-I2,NC-9802157b,2% down / 10 years quarterly,0.02,10,quarterly,0.0,0.08,0.0
+NC-9802157b-C,NC-9802157b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-983556ad-C,NC-983556ad,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-98682f44-C,NC-98682f44,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-98c1dab3-I1,NC-98c1dab3,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-98c1dab3-I2,NC-98c1dab3,38% down / 7 years quarterly,0.38,7,quarterly,0.0,0.08,0.0
+NC-98c1dab3-I3,NC-98c1dab3,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-98c1dab3-C,NC-98c1dab3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-98e1449e-C,NC-98e1449e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-9ab2b29d-C,NC-9ab2b29d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-9c06fe6a-I1,NC-9c06fe6a,20% down / 4 years quarterly,0.2,4,quarterly,0.0,0.08,0.0
+NC-9c06fe6a-I2,NC-9c06fe6a,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-9c06fe6a-I3,NC-9c06fe6a,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-9c06fe6a-C,NC-9c06fe6a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-9c61744d-I1,NC-9c61744d,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-9c61744d-I2,NC-9c61744d,50% down / 12 years quarterly,0.5,12,quarterly,0.0,0.08,0.0
+NC-9c61744d-C,NC-9c61744d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-9cebbedc-C,NC-9cebbedc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-9d1af962-C,NC-9d1af962,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-9e357bef-I1,NC-9e357bef,23% down / 6 years quarterly,0.23,6,quarterly,0.0,0.08,0.0
+NC-9e357bef-I2,NC-9e357bef,37% down / 7 years quarterly,0.37,7,quarterly,0.0,0.08,0.0
+NC-9e357bef-I3,NC-9e357bef,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-9e357bef-C,NC-9e357bef,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a092adae-I1,NC-a092adae,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NC-a092adae-C,NC-a092adae,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a0f1cdfb-C,NC-a0f1cdfb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a11ed6a6-C,NC-a11ed6a6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a15e01e5-I1,NC-a15e01e5,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-a15e01e5-I2,NC-a15e01e5,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-a15e01e5-C,NC-a15e01e5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a2d1f202-I1,NC-a2d1f202,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-a2d1f202-C,NC-a2d1f202,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a3df9253-C,NC-a3df9253,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a5e65724-C,NC-a5e65724,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a637ead3-C,NC-a637ead3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-a7b5a663-I1,NC-a7b5a663,10% down / 5 years quarterly,0.1,5,quarterly,0.0,0.08,0.0
+NC-a7b5a663-I2,NC-a7b5a663,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-a7b5a663-C,NC-a7b5a663,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-aa66d300-C,NC-aa66d300,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ab83b915-I1,NC-ab83b915,5% down / 5 years quarterly,0.05,5,quarterly,0.0,0.08,0.0
+NC-ab83b915-I2,NC-ab83b915,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-ab83b915-I3,NC-ab83b915,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+NC-ab83b915-C,NC-ab83b915,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ac9c0d42-C,NC-ac9c0d42,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-af6fda6a-I1,NC-af6fda6a,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-af6fda6a-I2,NC-af6fda6a,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-af6fda6a-C,NC-af6fda6a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-af927d4a-C,NC-af927d4a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-af990ff6-C,NC-af990ff6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b132dbd5-C,NC-b132dbd5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b175c8f6-C,NC-b175c8f6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b1c10118-C,NC-b1c10118,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b23c7ad1-I1,NC-b23c7ad1,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-b23c7ad1-I2,NC-b23c7ad1,30% down / 7 years quarterly,0.3,7,quarterly,0.0,0.08,0.0
+NC-b23c7ad1-I3,NC-b23c7ad1,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NC-b23c7ad1-C,NC-b23c7ad1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b25d3d0c-C,NC-b25d3d0c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b477d97b-I1,NC-b477d97b,33% down / 7 years quarterly,0.33,7,quarterly,0.0,0.08,0.0
+NC-b477d97b-C,NC-b477d97b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b66b8215-C,NC-b66b8215,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b6e3f8cd-C,NC-b6e3f8cd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b7bdfd7c-C,NC-b7bdfd7c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b7d9f58c-C,NC-b7d9f58c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b8afe9c5-C,NC-b8afe9c5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b8bf7f3d-C,NC-b8bf7f3d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-b8fab968-I1,NC-b8fab968,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NC-b8fab968-I2,NC-b8fab968,31% down / 7 years quarterly,0.31,7,quarterly,0.0,0.08,0.0
+NC-b8fab968-I3,NC-b8fab968,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+NC-b8fab968-C,NC-b8fab968,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ba1b6361-I1,NC-ba1b6361,8% down / 10 years quarterly,0.08,10,quarterly,0.0,0.08,0.0
+NC-ba1b6361-I2,NC-ba1b6361,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-ba1b6361-C,NC-ba1b6361,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-bae2fae4-I1,NC-bae2fae4,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+NC-bae2fae4-I2,NC-bae2fae4,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-bae2fae4-I3,NC-bae2fae4,35% down / 12 years quarterly,0.35,12,quarterly,0.0,0.08,0.0
+NC-bae2fae4-C,NC-bae2fae4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-bbfab493-I1,NC-bbfab493,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-bbfab493-C,NC-bbfab493,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-bcb3c5f1-C,NC-bcb3c5f1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-be293ca8-C,NC-be293ca8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-be31bb0b-I1,NC-be31bb0b,31% down / 7 years quarterly,0.31,7,quarterly,0.0,0.08,0.0
+NC-bebd7750-I1,NC-bebd7750,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-bebd7750-C,NC-bebd7750,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-bed50788-C,NC-bed50788,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-beefe538-I1,NC-beefe538,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-beefe538-C,NC-beefe538,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-bf5f51ca-C,NC-bf5f51ca,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-bf6caa6a-I1,NC-bf6caa6a,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+NC-bf6caa6a-C,NC-bf6caa6a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-bfb5bf80-I1,NC-bfb5bf80,15% down / 7 years quarterly,0.15,7,quarterly,0.0,0.08,0.0
+NC-bfb5bf80-I2,NC-bfb5bf80,22% down / 7 years quarterly,0.22,7,quarterly,0.0,0.08,0.0
+NC-bfb5bf80-C,NC-bfb5bf80,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-bfc5061a-C,NC-bfc5061a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c06305a3-I1,NC-c06305a3,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-c06305a3-I2,NC-c06305a3,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+NC-c06305a3-C,NC-c06305a3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c11ebe89-I1,NC-c11ebe89,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NC-c11ebe89-I2,NC-c11ebe89,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-c11ebe89-I3,NC-c11ebe89,15% down / 7 years quarterly,0.15,7,quarterly,0.0,0.08,0.0
+NC-c11ebe89-C,NC-c11ebe89,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c2c78f27-C,NC-c2c78f27,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c332809f-I1,NC-c332809f,50% down / 2 years quarterly,0.5,2,quarterly,0.0,0.08,0.0
+NC-c332809f-I2,NC-c332809f,47% down / 7 years quarterly,0.47,7,quarterly,0.0,0.08,0.0
+NC-c332809f-I3,NC-c332809f,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-c332809f-C,NC-c332809f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c365a4e4-C,NC-c365a4e4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c3c0c969-C,NC-c3c0c969,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c3ece508-C,NC-c3ece508,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c42637fb-C,NC-c42637fb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c465fd18-C,NC-c465fd18,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c55f5ce4-C,NC-c55f5ce4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c5a770b3-C,NC-c5a770b3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c5ac2091-C,NC-c5ac2091,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c64bb936-I1,NC-c64bb936,9% down / 6 years quarterly,0.09,6,quarterly,0.0,0.08,0.0
+NC-c66eb76f-I1,NC-c66eb76f,0% down / 8 years quarterly,0.0,8,quarterly,0.0,0.08,0.0
+NC-c66eb76f-I2,NC-c66eb76f,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+NC-c66eb76f-I3,NC-c66eb76f,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-c66eb76f-C,NC-c66eb76f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c72a3942-C,NC-c72a3942,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c879ba63-I1,NC-c879ba63,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-c879ba63-C,NC-c879ba63,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c880e6a9-C,NC-c880e6a9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c978ffce-I1,NC-c978ffce,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-c978ffce-I2,NC-c978ffce,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+NC-c978ffce-I3,NC-c978ffce,3% down / 10 years quarterly,0.03,10,quarterly,0.0,0.08,0.0
+NC-c978ffce-C,NC-c978ffce,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-c9fbb73e-C,NC-c9fbb73e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ca425eda-I1,NC-ca425eda,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+NC-ca425eda-C,NC-ca425eda,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-cc53f2a1-C,NC-cc53f2a1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-cdf5c521-C,NC-cdf5c521,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ce9a3ba0-C,NC-ce9a3ba0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-cfdc67c4-I1,NC-cfdc67c4,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-cfdc67c4-I2,NC-cfdc67c4,44% down / 7 years quarterly,0.44,7,quarterly,0.0,0.08,0.0
+NC-cfdc67c4-I3,NC-cfdc67c4,0% down / 8 years quarterly,0.0,8,quarterly,0.0,0.08,0.0
+NC-cfdc67c4-C,NC-cfdc67c4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d063c077-C,NC-d063c077,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d08e742e-C,NC-d08e742e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d1f27a5b-C,NC-d1f27a5b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d22d98f7-C,NC-d22d98f7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d27c57f3-C,NC-d27c57f3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d33404ae-C,NC-d33404ae,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d36cd752-C,NC-d36cd752,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d389364f-I1,NC-d389364f,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+NC-d389364f-I2,NC-d389364f,33% down / 7 years quarterly,0.33,7,quarterly,0.0,0.08,0.0
+NC-d389364f-I3,NC-d389364f,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-d389364f-C,NC-d389364f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d3aca74e-C,NC-d3aca74e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d4979505-I1,NC-d4979505,7% down / 7 years quarterly,0.07,7,quarterly,0.0,0.08,0.0
+NC-d4979505-I2,NC-d4979505,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+NC-d4979505-C,NC-d4979505,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d728b89c-I1,NC-d728b89c,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-d728b89c-C,NC-d728b89c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d944b58d-C,NC-d944b58d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-d9d58ca1-C,NC-d9d58ca1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-dc0c3b7f-C,NC-dc0c3b7f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-dcd2868c-I1,NC-dcd2868c,4% down / 7 years quarterly,0.04,7,quarterly,0.0,0.08,0.0
+NC-dcd2868c-I2,NC-dcd2868c,35% down / 7 years quarterly,0.35,7,quarterly,0.0,0.08,0.0
+NC-dcd2868c-I3,NC-dcd2868c,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-dcd2868c-C,NC-dcd2868c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ddd5e4c9-I1,NC-ddd5e4c9,2% down / 7 years quarterly,0.02,7,quarterly,0.0,0.08,0.0
+NC-ddd5e4c9-I2,NC-ddd5e4c9,34% down / 7 years quarterly,0.34,7,quarterly,0.0,0.08,0.0
+NC-ddd5e4c9-I3,NC-ddd5e4c9,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+NC-ddd5e4c9-C,NC-ddd5e4c9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ddf32f32-C,NC-ddf32f32,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-de35250c-C,NC-de35250c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-df20c51f-C,NC-df20c51f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-e02b612d-C,NC-e02b612d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-e4e68f2b-C,NC-e4e68f2b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-e5fd5364-I1,NC-e5fd5364,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-e5fd5364-I2,NC-e5fd5364,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-e5fd5364-C,NC-e5fd5364,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-e726a4e3-C,NC-e726a4e3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-e73b21df-C,NC-e73b21df,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-e7970e9a-C,NC-e7970e9a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-e7b6baa9-C,NC-e7b6baa9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ea1e0753-C,NC-ea1e0753,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ea5cf8c6-I1,NC-ea5cf8c6,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+NC-ea5cf8c6-I2,NC-ea5cf8c6,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-ea5cf8c6-I3,NC-ea5cf8c6,20% down / 7 years quarterly,0.2,7,quarterly,0.0,0.08,0.0
+NC-ea5cf8c6-C,NC-ea5cf8c6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-eab2a74b-C,NC-eab2a74b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-eb45b61c-C,NC-eb45b61c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-eb6a26a3-C,NC-eb6a26a3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ebc445e5-C,NC-ebc445e5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ed4ad15e-C,NC-ed4ad15e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ed625807-C,NC-ed625807,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-edadf843-C,NC-edadf843,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ef7735b5-I1,NC-ef7735b5,24% down / 7 years quarterly,0.24,7,quarterly,0.0,0.08,0.0
+NC-ef7735b5-C,NC-ef7735b5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-f139f612-I1,NC-f139f612,10% down / 5 years quarterly,0.1,5,quarterly,0.0,0.08,0.0
+NC-f139f612-I2,NC-f139f612,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-f139f612-I3,NC-f139f612,49% down / 7 years quarterly,0.49,7,quarterly,0.0,0.08,0.0
+NC-f139f612-C,NC-f139f612,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-f1575961-I1,NC-f1575961,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+NC-f1575961-I2,NC-f1575961,37% down / 7 years quarterly,0.37,7,quarterly,0.0,0.08,0.0
+NC-f1575961-I3,NC-f1575961,49% down / 7 years quarterly,0.49,7,quarterly,0.0,0.08,0.0
+NC-f1575961-C,NC-f1575961,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-f250c33f-C,NC-f250c33f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-f3d46ae7-I1,NC-f3d46ae7,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+NC-f3d46ae7-C,NC-f3d46ae7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-f5dcde33-C,NC-f5dcde33,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-f6623b22-I1,NC-f6623b22,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+NC-f6623b22-C,NC-f6623b22,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-f74c4d8f-C,NC-f74c4d8f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-fbfc0994-C,NC-fbfc0994,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-fc7ffc47-C,NC-fc7ffc47,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-fd809c8c-C,NC-fd809c8c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-fde2feba-C,NC-fde2feba,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-ff280aba-C,NC-ff280aba,Cash,1.0,1,quarterly,0.0,0.08,0.0
+NC-fff1e984-C,NC-fff1e984,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-00fbbbd9-I1,OC-00fbbbd9,16% down / 7 years quarterly,0.16,7,quarterly,0.0,0.08,0.0
+OC-00fbbbd9-I2,OC-00fbbbd9,19% down / 7 years quarterly,0.19,7,quarterly,0.0,0.08,0.0
+OC-00fbbbd9-I3,OC-00fbbbd9,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+OC-00fbbbd9-C,OC-00fbbbd9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-02ce928e-C,OC-02ce928e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-0462c4d6-C,OC-0462c4d6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-048cf78c-I1,OC-048cf78c,7% down / 7 years quarterly,0.07,7,quarterly,0.0,0.08,0.0
+OC-048cf78c-I2,OC-048cf78c,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+OC-048cf78c-I3,OC-048cf78c,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+OC-048cf78c-C,OC-048cf78c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-07b2f1d3-I1,OC-07b2f1d3,20% down / 6 years quarterly,0.2,6,quarterly,0.0,0.08,0.0
+OC-07b2f1d3-I2,OC-07b2f1d3,23% down / 7 years quarterly,0.23,7,quarterly,0.0,0.08,0.0
+OC-07b2f1d3-C,OC-07b2f1d3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-08b9a9bd-C,OC-08b9a9bd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-0a73c731-C,OC-0a73c731,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-10de3eb9-C,OC-10de3eb9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-123ca9a8-I1,OC-123ca9a8,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-123ca9a8-C,OC-123ca9a8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-163e13b6-C,OC-163e13b6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-1acbaee9-I1,OC-1acbaee9,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+OC-1c651430-I1,OC-1c651430,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-1c651430-I2,OC-1c651430,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+OC-1c651430-I3,OC-1c651430,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+OC-1c651430-C,OC-1c651430,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-1f6817b1-C,OC-1f6817b1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-2259701f-I1,OC-2259701f,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-2259701f-C,OC-2259701f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-22b77575-C,OC-22b77575,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-22d18d7a-I1,OC-22d18d7a,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-22d18d7a-I2,OC-22d18d7a,30% down / 8 years quarterly,0.3,8,quarterly,0.0,0.08,0.0
+OC-22d18d7a-I3,OC-22d18d7a,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+OC-22d18d7a-C,OC-22d18d7a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-250c51e9-I1,OC-250c51e9,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+OC-250c51e9-C,OC-250c51e9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-28774c68-C,OC-28774c68,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-2921c0f0-C,OC-2921c0f0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-2b05c51a-C,OC-2b05c51a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-2cd34b23-I1,OC-2cd34b23,25% down / 7 years quarterly,0.25,7,quarterly,0.0,0.08,0.0
+OC-2cd34b23-I2,OC-2cd34b23,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+OC-2cd34b23-I3,OC-2cd34b23,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+OC-2cd34b23-C,OC-2cd34b23,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-2fb2682d-C,OC-2fb2682d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-31529bbe-C,OC-31529bbe,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-32b66636-C,OC-32b66636,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-332ff6a8-I1,OC-332ff6a8,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-332ff6a8-I2,OC-332ff6a8,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+OC-332ff6a8-I3,OC-332ff6a8,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+OC-332ff6a8-C,OC-332ff6a8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-3369f13b-C,OC-3369f13b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-3746449d-C,OC-3746449d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-39a35097-C,OC-39a35097,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-39e2ec6d-C,OC-39e2ec6d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-3a2dd140-C,OC-3a2dd140,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-3e0b35fb-C,OC-3e0b35fb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-3e550716-C,OC-3e550716,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-3e7ec79a-I1,OC-3e7ec79a,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+OC-3e7ec79a-I2,OC-3e7ec79a,6% down / 7 years quarterly,0.06,7,quarterly,0.0,0.08,0.0
+OC-3e7ec79a-I3,OC-3e7ec79a,31% down / 7 years quarterly,0.31,7,quarterly,0.0,0.08,0.0
+OC-3e7ec79a-C,OC-3e7ec79a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4092c616-C,OC-4092c616,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-42d2f358-I1,OC-42d2f358,15% down / 6 years quarterly,0.15,6,quarterly,0.0,0.08,0.0
+OC-42d2f358-I2,OC-42d2f358,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-42d2f358-I3,OC-42d2f358,20% down / 7 years quarterly,0.2,7,quarterly,0.0,0.08,0.0
+OC-42d2f358-C,OC-42d2f358,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-42e5c714-C,OC-42e5c714,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4407fe21-C,OC-4407fe21,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4555f539-I1,OC-4555f539,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+OC-4555f539-C,OC-4555f539,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4637dd8d-I1,OC-4637dd8d,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-4637dd8d-I2,OC-4637dd8d,20% down / 7 years quarterly,0.2,7,quarterly,0.0,0.08,0.0
+OC-4637dd8d-I3,OC-4637dd8d,16% down / 8 years quarterly,0.16,8,quarterly,0.0,0.08,0.0
+OC-4637dd8d-C,OC-4637dd8d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-48fa801e-C,OC-48fa801e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4b79d5d4-C,OC-4b79d5d4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4da79b3b-C,OC-4da79b3b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4e21e1d0-C,OC-4e21e1d0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4f1b5fb3-C,OC-4f1b5fb3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4f4f70b5-I1,OC-4f4f70b5,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+OC-4f4f70b5-I2,OC-4f4f70b5,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+OC-4f835717-I1,OC-4f835717,7% down / 7 years quarterly,0.07,7,quarterly,0.0,0.08,0.0
+OC-4f835717-I2,OC-4f835717,49% down / 7 years quarterly,0.49,7,quarterly,0.0,0.08,0.0
+OC-4f835717-I3,OC-4f835717,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+OC-4f835717-C,OC-4f835717,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-4fd1b78e-C,OC-4fd1b78e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-50d5ae00-I1,OC-50d5ae00,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+OC-50d5ae00-I2,OC-50d5ae00,36% down / 7 years quarterly,0.36,7,quarterly,0.0,0.08,0.0
+OC-50d5ae00-I3,OC-50d5ae00,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+OC-50d5ae00-C,OC-50d5ae00,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-51893fba-C,OC-51893fba,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-51ed26d0-I1,OC-51ed26d0,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-51ed26d0-I2,OC-51ed26d0,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+OC-51ed26d0-I3,OC-51ed26d0,13% down / 12 years quarterly,0.13,12,quarterly,0.0,0.08,0.0
+OC-51ed26d0-C,OC-51ed26d0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-522917aa-C,OC-522917aa,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-52f36a3e-C,OC-52f36a3e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-53084737-C,OC-53084737,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-559c251d-C,OC-559c251d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-55c946ce-I1,OC-55c946ce,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-55c946ce-C,OC-55c946ce,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-57a2f12c-I1,OC-57a2f12c,14% down / 8 years quarterly,0.14,8,quarterly,0.0,0.08,0.0
+OC-5c77569d-C,OC-5c77569d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-6020b66a-I1,OC-6020b66a,13% down / 7 years quarterly,0.13,7,quarterly,0.0,0.08,0.0
+OC-6020b66a-C,OC-6020b66a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-610b96eb-I1,OC-610b96eb,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+OC-610b96eb-I2,OC-610b96eb,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+OC-610b96eb-C,OC-610b96eb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-64f1f1c1-C,OC-64f1f1c1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-676fab06-I1,OC-676fab06,25% down / 5 years quarterly,0.25,5,quarterly,0.0,0.08,0.0
+OC-6e7ec54a-C,OC-6e7ec54a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-6e8dd85a-C,OC-6e8dd85a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-6ef65359-C,OC-6ef65359,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-718c048f-C,OC-718c048f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-71aee7e9-C,OC-71aee7e9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-732642bf-C,OC-732642bf,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-732da74f-I1,OC-732da74f,10% down / 5 years quarterly,0.1,5,quarterly,0.0,0.08,0.0
+OC-732da74f-I2,OC-732da74f,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-732da74f-C,OC-732da74f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-73a59c30-C,OC-73a59c30,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-756e19bd-I1,OC-756e19bd,47% down / 7 years quarterly,0.47,7,quarterly,0.0,0.08,0.0
+OC-7b7cd036-I1,OC-7b7cd036,1% down / 7 years quarterly,0.01,7,quarterly,0.0,0.08,0.0
+OC-7dac428b-C,OC-7dac428b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-81f53b50-C,OC-81f53b50,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-842696e2-C,OC-842696e2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-8456731d-C,OC-8456731d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-8491f62f-I1,OC-8491f62f,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+OC-8491f62f-I2,OC-8491f62f,16% down / 7 years quarterly,0.16,7,quarterly,0.0,0.08,0.0
+OC-8491f62f-I3,OC-8491f62f,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+OC-8491f62f-C,OC-8491f62f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-852f0097-C,OC-852f0097,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-864d0d22-C,OC-864d0d22,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-885e1414-I1,OC-885e1414,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+OC-885e1414-I2,OC-885e1414,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-885e1414-C,OC-885e1414,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-893b7e43-I1,OC-893b7e43,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+OC-893b7e43-I2,OC-893b7e43,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+OC-893b7e43-I3,OC-893b7e43,7% down / 12 years quarterly,0.07,12,quarterly,0.0,0.08,0.0
+OC-893b7e43-C,OC-893b7e43,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-8bdc160e-C,OC-8bdc160e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-8ce90c59-I1,OC-8ce90c59,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+OC-8ce90c59-C,OC-8ce90c59,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-8d858186-C,OC-8d858186,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-8dd0f20d-I1,OC-8dd0f20d,46% down / 7 years quarterly,0.46,7,quarterly,0.0,0.08,0.0
+OC-8dd0f20d-I2,OC-8dd0f20d,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+OC-8dd0f20d-C,OC-8dd0f20d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-8df6cfbc-C,OC-8df6cfbc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-93d5041b-C,OC-93d5041b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-974f4054-C,OC-974f4054,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-9787765e-C,OC-9787765e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-9802157b-C,OC-9802157b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-9892a9d4-C,OC-9892a9d4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-98ee85f1-I1,OC-98ee85f1,7% down / 7 years quarterly,0.07,7,quarterly,0.0,0.08,0.0
+OC-98ee85f1-I2,OC-98ee85f1,8% down / 7 years quarterly,0.08,7,quarterly,0.0,0.08,0.0
+OC-98ee85f1-I3,OC-98ee85f1,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-98ee85f1-C,OC-98ee85f1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-99917325-I1,OC-99917325,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-99917325-I2,OC-99917325,25% down / 7 years quarterly,0.25,7,quarterly,0.0,0.08,0.0
+OC-99917325-C,OC-99917325,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-9c52f292-C,OC-9c52f292,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-9c753e7d-C,OC-9c753e7d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-9deb9ea4-C,OC-9deb9ea4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-9e224cce-C,OC-9e224cce,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-9f1613c5-C,OC-9f1613c5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-a44c9635-C,OC-a44c9635,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-a4b96a80-C,OC-a4b96a80,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-a4cd20c7-C,OC-a4cd20c7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-a68c8cc8-I1,OC-a68c8cc8,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-a68c8cc8-C,OC-a68c8cc8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-a7fe1b0e-C,OC-a7fe1b0e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-aac310c8-C,OC-aac310c8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-b0b8fc59-C,OC-b0b8fc59,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-b61a9535-I1,OC-b61a9535,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-b61a9535-C,OC-b61a9535,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-b99c9472-C,OC-b99c9472,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-bcf33644-C,OC-bcf33644,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-bd422a4e-C,OC-bd422a4e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-be19da62-C,OC-be19da62,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-be730661-C,OC-be730661,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-beb97cd2-C,OC-beb97cd2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-beb9a737-C,OC-beb9a737,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-bef533e1-C,OC-bef533e1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-bf1051d3-I1,OC-bf1051d3,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+OC-bf1051d3-C,OC-bf1051d3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c0b62b71-I1,OC-c0b62b71,22% down / 6 years quarterly,0.22,6,quarterly,0.0,0.08,0.0
+OC-c0b62b71-I2,OC-c0b62b71,30% down / 7 years quarterly,0.3,7,quarterly,0.0,0.08,0.0
+OC-c0b62b71-I3,OC-c0b62b71,2% down / 12 years quarterly,0.02,12,quarterly,0.0,0.08,0.0
+OC-c0b62b71-C,OC-c0b62b71,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c1a5d687-C,OC-c1a5d687,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c2c0e660-C,OC-c2c0e660,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c3c69a70-C,OC-c3c69a70,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c3e95d79-C,OC-c3e95d79,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c5c439ed-C,OC-c5c439ed,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c64f5c1a-I1,OC-c64f5c1a,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+OC-c64f5c1a-C,OC-c64f5c1a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c7f8a728-C,OC-c7f8a728,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-c9c7a61f-I1,OC-c9c7a61f,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-c9c7a61f-C,OC-c9c7a61f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-cc929252-C,OC-cc929252,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-cc9b8dc8-C,OC-cc9b8dc8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-cd6eb9b4-C,OC-cd6eb9b4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-cec24104-I1,OC-cec24104,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+OC-cec24104-I2,OC-cec24104,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-cec24104-I3,OC-cec24104,39% down / 7 years quarterly,0.39,7,quarterly,0.0,0.08,0.0
+OC-cec24104-C,OC-cec24104,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-d027434b-C,OC-d027434b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-d08e742e-C,OC-d08e742e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-d1480737-C,OC-d1480737,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-d4d40f29-I1,OC-d4d40f29,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+OC-d4d40f29-C,OC-d4d40f29,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-d6fb0a3b-C,OC-d6fb0a3b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-d8376dab-C,OC-d8376dab,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-d988cc63-C,OC-d988cc63,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-db512688-I1,OC-db512688,41% down / 7 years quarterly,0.41,7,quarterly,0.0,0.08,0.0
+OC-db512688-C,OC-db512688,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-dc490ce2-I1,OC-dc490ce2,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+OC-dc490ce2-I2,OC-dc490ce2,14% down / 8 years quarterly,0.14,8,quarterly,0.0,0.08,0.0
+OC-dd2d3250-C,OC-dd2d3250,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-de349145-C,OC-de349145,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-dffc3001-I1,OC-dffc3001,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-dffc3001-I2,OC-dffc3001,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+OC-dffc3001-C,OC-dffc3001,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-e8e30831-C,OC-e8e30831,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-ea25e02b-I1,OC-ea25e02b,30% down / 7 years quarterly,0.3,7,quarterly,0.0,0.08,0.0
+OC-ea25e02b-I2,OC-ea25e02b,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+OC-ea25e02b-C,OC-ea25e02b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-eb732649-C,OC-eb732649,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-ec65a740-C,OC-ec65a740,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-ee37b778-C,OC-ee37b778,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-efe2588f-C,OC-efe2588f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-f093202a-I1,OC-f093202a,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-f093202a-C,OC-f093202a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-f389c77b-C,OC-f389c77b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-fb797362-I1,OC-fb797362,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+OC-fb797362-C,OC-fb797362,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-fd111c27-C,OC-fd111c27,Cash,1.0,1,quarterly,0.0,0.08,0.0
+OC-fe5794ab-C,OC-fe5794ab,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-012b7440-C,SH-012b7440,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-028290ee-I1,SH-028290ee,30% down / 5 years quarterly,0.3,5,quarterly,0.0,0.08,0.0
+SH-028290ee-I2,SH-028290ee,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-028290ee-I3,SH-028290ee,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+SH-028290ee-C,SH-028290ee,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-036297ae-I1,SH-036297ae,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-036297ae-I2,SH-036297ae,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-036297ae-I3,SH-036297ae,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+SH-036297ae-C,SH-036297ae,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-03997869-C,SH-03997869,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-05942654-I1,SH-05942654,5% down / 5 years quarterly,0.05,5,quarterly,0.0,0.08,0.0
+SH-05942654-I2,SH-05942654,13% down / 7 years quarterly,0.13,7,quarterly,0.0,0.08,0.0
+SH-05942654-I3,SH-05942654,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+SH-05942654-C,SH-05942654,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-0633624a-I1,SH-0633624a,4% down / 7 years quarterly,0.04,7,quarterly,0.0,0.08,0.0
+SH-0633624a-I2,SH-0633624a,44% down / 7 years quarterly,0.44,7,quarterly,0.0,0.08,0.0
+SH-0633624a-I3,SH-0633624a,18% down / 9 years quarterly,0.18,9,quarterly,0.0,0.08,0.0
+SH-0633624a-C,SH-0633624a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-068cb917-I1,SH-068cb917,4% down / 7 years quarterly,0.04,7,quarterly,0.0,0.08,0.0
+SH-068cb917-I2,SH-068cb917,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-068cb917-I3,SH-068cb917,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SH-068cb917-C,SH-068cb917,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-08e596e7-I1,SH-08e596e7,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-08e596e7-I2,SH-08e596e7,22% down / 7 years quarterly,0.22,7,quarterly,0.0,0.08,0.0
+SH-08e596e7-I3,SH-08e596e7,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-08e596e7-C,SH-08e596e7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-0af26364-I1,SH-0af26364,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-0c864ca2-I1,SH-0c864ca2,0% down / 6 years quarterly,0.0,6,quarterly,0.0,0.08,0.0
+SH-0c864ca2-I2,SH-0c864ca2,15% down / 7 years quarterly,0.15,7,quarterly,0.0,0.08,0.0
+SH-0c864ca2-I3,SH-0c864ca2,20% down / 7 years quarterly,0.2,7,quarterly,0.0,0.08,0.0
+SH-0c864ca2-C,SH-0c864ca2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-112ea829-C,SH-112ea829,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-1408879e-C,SH-1408879e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-14089de4-C,SH-14089de4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-1712eefd-C,SH-1712eefd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-194a0fc0-C,SH-194a0fc0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-1a6d9dd6-I1,SH-1a6d9dd6,38% down / 6 years quarterly,0.38,6,quarterly,0.0,0.08,0.0
+SH-1a6d9dd6-I2,SH-1a6d9dd6,45% down / 7 years quarterly,0.45,7,quarterly,0.0,0.08,0.0
+SH-1a6d9dd6-I3,SH-1a6d9dd6,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-1a6d9dd6-C,SH-1a6d9dd6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-1d474552-C,SH-1d474552,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-1dca61d6-I1,SH-1dca61d6,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-1dca61d6-I2,SH-1dca61d6,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+SH-1dca61d6-I3,SH-1dca61d6,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-1dca61d6-C,SH-1dca61d6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-200fbd5e-I1,SH-200fbd5e,15% down / 7 years quarterly,0.15,7,quarterly,0.0,0.08,0.0
+SH-21dd369e-I1,SH-21dd369e,0% down / 6 years quarterly,0.0,6,quarterly,0.0,0.08,0.0
+SH-21dd369e-I2,SH-21dd369e,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-21dd369e-I3,SH-21dd369e,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+SH-21dd369e-C,SH-21dd369e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-24855778-I1,SH-24855778,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-24855778-C,SH-24855778,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-275f6090-C,SH-275f6090,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-2a4a4562-I1,SH-2a4a4562,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-2a4a4562-I2,SH-2a4a4562,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+SH-2a4a4562-C,SH-2a4a4562,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-2aec0a20-I1,SH-2aec0a20,5% down / 6 years quarterly,0.05,6,quarterly,0.0,0.08,0.0
+SH-2aec0a20-I2,SH-2aec0a20,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-2aec0a20-I3,SH-2aec0a20,0% down / 8 years quarterly,0.0,8,quarterly,0.0,0.08,0.0
+SH-2aec0a20-C,SH-2aec0a20,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-2d236201-C,SH-2d236201,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-2d2d7547-I1,SH-2d2d7547,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SH-2d61431c-I1,SH-2d61431c,5% down / 5 years quarterly,0.05,5,quarterly,0.0,0.08,0.0
+SH-2d61431c-I2,SH-2d61431c,31% down / 7 years quarterly,0.31,7,quarterly,0.0,0.08,0.0
+SH-2d61431c-I3,SH-2d61431c,22% down / 9 years quarterly,0.22,9,quarterly,0.0,0.08,0.0
+SH-2d61431c-C,SH-2d61431c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-2e7fded5-I1,SH-2e7fded5,18% down / 5 years quarterly,0.18,5,quarterly,0.0,0.08,0.0
+SH-2e7fded5-I2,SH-2e7fded5,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-2e7fded5-I3,SH-2e7fded5,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+SH-2e7fded5-C,SH-2e7fded5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-2eaa8009-I1,SH-2eaa8009,30% down / 7 years quarterly,0.3,7,quarterly,0.0,0.08,0.0
+SH-306a4d3e-C,SH-306a4d3e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-32b52e92-I1,SH-32b52e92,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SH-32b52e92-I2,SH-32b52e92,27% down / 7 years quarterly,0.27,7,quarterly,0.0,0.08,0.0
+SH-32b52e92-I3,SH-32b52e92,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+SH-32b52e92-C,SH-32b52e92,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-357ac67d-I1,SH-357ac67d,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-357ac67d-I2,SH-357ac67d,6% down / 7 years quarterly,0.06,7,quarterly,0.0,0.08,0.0
+SH-357ac67d-I3,SH-357ac67d,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-357ac67d-C,SH-357ac67d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-357bc43a-I1,SH-357bc43a,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-357bc43a-I2,SH-357bc43a,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+SH-357bc43a-I3,SH-357bc43a,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-357bc43a-C,SH-357bc43a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-3594ac43-I1,SH-3594ac43,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-3594ac43-C,SH-3594ac43,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-376c37dc-I1,SH-376c37dc,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SH-376c37dc-I2,SH-376c37dc,29% down / 7 years quarterly,0.29,7,quarterly,0.0,0.08,0.0
+SH-376c37dc-I3,SH-376c37dc,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-376c37dc-C,SH-376c37dc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-37ad1000-C,SH-37ad1000,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-38d01617-C,SH-38d01617,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-390c1871-C,SH-390c1871,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-3c21b847-C,SH-3c21b847,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-3ffd8a3d-I1,SH-3ffd8a3d,33% down / 3 years quarterly,0.33,3,quarterly,0.0,0.08,0.0
+SH-3ffd8a3d-I2,SH-3ffd8a3d,14% down / 7 years quarterly,0.14,7,quarterly,0.0,0.08,0.0
+SH-3ffd8a3d-I3,SH-3ffd8a3d,33% down / 10 years quarterly,0.33,10,quarterly,0.0,0.08,0.0
+SH-3ffd8a3d-C,SH-3ffd8a3d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-414323a3-I1,SH-414323a3,9% down / 7 years quarterly,0.09,7,quarterly,0.0,0.08,0.0
+SH-414323a3-I2,SH-414323a3,17% down / 7 years quarterly,0.17,7,quarterly,0.0,0.08,0.0
+SH-414323a3-I3,SH-414323a3,17% down / 12 years quarterly,0.17,12,quarterly,0.0,0.08,0.0
+SH-414323a3-C,SH-414323a3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-414757e2-C,SH-414757e2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-41d39013-I1,SH-41d39013,2% down / 7 years quarterly,0.02,7,quarterly,0.0,0.08,0.0
+SH-41d39013-I2,SH-41d39013,20% down / 7 years quarterly,0.2,7,quarterly,0.0,0.08,0.0
+SH-41d39013-I3,SH-41d39013,3% down / 12 years quarterly,0.03,12,quarterly,0.0,0.08,0.0
+SH-41d39013-C,SH-41d39013,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-428340c2-C,SH-428340c2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-43a11991-I1,SH-43a11991,20% down / 5 years quarterly,0.2,5,quarterly,0.0,0.08,0.0
+SH-43a11991-I2,SH-43a11991,33% down / 7 years quarterly,0.33,7,quarterly,0.0,0.08,0.0
+SH-43a11991-I3,SH-43a11991,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-43a11991-C,SH-43a11991,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-455a589a-I1,SH-455a589a,4% down / 7 years quarterly,0.04,7,quarterly,0.0,0.08,0.0
+SH-455a589a-I2,SH-455a589a,20% down / 7 years quarterly,0.2,7,quarterly,0.0,0.08,0.0
+SH-455a589a-I3,SH-455a589a,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+SH-455a589a-C,SH-455a589a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-46658352-C,SH-46658352,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-47b6034a-C,SH-47b6034a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-49f8edc3-I1,SH-49f8edc3,26% down / 6 years quarterly,0.26,6,quarterly,0.0,0.08,0.0
+SH-49f8edc3-I2,SH-49f8edc3,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-49f8edc3-I3,SH-49f8edc3,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+SH-49f8edc3-C,SH-49f8edc3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-4aef8df2-I1,SH-4aef8df2,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-4aef8df2-I2,SH-4aef8df2,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+SH-4bf21803-I1,SH-4bf21803,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+SH-4bf21803-I2,SH-4bf21803,2% down / 8 years quarterly,0.02,8,quarterly,0.0,0.08,0.0
+SH-4bf21803-I3,SH-4bf21803,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SH-4bf21803-C,SH-4bf21803,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-4ca29769-I1,SH-4ca29769,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-4ca29769-I2,SH-4ca29769,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+SH-4ca29769-I3,SH-4ca29769,11% down / 10 years quarterly,0.11,10,quarterly,0.0,0.08,0.0
+SH-4ca29769-C,SH-4ca29769,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-51214b26-I1,SH-51214b26,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+SH-51214b26-C,SH-51214b26,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-522368fd-C,SH-522368fd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-5384b79a-I1,SH-5384b79a,7% down / 7 years quarterly,0.07,7,quarterly,0.0,0.08,0.0
+SH-5384b79a-I2,SH-5384b79a,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-5384b79a-I3,SH-5384b79a,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+SH-5384b79a-C,SH-5384b79a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-577e1826-I1,SH-577e1826,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-577e1826-I2,SH-577e1826,42% down / 7 years quarterly,0.42,7,quarterly,0.0,0.08,0.0
+SH-577e1826-C,SH-577e1826,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-58e077c7-I1,SH-58e077c7,15% down / 5 years quarterly,0.15,5,quarterly,0.0,0.08,0.0
+SH-58e077c7-I2,SH-58e077c7,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-58e077c7-I3,SH-58e077c7,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-58e077c7-C,SH-58e077c7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-5c436c13-C,SH-5c436c13,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-5e3d5a6e-C,SH-5e3d5a6e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-614cee00-I1,SH-614cee00,23% down / 7 years quarterly,0.23,7,quarterly,0.0,0.08,0.0
+SH-614cee00-I2,SH-614cee00,25% down / 7 years quarterly,0.25,7,quarterly,0.0,0.08,0.0
+SH-614cee00-I3,SH-614cee00,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SH-614cee00-C,SH-614cee00,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-62acecee-I1,SH-62acecee,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-62acecee-C,SH-62acecee,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-640408d8-I1,SH-640408d8,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-640408d8-I2,SH-640408d8,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+SH-640408d8-C,SH-640408d8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-69f1e2e5-I1,SH-69f1e2e5,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SH-69f1e2e5-C,SH-69f1e2e5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-6aebcd54-C,SH-6aebcd54,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-6c460cbf-I1,SH-6c460cbf,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-6c460cbf-I2,SH-6c460cbf,9% down / 7 years quarterly,0.09,7,quarterly,0.0,0.08,0.0
+SH-6c460cbf-I3,SH-6c460cbf,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-6c460cbf-C,SH-6c460cbf,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-6d22cf0d-C,SH-6d22cf0d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-6ddf4378-I1,SH-6ddf4378,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SH-6ddf4378-I2,SH-6ddf4378,37% down / 7 years quarterly,0.37,7,quarterly,0.0,0.08,0.0
+SH-6ddf4378-I3,SH-6ddf4378,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-6ddf4378-C,SH-6ddf4378,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-6de9e703-I1,SH-6de9e703,42% down / 7 years quarterly,0.42,7,quarterly,0.0,0.08,0.0
+SH-6de9e703-I2,SH-6de9e703,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-6de9e703-C,SH-6de9e703,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-6e79ce82-C,SH-6e79ce82,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-72daf36f-I1,SH-72daf36f,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-72daf36f-I2,SH-72daf36f,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-72daf36f-I3,SH-72daf36f,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-72daf36f-C,SH-72daf36f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-76a8f3e1-I1,SH-76a8f3e1,5% down / 6 years quarterly,0.05,6,quarterly,0.0,0.08,0.0
+SH-78225ce1-I1,SH-78225ce1,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-78225ce1-I2,SH-78225ce1,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-78225ce1-C,SH-78225ce1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-7932f70c-I1,SH-7932f70c,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-7932f70c-I2,SH-7932f70c,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-7932f70c-I3,SH-7932f70c,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-7932f70c-C,SH-7932f70c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-79b7de79-C,SH-79b7de79,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-79b930d6-I1,SH-79b930d6,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-79b930d6-I2,SH-79b930d6,14% down / 7 years quarterly,0.14,7,quarterly,0.0,0.08,0.0
+SH-79b930d6-C,SH-79b930d6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-7baaa01b-I1,SH-7baaa01b,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-7baaa01b-I2,SH-7baaa01b,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-7baaa01b-I3,SH-7baaa01b,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-7baaa01b-C,SH-7baaa01b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-7c92fc5c-I1,SH-7c92fc5c,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-7c92fc5c-I2,SH-7c92fc5c,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SH-7c92fc5c-I3,SH-7c92fc5c,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+SH-7c92fc5c-C,SH-7c92fc5c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-8cd24264-C,SH-8cd24264,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-90677746-I1,SH-90677746,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-90677746-I2,SH-90677746,45% down / 7 years quarterly,0.45,7,quarterly,0.0,0.08,0.0
+SH-90677746-I3,SH-90677746,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-90677746-C,SH-90677746,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-959c3eb8-I1,SH-959c3eb8,18% down / 3 years quarterly,0.18,3,quarterly,0.0,0.08,0.0
+SH-959c3eb8-I2,SH-959c3eb8,15% down / 7 years quarterly,0.15,7,quarterly,0.0,0.08,0.0
+SH-95b7a6bd-I1,SH-95b7a6bd,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-95b7a6bd-I2,SH-95b7a6bd,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+SH-95b7a6bd-I3,SH-95b7a6bd,47% down / 7 years quarterly,0.47,7,quarterly,0.0,0.08,0.0
+SH-95b7a6bd-C,SH-95b7a6bd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-96db877e-I1,SH-96db877e,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-96db877e-I2,SH-96db877e,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-96db877e-C,SH-96db877e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-9797e551-I1,SH-9797e551,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-9797e551-I2,SH-9797e551,4% down / 8 years quarterly,0.04,8,quarterly,0.0,0.08,0.0
+SH-9797e551-I3,SH-9797e551,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SH-9797e551-C,SH-9797e551,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-9e457e55-C,SH-9e457e55,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-a09b5c73-I1,SH-a09b5c73,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-a09b5c73-I2,SH-a09b5c73,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SH-a09b5c73-I3,SH-a09b5c73,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SH-a09b5c73-C,SH-a09b5c73,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-a1dcb763-C,SH-a1dcb763,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-a29085dd-I1,SH-a29085dd,6% down / 7 years quarterly,0.06,7,quarterly,0.0,0.08,0.0
+SH-a29085dd-I2,SH-a29085dd,14% down / 7 years quarterly,0.14,7,quarterly,0.0,0.08,0.0
+SH-a29085dd-I3,SH-a29085dd,18% down / 7 years quarterly,0.18,7,quarterly,0.0,0.08,0.0
+SH-a29085dd-C,SH-a29085dd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-a7d44629-I1,SH-a7d44629,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-a7d44629-C,SH-a7d44629,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-a9db9067-I1,SH-a9db9067,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-a9db9067-I2,SH-a9db9067,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+SH-a9db9067-I3,SH-a9db9067,5% down / 9 years quarterly,0.05,9,quarterly,0.0,0.08,0.0
+SH-a9db9067-C,SH-a9db9067,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-aa98e3fe-C,SH-aa98e3fe,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-aebf530a-C,SH-aebf530a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-b07fe224-C,SH-b07fe224,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-b0f47bea-C,SH-b0f47bea,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-b26b2c78-I1,SH-b26b2c78,22% down / 7 years quarterly,0.22,7,quarterly,0.0,0.08,0.0
+SH-b26b2c78-C,SH-b26b2c78,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-b475af31-I1,SH-b475af31,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-b475af31-I2,SH-b475af31,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-b475af31-I3,SH-b475af31,4% down / 12 years quarterly,0.04,12,quarterly,0.0,0.08,0.0
+SH-b475af31-C,SH-b475af31,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-b559e193-I1,SH-b559e193,20% down / 4 years quarterly,0.2,4,quarterly,0.0,0.08,0.0
+SH-b559e193-I2,SH-b559e193,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+SH-b559e193-C,SH-b559e193,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-b6cbcd74-I1,SH-b6cbcd74,1% down / 7 years quarterly,0.01,7,quarterly,0.0,0.08,0.0
+SH-b6cbcd74-I2,SH-b6cbcd74,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-b6cbcd74-I3,SH-b6cbcd74,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-b6cbcd74-C,SH-b6cbcd74,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-ba03e4be-I1,SH-ba03e4be,6% down / 12 years quarterly,0.06,12,quarterly,0.0,0.08,0.0
+SH-ba03e4be-C,SH-ba03e4be,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-bba27e8a-I1,SH-bba27e8a,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-bba27e8a-I2,SH-bba27e8a,16% down / 10 years quarterly,0.16,10,quarterly,0.0,0.08,0.0
+SH-bba27e8a-I3,SH-bba27e8a,7% down / 12 years quarterly,0.07,12,quarterly,0.0,0.08,0.0
+SH-bba27e8a-C,SH-bba27e8a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-be0caaea-I1,SH-be0caaea,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+SH-be0caaea-I2,SH-be0caaea,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+SH-be0caaea-I3,SH-be0caaea,13% down / 10 years quarterly,0.13,10,quarterly,0.0,0.08,0.0
+SH-be0caaea-C,SH-be0caaea,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-beab7ab2-I1,SH-beab7ab2,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SH-beab7ab2-I2,SH-beab7ab2,25% down / 7 years quarterly,0.25,7,quarterly,0.0,0.08,0.0
+SH-beab7ab2-I3,SH-beab7ab2,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-beab7ab2-C,SH-beab7ab2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-c0dd0275-C,SH-c0dd0275,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-c47c7404-C,SH-c47c7404,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-c6d73a9f-I1,SH-c6d73a9f,39% down / 7 years quarterly,0.39,7,quarterly,0.0,0.08,0.0
+SH-c6d73a9f-C,SH-c6d73a9f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-c6dc0538-C,SH-c6dc0538,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-c7e812de-I1,SH-c7e812de,20% down / 6 years quarterly,0.2,6,quarterly,0.0,0.08,0.0
+SH-c7e812de-I2,SH-c7e812de,17% down / 7 years quarterly,0.17,7,quarterly,0.0,0.08,0.0
+SH-c7e812de-I3,SH-c7e812de,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SH-c7e812de-C,SH-c7e812de,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-c8e52be7-I1,SH-c8e52be7,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SH-c8e52be7-C,SH-c8e52be7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-c9957ea3-I1,SH-c9957ea3,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-c9957ea3-I2,SH-c9957ea3,0% down / 8 years quarterly,0.0,8,quarterly,0.0,0.08,0.0
+SH-c9957ea3-I3,SH-c9957ea3,14% down / 10 years quarterly,0.14,10,quarterly,0.0,0.08,0.0
+SH-c9957ea3-C,SH-c9957ea3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-c9e92c60-C,SH-c9e92c60,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-d86e41d9-I1,SH-d86e41d9,2% down / 7 years quarterly,0.02,7,quarterly,0.0,0.08,0.0
+SH-d86e41d9-I2,SH-d86e41d9,22% down / 7 years quarterly,0.22,7,quarterly,0.0,0.08,0.0
+SH-d86e41d9-I3,SH-d86e41d9,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-d86e41d9-C,SH-d86e41d9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-da7f99e8-I1,SH-da7f99e8,10% down / 5 years quarterly,0.1,5,quarterly,0.0,0.08,0.0
+SH-da7f99e8-I2,SH-da7f99e8,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-da7f99e8-I3,SH-da7f99e8,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-da7f99e8-C,SH-da7f99e8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-ddc792d5-I1,SH-ddc792d5,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-ddc792d5-C,SH-ddc792d5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-ded0b4ff-C,SH-ded0b4ff,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-e03d465e-C,SH-e03d465e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-e372d2f8-I1,SH-e372d2f8,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SH-e372d2f8-I2,SH-e372d2f8,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-e372d2f8-I3,SH-e372d2f8,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SH-e372d2f8-C,SH-e372d2f8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-e4c43c4e-I1,SH-e4c43c4e,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-e4c43c4e-C,SH-e4c43c4e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-eaa563cf-C,SH-eaa563cf,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-edd4d5b4-C,SH-edd4d5b4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-ef02453f-I1,SH-ef02453f,3% down / 7 years quarterly,0.03,7,quarterly,0.0,0.08,0.0
+SH-ef02453f-I2,SH-ef02453f,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-ef02453f-I3,SH-ef02453f,3% down / 12 years quarterly,0.03,12,quarterly,0.0,0.08,0.0
+SH-ef02453f-C,SH-ef02453f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SH-f5f45337-I1,SH-f5f45337,9% down / 7 years quarterly,0.09,7,quarterly,0.0,0.08,0.0
+SH-f5f45337-I2,SH-f5f45337,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SH-f5f45337-C,SH-f5f45337,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-04413284-C,SK-04413284,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-0c321af9-I1,SK-0c321af9,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-0c321af9-C,SK-0c321af9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-0ec259d0-C,SK-0ec259d0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-1053913d-C,SK-1053913d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-10b2093e-C,SK-10b2093e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-11900dd0-C,SK-11900dd0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-18929524-C,SK-18929524,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-1e082edb-I1,SK-1e082edb,32% down / 7 years quarterly,0.32,7,quarterly,0.0,0.08,0.0
+SK-1e082edb-I2,SK-1e082edb,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+SK-1e082edb-C,SK-1e082edb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-1f797564-C,SK-1f797564,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-225a9ebd-C,SK-225a9ebd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-238009e5-I1,SK-238009e5,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SK-238009e5-I2,SK-238009e5,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+SK-238009e5-I3,SK-238009e5,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+SK-238009e5-C,SK-238009e5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-23bb3dfa-I1,SK-23bb3dfa,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-23bb3dfa-C,SK-23bb3dfa,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-23c213c5-I1,SK-23c213c5,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-23c213c5-C,SK-23c213c5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-25690e5b-I1,SK-25690e5b,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SK-25690e5b-C,SK-25690e5b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-27f98324-I1,SK-27f98324,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-27f98324-C,SK-27f98324,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-3264780a-C,SK-3264780a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-37fc32ee-C,SK-37fc32ee,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-3b7ae633-C,SK-3b7ae633,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-42b5b971-I1,SK-42b5b971,35% down / 7 years quarterly,0.35,7,quarterly,0.0,0.08,0.0
+SK-42b5b971-I2,SK-42b5b971,42% down / 10 years quarterly,0.42,10,quarterly,0.0,0.08,0.0
+SK-42b5b971-I3,SK-42b5b971,48% down / 10 years quarterly,0.48,10,quarterly,0.0,0.08,0.0
+SK-42b5b971-C,SK-42b5b971,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-434855b8-C,SK-434855b8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-434cb506-I1,SK-434cb506,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-434cb506-C,SK-434cb506,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-44e9b746-C,SK-44e9b746,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-50a1b305-I1,SK-50a1b305,10% down / 2 years quarterly,0.1,2,quarterly,0.0,0.08,0.0
+SK-50a1b305-I2,SK-50a1b305,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-50a1b305-I3,SK-50a1b305,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+SK-50a1b305-C,SK-50a1b305,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-56630c24-I1,SK-56630c24,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-56630c24-I2,SK-56630c24,34% down / 7 years quarterly,0.34,7,quarterly,0.0,0.08,0.0
+SK-56630c24-I3,SK-56630c24,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+SK-5e76a823-C,SK-5e76a823,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-69157363-C,SK-69157363,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-6a0f6b31-I1,SK-6a0f6b31,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SK-6a0f6b31-C,SK-6a0f6b31,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-797ccc5d-C,SK-797ccc5d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-797da387-C,SK-797da387,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-7b551427-I1,SK-7b551427,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-7b551427-I2,SK-7b551427,29% down / 7 years quarterly,0.29,7,quarterly,0.0,0.08,0.0
+SK-7b551427-I3,SK-7b551427,33% down / 7 years quarterly,0.33,7,quarterly,0.0,0.08,0.0
+SK-7bedc158-C,SK-7bedc158,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-80fb355f-C,SK-80fb355f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-82927020-I1,SK-82927020,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SK-84296e90-C,SK-84296e90,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-912a59de-C,SK-912a59de,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-91b197be-C,SK-91b197be,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-9774ac1b-C,SK-9774ac1b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-997bb199-C,SK-997bb199,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-a0758e5e-C,SK-a0758e5e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-a395eee0-C,SK-a395eee0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-ad9e1bf6-C,SK-ad9e1bf6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-b46373c3-C,SK-b46373c3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-b863f603-I1,SK-b863f603,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-b863f603-I2,SK-b863f603,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SK-b863f603-C,SK-b863f603,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-b9dd763b-I1,SK-b9dd763b,10% down / 8 years quarterly,0.1,8,quarterly,0.0,0.08,0.0
+SK-bba9ba76-C,SK-bba9ba76,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-be7d7929-I1,SK-be7d7929,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-be7d7929-C,SK-be7d7929,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-bec0be46-C,SK-bec0be46,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-c01ca8d7-C,SK-c01ca8d7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-c2c8ca33-C,SK-c2c8ca33,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-c43c93ed-C,SK-c43c93ed,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-c5ec4528-I1,SK-c5ec4528,10% down / 5 years quarterly,0.1,5,quarterly,0.0,0.08,0.0
+SK-c5ec4528-C,SK-c5ec4528,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-c77badb9-I1,SK-c77badb9,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-c77badb9-C,SK-c77badb9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-c8df2a8d-C,SK-c8df2a8d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-c9979829-C,SK-c9979829,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-ca1e764e-C,SK-ca1e764e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-cd7668c5-C,SK-cd7668c5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-cedd91a5-I1,SK-cedd91a5,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+SK-cedd91a5-C,SK-cedd91a5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-d95b1b5e-C,SK-d95b1b5e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-d9f3dbba-C,SK-d9f3dbba,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-dc2974a3-C,SK-dc2974a3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-e8d82e9b-I1,SK-e8d82e9b,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-e8d82e9b-C,SK-e8d82e9b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-e9078838-C,SK-e9078838,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-ea4cd778-C,SK-ea4cd778,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-ea52cee8-C,SK-ea52cee8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-f14b906e-I1,SK-f14b906e,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SK-f14b906e-I2,SK-f14b906e,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+SK-f14b906e-I3,SK-f14b906e,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+SK-f14b906e-C,SK-f14b906e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-f51491ce-C,SK-f51491ce,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-f93c87b2-C,SK-f93c87b2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SK-fe4cb4b3-I1,SK-fe4cb4b3,5% down / 5 years quarterly,0.05,5,quarterly,0.0,0.08,0.0
+SK-fe4cb4b3-C,SK-fe4cb4b3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-003efcfb-I1,SZ-003efcfb,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SZ-003efcfb-I2,SZ-003efcfb,5% down / 8 years quarterly,0.05,8,quarterly,0.0,0.08,0.0
+SZ-003efcfb-I3,SZ-003efcfb,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+SZ-003efcfb-C,SZ-003efcfb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-0138271d-C,SZ-0138271d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-06185b95-I1,SZ-06185b95,35% down / 7 years quarterly,0.35,7,quarterly,0.0,0.08,0.0
+SZ-06185b95-C,SZ-06185b95,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-069e1de4-I1,SZ-069e1de4,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SZ-069e1de4-I2,SZ-069e1de4,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-069e1de4-C,SZ-069e1de4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-08e848e6-I1,SZ-08e848e6,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SZ-08e848e6-C,SZ-08e848e6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-0f5b1812-I1,SZ-0f5b1812,6% down / 7 years quarterly,0.06,7,quarterly,0.0,0.08,0.0
+SZ-0f5b1812-I2,SZ-0f5b1812,40% down / 7 years quarterly,0.4,7,quarterly,0.0,0.08,0.0
+SZ-0f5b1812-C,SZ-0f5b1812,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-10e09741-I1,SZ-10e09741,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-10e09741-C,SZ-10e09741,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-141e853d-C,SZ-141e853d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-149da04e-C,SZ-149da04e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-19de647b-C,SZ-19de647b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-1a111f8e-I1,SZ-1a111f8e,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-1b486ba2-C,SZ-1b486ba2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-1b6fbe87-C,SZ-1b6fbe87,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-243f0def-I1,SZ-243f0def,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SZ-243f0def-I2,SZ-243f0def,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-25a3c173-I1,SZ-25a3c173,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-25a3c173-C,SZ-25a3c173,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-25bf4416-C,SZ-25bf4416,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-2829f4be-C,SZ-2829f4be,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-28774c68-C,SZ-28774c68,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-28f27314-I1,SZ-28f27314,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SZ-28f27314-I2,SZ-28f27314,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-28f27314-I3,SZ-28f27314,15% down / 9 years quarterly,0.15,9,quarterly,0.0,0.08,0.0
+SZ-28f27314-C,SZ-28f27314,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-2cd76d18-I1,SZ-2cd76d18,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SZ-2cd76d18-C,SZ-2cd76d18,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-2e93feac-C,SZ-2e93feac,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-32ad7588-C,SZ-32ad7588,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-32db4099-I1,SZ-32db4099,31% down / 7 years quarterly,0.31,7,quarterly,0.0,0.08,0.0
+SZ-336dcde4-C,SZ-336dcde4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-349bc7a9-C,SZ-349bc7a9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-34fb9a45-I1,SZ-34fb9a45,16% down / 9 years quarterly,0.16,9,quarterly,0.0,0.08,0.0
+SZ-34fb9a45-C,SZ-34fb9a45,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-35b01208-I1,SZ-35b01208,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SZ-35b01208-I2,SZ-35b01208,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SZ-35b01208-C,SZ-35b01208,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-36242fd6-I1,SZ-36242fd6,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-36242fd6-C,SZ-36242fd6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-36b28ad7-C,SZ-36b28ad7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-3c5d877f-C,SZ-3c5d877f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-40450a31-C,SZ-40450a31,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-457ecd15-C,SZ-457ecd15,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-46d0501e-I1,SZ-46d0501e,30% down / 5 years quarterly,0.3,5,quarterly,0.0,0.08,0.0
+SZ-46d0501e-I2,SZ-46d0501e,50% down / 7 years quarterly,0.5,7,quarterly,0.0,0.08,0.0
+SZ-46d0501e-I3,SZ-46d0501e,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-46d0501e-C,SZ-46d0501e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-48c6bb8a-I1,SZ-48c6bb8a,46% down / 7 years quarterly,0.46,7,quarterly,0.0,0.08,0.0
+SZ-48c6bb8a-I2,SZ-48c6bb8a,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-48c6bb8a-C,SZ-48c6bb8a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-497ead48-I1,SZ-497ead48,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-497ead48-C,SZ-497ead48,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-4ae82979-C,SZ-4ae82979,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-4f6f640c-C,SZ-4f6f640c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-51e80962-I1,SZ-51e80962,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-51e80962-C,SZ-51e80962,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-53084737-C,SZ-53084737,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-58ce12c7-C,SZ-58ce12c7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-5a34cef8-I1,SZ-5a34cef8,5% down / 5 years quarterly,0.05,5,quarterly,0.0,0.08,0.0
+SZ-5a34cef8-I2,SZ-5a34cef8,7% down / 10 years quarterly,0.07,10,quarterly,0.0,0.08,0.0
+SZ-5a34cef8-I3,SZ-5a34cef8,22% down / 12 years quarterly,0.22,12,quarterly,0.0,0.08,0.0
+SZ-5a34cef8-C,SZ-5a34cef8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-5bf2ec1a-C,SZ-5bf2ec1a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-5d7f1d6c-I1,SZ-5d7f1d6c,34% down / 7 years quarterly,0.34,7,quarterly,0.0,0.08,0.0
+SZ-5d7f1d6c-C,SZ-5d7f1d6c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-5dfed605-I1,SZ-5dfed605,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-5dfed605-I2,SZ-5dfed605,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-633721a3-I1,SZ-633721a3,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-633721a3-C,SZ-633721a3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-69a7be7d-I1,SZ-69a7be7d,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-69a7be7d-I2,SZ-69a7be7d,23% down / 8 years quarterly,0.23,8,quarterly,0.0,0.08,0.0
+SZ-69a7be7d-I3,SZ-69a7be7d,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-69a7be7d-C,SZ-69a7be7d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-6a0ece0d-I1,SZ-6a0ece0d,50% down / 2 years quarterly,0.5,2,quarterly,0.0,0.08,0.0
+SZ-6a0ece0d-I2,SZ-6a0ece0d,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SZ-6a0ece0d-I3,SZ-6a0ece0d,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-6a0ece0d-C,SZ-6a0ece0d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-6ede0c9c-I1,SZ-6ede0c9c,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-6ee07c9b-C,SZ-6ee07c9b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-70ade399-C,SZ-70ade399,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-72f32c07-I1,SZ-72f32c07,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-72f32c07-I2,SZ-72f32c07,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-72f32c07-C,SZ-72f32c07,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-75ffe89a-C,SZ-75ffe89a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-76c72b9f-I1,SZ-76c72b9f,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-76c72b9f-C,SZ-76c72b9f,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-770cb7be-I1,SZ-770cb7be,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-770cb7be-I2,SZ-770cb7be,35% down / 7 years quarterly,0.35,7,quarterly,0.0,0.08,0.0
+SZ-770cb7be-C,SZ-770cb7be,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-7a82c3d8-I1,SZ-7a82c3d8,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-7a82c3d8-C,SZ-7a82c3d8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-7af94448-I1,SZ-7af94448,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-7af94448-C,SZ-7af94448,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-8010c895-I1,SZ-8010c895,22% down / 6 years quarterly,0.22,6,quarterly,0.0,0.08,0.0
+SZ-8010c895-I2,SZ-8010c895,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-8010c895-I3,SZ-8010c895,18% down / 7 years quarterly,0.18,7,quarterly,0.0,0.08,0.0
+SZ-8010c895-C,SZ-8010c895,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-81ee5bb2-I1,SZ-81ee5bb2,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SZ-81ee5bb2-I2,SZ-81ee5bb2,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-81ee5bb2-C,SZ-81ee5bb2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-82ce880d-C,SZ-82ce880d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-85c34b1b-I1,SZ-85c34b1b,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+SZ-85c34b1b-I2,SZ-85c34b1b,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-85c34b1b-C,SZ-85c34b1b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-86148849-I1,SZ-86148849,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SZ-86148849-I2,SZ-86148849,33% down / 7 years quarterly,0.33,7,quarterly,0.0,0.08,0.0
+SZ-86148849-I3,SZ-86148849,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-86148849-C,SZ-86148849,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-862596aa-I1,SZ-862596aa,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-862596aa-C,SZ-862596aa,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-87e8222a-C,SZ-87e8222a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-8e99fd45-C,SZ-8e99fd45,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-8f65a907-C,SZ-8f65a907,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-90203c0e-I1,SZ-90203c0e,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SZ-90203c0e-I2,SZ-90203c0e,5% down / 9 years quarterly,0.05,9,quarterly,0.0,0.08,0.0
+SZ-90203c0e-C,SZ-90203c0e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-90404426-I1,SZ-90404426,4% down / 7 years quarterly,0.04,7,quarterly,0.0,0.08,0.0
+SZ-90404426-I2,SZ-90404426,7% down / 8 years quarterly,0.07,8,quarterly,0.0,0.08,0.0
+SZ-90404426-I3,SZ-90404426,21% down / 12 years quarterly,0.21,12,quarterly,0.0,0.08,0.0
+SZ-90404426-C,SZ-90404426,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-92b019f2-I1,SZ-92b019f2,9% down / 7 years quarterly,0.09,7,quarterly,0.0,0.08,0.0
+SZ-92b019f2-I2,SZ-92b019f2,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-92b019f2-I3,SZ-92b019f2,11% down / 10 years quarterly,0.11,10,quarterly,0.0,0.08,0.0
+SZ-92b019f2-C,SZ-92b019f2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-947f23fe-I1,SZ-947f23fe,4% down / 7 years quarterly,0.04,7,quarterly,0.0,0.08,0.0
+SZ-947f23fe-I2,SZ-947f23fe,31% down / 7 years quarterly,0.31,7,quarterly,0.0,0.08,0.0
+SZ-947f23fe-I3,SZ-947f23fe,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SZ-947f23fe-C,SZ-947f23fe,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-97f6b669-I1,SZ-97f6b669,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-97f6b669-I2,SZ-97f6b669,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-97f6b669-I3,SZ-97f6b669,15% down / 12 years quarterly,0.15,12,quarterly,0.0,0.08,0.0
+SZ-97f6b669-C,SZ-97f6b669,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-992c4471-I1,SZ-992c4471,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-992c4471-C,SZ-992c4471,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-9a6c74dc-I1,SZ-9a6c74dc,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-9a6c74dc-I2,SZ-9a6c74dc,15% down / 9 years quarterly,0.15,9,quarterly,0.0,0.08,0.0
+SZ-9a6c74dc-I3,SZ-9a6c74dc,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-9b624cfa-I1,SZ-9b624cfa,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-9b9b7b6c-C,SZ-9b9b7b6c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-9d6d7041-C,SZ-9d6d7041,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-9e224cce-C,SZ-9e224cce,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-9ea949c3-C,SZ-9ea949c3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-9fac6c54-I1,SZ-9fac6c54,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-a155722a-I1,SZ-a155722a,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-a155722a-I2,SZ-a155722a,8% down / 12 years quarterly,0.08,12,quarterly,0.0,0.08,0.0
+SZ-a155722a-I3,SZ-a155722a,17% down / 12 years quarterly,0.17,12,quarterly,0.0,0.08,0.0
+SZ-a155722a-C,SZ-a155722a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-a1789eb3-C,SZ-a1789eb3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-a1dc0f8c-I1,SZ-a1dc0f8c,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-a1dc0f8c-C,SZ-a1dc0f8c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-a60deb3c-C,SZ-a60deb3c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-a78b3996-I1,SZ-a78b3996,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SZ-a78b3996-I2,SZ-a78b3996,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-a99a7986-I1,SZ-a99a7986,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-aa625ba1-I1,SZ-aa625ba1,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SZ-aa625ba1-I2,SZ-aa625ba1,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SZ-aa625ba1-I3,SZ-aa625ba1,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-aa625ba1-C,SZ-aa625ba1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-ab61c04d-C,SZ-ab61c04d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-b2e24f13-I1,SZ-b2e24f13,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-b2e24f13-C,SZ-b2e24f13,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-b768a340-I1,SZ-b768a340,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-b768a340-C,SZ-b768a340,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-b81a1ee4-C,SZ-b81a1ee4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-b8677998-C,SZ-b8677998,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-b899d94b-I1,SZ-b899d94b,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SZ-b899d94b-I2,SZ-b899d94b,48% down / 7 years quarterly,0.48,7,quarterly,0.0,0.08,0.0
+SZ-b899d94b-I3,SZ-b899d94b,5% down / 12 years quarterly,0.05,12,quarterly,0.0,0.08,0.0
+SZ-b899d94b-C,SZ-b899d94b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-b98c2a8c-C,SZ-b98c2a8c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-ba23782e-I1,SZ-ba23782e,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-ba23782e-C,SZ-ba23782e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-ba402f75-C,SZ-ba402f75,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-bb9de0dc-I1,SZ-bb9de0dc,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-bb9de0dc-C,SZ-bb9de0dc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-bc3cc2d6-I1,SZ-bc3cc2d6,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SZ-bc3cc2d6-I2,SZ-bc3cc2d6,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-bc3cc2d6-C,SZ-bc3cc2d6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-bd422a4e-C,SZ-bd422a4e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-bd65b4a4-I1,SZ-bd65b4a4,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-bd65b4a4-C,SZ-bd65b4a4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-bec1b74a-C,SZ-bec1b74a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-beda9fd5-I1,SZ-beda9fd5,4% down / 7 years quarterly,0.04,7,quarterly,0.0,0.08,0.0
+SZ-beda9fd5-I2,SZ-beda9fd5,45% down / 7 years quarterly,0.45,7,quarterly,0.0,0.08,0.0
+SZ-beda9fd5-I3,SZ-beda9fd5,8% down / 10 years quarterly,0.08,10,quarterly,0.0,0.08,0.0
+SZ-beda9fd5-C,SZ-beda9fd5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-bf1051d3-C,SZ-bf1051d3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-bfad0b95-I1,SZ-bfad0b95,10% down / 9 years quarterly,0.1,9,quarterly,0.0,0.08,0.0
+SZ-c059dbf7-I1,SZ-c059dbf7,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-c059dbf7-C,SZ-c059dbf7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-c1428b9b-I1,SZ-c1428b9b,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-c1428b9b-C,SZ-c1428b9b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-c17eb1d9-I1,SZ-c17eb1d9,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-c42a2fdd-I1,SZ-c42a2fdd,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SZ-c42a2fdd-I2,SZ-c42a2fdd,6% down / 9 years quarterly,0.06,9,quarterly,0.0,0.08,0.0
+SZ-c42a2fdd-I3,SZ-c42a2fdd,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-c42a2fdd-C,SZ-c42a2fdd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-c4f7f975-C,SZ-c4f7f975,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-c63ec5b5-I1,SZ-c63ec5b5,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-c63ec5b5-C,SZ-c63ec5b5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-c847d58a-I1,SZ-c847d58a,30% down / 7 years quarterly,0.3,7,quarterly,0.0,0.08,0.0
+SZ-c847d58a-I2,SZ-c847d58a,50% down / 12 years quarterly,0.5,12,quarterly,0.0,0.08,0.0
+SZ-c847d58a-C,SZ-c847d58a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-c8e45467-I1,SZ-c8e45467,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-c8e45467-C,SZ-c8e45467,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-ca5b229d-I1,SZ-ca5b229d,15% down / 7 years quarterly,0.15,7,quarterly,0.0,0.08,0.0
+SZ-cd8d6165-C,SZ-cd8d6165,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-d0d198ce-C,SZ-d0d198ce,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-d2c969f8-C,SZ-d2c969f8,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-d539f15d-I1,SZ-d539f15d,6% down / 7 years quarterly,0.06,7,quarterly,0.0,0.08,0.0
+SZ-d539f15d-I2,SZ-d539f15d,45% down / 7 years quarterly,0.45,7,quarterly,0.0,0.08,0.0
+SZ-d539f15d-I3,SZ-d539f15d,49% down / 7 years quarterly,0.49,7,quarterly,0.0,0.08,0.0
+SZ-d539f15d-C,SZ-d539f15d,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-d6198bc4-C,SZ-d6198bc4,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-da1acf06-I1,SZ-da1acf06,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-da1acf06-C,SZ-da1acf06,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-da9f0865-I1,SZ-da9f0865,8% down / 7 years quarterly,0.08,7,quarterly,0.0,0.08,0.0
+SZ-da9f0865-C,SZ-da9f0865,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-db4759bc-C,SZ-db4759bc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-dda14aee-I1,SZ-dda14aee,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-dda14aee-I2,SZ-dda14aee,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SZ-dda14aee-I3,SZ-dda14aee,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-dda14aee-C,SZ-dda14aee,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-df6c9e1b-I1,SZ-df6c9e1b,10% down / 6 years quarterly,0.1,6,quarterly,0.0,0.08,0.0
+SZ-df6c9e1b-I2,SZ-df6c9e1b,29% down / 7 years quarterly,0.29,7,quarterly,0.0,0.08,0.0
+SZ-df6c9e1b-I3,SZ-df6c9e1b,11% down / 10 years quarterly,0.11,10,quarterly,0.0,0.08,0.0
+SZ-df6c9e1b-C,SZ-df6c9e1b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-dfd94498-C,SZ-dfd94498,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-e0b9f820-I1,SZ-e0b9f820,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SZ-e0b9f820-C,SZ-e0b9f820,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-e18b3ac0-C,SZ-e18b3ac0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-e6435627-I1,SZ-e6435627,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SZ-e6435627-I2,SZ-e6435627,23% down / 7 years quarterly,0.23,7,quarterly,0.0,0.08,0.0
+SZ-e6435627-I3,SZ-e6435627,35% down / 7 years quarterly,0.35,7,quarterly,0.0,0.08,0.0
+SZ-e6435627-C,SZ-e6435627,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-e69c323c-I1,SZ-e69c323c,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-e69c323c-I2,SZ-e69c323c,26% down / 7 years quarterly,0.26,7,quarterly,0.0,0.08,0.0
+SZ-e69c323c-I3,SZ-e69c323c,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SZ-e69c323c-C,SZ-e69c323c,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-e6d9bc1e-C,SZ-e6d9bc1e,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-e897c2d7-I1,SZ-e897c2d7,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-e897c2d7-I2,SZ-e897c2d7,12% down / 10 years quarterly,0.12,10,quarterly,0.0,0.08,0.0
+SZ-e897c2d7-C,SZ-e897c2d7,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-e9e2c685-I1,SZ-e9e2c685,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-e9e2c685-C,SZ-e9e2c685,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-ea8cc316-I1,SZ-ea8cc316,20% down / 8 years quarterly,0.2,8,quarterly,0.0,0.08,0.0
+SZ-ea8cc316-C,SZ-ea8cc316,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-efecd011-I1,SZ-efecd011,4% down / 7 years quarterly,0.04,7,quarterly,0.0,0.08,0.0
+SZ-efecd011-I2,SZ-efecd011,0% down / 10 years quarterly,0.0,10,quarterly,0.0,0.08,0.0
+SZ-efecd011-I3,SZ-efecd011,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-efecd011-C,SZ-efecd011,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-f0c85220-I1,SZ-f0c85220,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-f27ec653-I1,SZ-f27ec653,17% down / 7 years quarterly,0.17,7,quarterly,0.0,0.08,0.0
+SZ-f27ec653-C,SZ-f27ec653,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-f3cd4288-C,SZ-f3cd4288,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-f4d03785-I1,SZ-f4d03785,0% down / 7 years quarterly,0.0,7,quarterly,0.0,0.08,0.0
+SZ-f4d03785-I2,SZ-f4d03785,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-f4d03785-I3,SZ-f4d03785,10% down / 10 years quarterly,0.1,10,quarterly,0.0,0.08,0.0
+SZ-f4d03785-C,SZ-f4d03785,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-f52063b2-I1,SZ-f52063b2,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SZ-f52063b2-C,SZ-f52063b2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-f5ea8b94-I1,SZ-f5ea8b94,46% down / 7 years quarterly,0.46,7,quarterly,0.0,0.08,0.0
+SZ-f645e246-I1,SZ-f645e246,10% down / 7 years quarterly,0.1,7,quarterly,0.0,0.08,0.0
+SZ-f77c9fe9-I1,SZ-f77c9fe9,9% down / 10 years quarterly,0.09,10,quarterly,0.0,0.08,0.0
+SZ-f77c9fe9-C,SZ-f77c9fe9,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-f7af8db3-C,SZ-f7af8db3,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-faf46f63-I1,SZ-faf46f63,10% down / 4 years quarterly,0.1,4,quarterly,0.0,0.08,0.0
+SZ-faf46f63-I2,SZ-faf46f63,13% down / 10 years quarterly,0.13,10,quarterly,0.0,0.08,0.0
+SZ-faf46f63-I3,SZ-faf46f63,10% down / 12 years quarterly,0.1,12,quarterly,0.0,0.08,0.0
+SZ-faf46f63-C,SZ-faf46f63,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-fd263db6-C,SZ-fd263db6,Cash,1.0,1,quarterly,0.0,0.08,0.0
+SZ-fd57ff93-I1,SZ-fd57ff93,5% down / 7 years quarterly,0.05,7,quarterly,0.0,0.08,0.0
+SZ-fd57ff93-I2,SZ-fd57ff93,16% down / 7 years quarterly,0.16,7,quarterly,0.0,0.08,0.0
+SZ-fd57ff93-I3,SZ-fd57ff93,5% down / 10 years quarterly,0.05,10,quarterly,0.0,0.08,0.0
+SZ-fd57ff93-C,SZ-fd57ff93,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-28fe76e1-C,ZM-28fe76e1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-2e6038d2-C,ZM-2e6038d2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-53e7b9f1-C,ZM-53e7b9f1,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-5697972b-C,ZM-5697972b,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-753677a5-C,ZM-753677a5,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-75496ddc-C,ZM-75496ddc,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-8ba2bd89-C,ZM-8ba2bd89,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-8cc084bd-C,ZM-8cc084bd,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-a6ed68bb-C,ZM-a6ed68bb,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-b3a74cb0-C,ZM-b3a74cb0,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-c83dadb2-C,ZM-c83dadb2,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-cce9ff70-C,ZM-cce9ff70,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-e0419a2a-C,ZM-e0419a2a,Cash,1.0,1,quarterly,0.0,0.08,0.0
+ZM-f4f7c2a3-C,ZM-f4f7c2a3,Cash,1.0,1,quarterly,0.0,0.08,0.0

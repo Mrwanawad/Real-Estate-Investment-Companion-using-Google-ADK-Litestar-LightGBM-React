@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import {
   createSession,
+  deleteSession,
   getTranscript,
   streamMessage,
   type ApiLanguage,
@@ -85,6 +86,8 @@ export default function ChatPage() {
   }, [storageKey]);
 
   const newChat = () => {
+    const current = sessionRef.current;
+    if (current) void current.then(deleteSession).catch(() => undefined);
     writeSaved(storageKey, null);
     sessionRef.current = null;
     setMessages([]);

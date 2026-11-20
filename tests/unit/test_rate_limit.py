@@ -21,6 +21,16 @@ def test_proxy_header_separates_clients() -> None:
     assert (first.status_code, again.status_code, other.status_code) == (201, 429, 201)
 
 
+def test_forwarded_for_uses_the_hop_the_proxy_appended() -> None:
+    settings = Settings(rate_limit_per_minute=1, client_ip_header="X-Forwarded-For")
+    with TestClient(app=create_app(settings)) as client:
+        first = client.post("/chat/sessions", json={}, headers={"X-Forwarded-For": "9.9.9.9"})
+        forged = client.post(
+            "/chat/sessions", json={}, headers={"X-Forwarded-For": "8.8.8.8, 9.9.9.9"}
+        )
+    assert (first.status_code, forged.status_code) == (201, 429)
+
+
 def test_zero_disables_the_limit() -> None:
     with TestClient(app=create_app(Settings(rate_limit_per_minute=0))) as client:
         codes = {client.post("/chat/sessions", json={}).status_code for _ in range(5)}

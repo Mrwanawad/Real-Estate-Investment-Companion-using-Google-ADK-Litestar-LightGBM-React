@@ -23,9 +23,11 @@ def build_rate_limit(settings: Settings) -> DefineMiddleware | None:
     header = settings.client_ip_header
 
     def identifier(request: Request[Any, Any, Any]) -> str:
-        # Only trust the header when the deploy says a proxy sets it (Fly-Client-IP on Fly.io).
+        # Only trust the header when the deploy says a proxy sets it (Fly-Client-IP on Fly.io,
+        # X-Forwarded-For on Render). In a list, the last entry is the one the trusted
+        # proxy appended; earlier entries come from the client and can be forged.
         if header and (value := request.headers.get(header)):
-            return value.strip()
+            return value.split(",")[-1].strip()
         return get_remote_address(request)
 
     return RateLimitConfig(
